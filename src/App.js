@@ -1,14 +1,21 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 function App() {
   return (
-    <div className="bg-gray-800 text-white min-h-screen p-8">
+    <div className="dark:bg-gray-800 bg-white dark:text-white text-black min-h-screen p-8">
       <header className="flex justify-between items-center py-4">
         <div className="flex items-center">
           <img src="/logo256.png" alt="Ian Skelskey Logo" className="h-16 w-16 mr-4 rounded-full" />
           <h1 className="text-4xl font-bold">Ian Skelskey</h1>
         </div>
         <nav>
-          <a href="https://github.com/IanSkelskey" className="text-lg mr-4">GitHub</a>
-          <a href="https://www.linkedin.com/in/ianskelskey/" className="text-lg">LinkedIn</a>
+          <a href="https://github.com/IanSkelskey" className="text-lg mr-4 hover:text-brand-blue dark:hover:text-brand-red">
+            <FontAwesomeIcon icon={faGithub} size="lg" />
+          </a>
+          <a href="https://www.linkedin.com/in/ianskelskey/" className="text-lg hover:text-brand-blue dark:hover:text-brand-red">
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
         </nav>
       </header>
       <main>
