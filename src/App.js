@@ -6,7 +6,7 @@ function App() {
     <div className="dark:bg-gray-800 bg-white dark:text-white text-black min-h-screen p-8">
       <header className="flex justify-between items-center py-4">
         <div className="flex items-center">
-          <img src="/logo256.png" alt="Ian Skelskey Logo" className="h-16 w-16 mr-4 rounded-full" />
+          <img src="/logo256.png" alt="Ian Skelskey Logo" className="h-24 w-24 mr-4 rounded-full" />
           <h1 className="text-4xl font-bold">Ian Skelskey</h1>
         </div>
         <nav>
@@ -27,7 +27,15 @@ function App() {
         </section>
         <section className="my-12">
           <h2 className="text-3xl font-bold mb-4">Projects</h2>
-          {/* Add project cards or list items here */}
+          <div className="aspect-w-16 aspect-h-9 my-8">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.youtube-nocookie.com/embed/FTwQ3LYJrfM?si=f-V2bQT8vOpM0RQZ"
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </section>
         {/* Add more sections as needed */}
       </main>
