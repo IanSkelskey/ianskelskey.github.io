@@ -65,7 +65,6 @@ function App() {
       {/* Footer */}
       <footer className="flex-none">
         <p>© 2023 Ian Skelskey. All rights reserved.</p>
-        <h2 className="text-3xl font-bold mb-4">Contact</h2>
         <p>If you're interested in working together, please reach out to me at <a href="mailto:ianskelskey@gmail.com" className="text-brand-blue dark:text-brand-red">ianskelskey@gmail.com</a>.</p>
         <a href="https://github.com/IanSkelskey" className="text-lg mr-4 hover:text-brand-blue dark:hover:text-brand-red">
           <FontAwesomeIcon icon={faGithub} size="lg" />
