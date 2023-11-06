@@ -37,13 +37,45 @@ function App() {
             ></iframe>
           </div>
         </section>
-        {/* Add more sections as needed */}
+        {/* Skills Section */}
+        <section className="my-12">
+          <h2 className="text-3xl font-bold mb-4">Skills</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Replace with your actual skills */}
+            <span className="skill-badge">Java</span>
+            <span className="skill-badge">React</span>
+            <span className="skill-badge">Tailwind CSS</span>
+            <span className="skill-badge">Game Development</span>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="my-12">
+          <h2 className="text-3xl font-bold mb-4">Education</h2>
+          <div>
+            <h3 className="text-2xl font-semibold">B.S. in Software Engineering</h3>
+            <p className="italic">Arizona State University - 2023</p>
+            <h3 className='text-2xl font-semibold'>A.S. in Computer Science/Mathematics (Honors)</h3>
+            <p className="italic">Tunxis Community College - 2019</p>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="my-12">
+          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+          <p>If you're interested in working together, please reach out to me at <a href="mailto:ianskelskey@gmail.com" className="text-brand-blue dark:text-brand-red">ianskelskey@gmail.com</a>.</p>
+        </section>
       </main>
+
+      {/* Footer */}
       <footer className="text-center py-8">
         <p>© 2023 Ian Skelskey. All rights reserved.</p>
       </footer>
     </div>
   );
 }
+
+// Utility class for skill badges
+const skillBadge = `inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-200 mr-2 mb-2`;
 
 export default App;
