@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Ian Skelskey's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio web application developed using React and Tailwind CSS. It's designed to showcase software engineering projects and skills, and it's perfect for anyone looking to create a professional online presence.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive design that works on desktop and mobile
+- Dark mode for better readability in different lighting conditions
+- Smooth page transitions for a polished user experience
+- Easy to customize with your own projects and information
 
-### `npm start`
+## Using This Repository as a Template
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To use this repository as a template for your own portfolio:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository to your local machine:
+```git clone https://github.com/IanSkelskey/ianskelskey.github.io.git```
+2. Install the necessary dependencies:
+```npm install```
+3. Start the development server:
+```npm start```
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm test`
+You can then begin to customize the `About` and `Projects` components with your own content.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+This portfolio uses a number of open-source projects and technologies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white) for the UI
+- ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) for styling
+- ![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white) for animations
+- ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-339AF0?style=flat-square&logo=font-awesome&logoColor=white) for icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This portfolio is set up to deploy to GitHub Pages using the `gh-pages` package. To deploy your own version:
 
-### `npm run eject`
+1. Run the build script:
+```npm run build```
+2. Deploy to GitHub Pages:
+```npm run deploy```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Customization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can customize the color scheme, fonts, and other Tailwind CSS settings in the `tailwind.config.js` file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For detailed instructions on how to customize your portfolio, check out the [Tailwind CSS documentation](https://tailwindcss.com/docs).
 
-## Learn More
+## Contributions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you have suggestions for improvements or bug reports, please open an issue or a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2023 Ian Skelskey. All rights reserved.
