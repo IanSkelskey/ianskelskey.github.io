@@ -4,11 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-blue': '#1992d4',
-        'brand-red': '#e3342f',
-      },
-      fontFamily: {
-        sans: ['Helvetica', 'Arial', 'sans-serif'],
+        'theme-black': '#1F2628',
+        'theme-white': '#E6EAEA',
+        'theme-brown': '#38312A',
+        'theme-cream': '#C7ABA4',
+        'theme-blue': '#344F62',
+        'theme-pink': '#805C58'
       },
     },
   },
