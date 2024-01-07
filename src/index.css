@@ -3,3 +3,21 @@
 @tailwind utilities;
 
 @import url('https://use.typekit.net/wkp2qiw.css');
+
+@layer base {
+    body {
+        @apply text-black dark:text-white dark:bg-neutral-800 bg-neutral-200;
+    }
+}
+
+@layer components {
+    .large-card {
+        @apply dark:bg-black bg-white rounded-2xl;
+    }
+}
+
+@layer utilities {
+    .subtle-text {
+        @apply text-neutral-600 dark:text-neutral-300;
+    }
+}

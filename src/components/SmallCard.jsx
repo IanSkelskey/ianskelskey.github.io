@@ -28,12 +28,12 @@ export default function SmallCard({ title, description, icon, accentColor }) {
 
 
     return (
-        <div className="bg-black border-2 rounded-md border-neutral-800 p-6 relative space-y-3">
+        <div className="dark:bg-black bg-white border-2 rounded-md dark:border-neutral-800 border-neutral-300 p-6 relative space-y-3">
             <div className="flex items-center space-x-3">
                 <FontAwesomeIcon icon={icon} className={iconClass} />
-                <h3 className="text-white text-xl">{title}</h3>
+                <h3 className="text-xl">{title}</h3>
             </div>
-            <p className="text-neutral-400">{description}</p>
+            <p className="subtle-text">{description}</p>
         </div>
     );
 }

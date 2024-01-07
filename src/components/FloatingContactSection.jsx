@@ -4,15 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function FloatingContactSection() {
     return (
-        <div className="flex flex-col w-96 h-full space-y-3 bg-black rounded-2xl p-6 items-center relative">
-            <img src="/assets/headshot.png" className="absolute -top-32 rounded-full w-36 h-36" alt="Ian Skelskey's headshot" />
-            <h1 className="text-2xl text-white font-serif font-bold">Ian Skelskey</h1>
-            <p className="text-sm text-neutral-400 bg-neutral-800 p-2 rounded-md">B.S. Software Engineering</p>
+        <div className="large-card flex flex-col w-96 h-full space-y-4 p-6 items-center relative">
+            <div className="absolute -top-32 rounded-full w-36 h-36 dark:bg-[url('assets/headshot.png')] bg-[url('assets/headshot-light.png')] bg-cover" />
+            <h1 className="text-2xl font-serif font-bold">Ian Skelskey</h1>
+            <p className="text-sm subtle-text dark:bg-neutral-800 bg-neutral-200 p-2 rounded-md">B.S. Software Engineering</p>
             <div className="flex items-center space-x-3">
                 <SocialIconLink icon={faGithub} href="https://github.com/ianskelskey" />
                 <SocialIconLink icon={faLinkedin} href="https://www.linkedin.com/in/ianskelskey/" />
             </div>
-            <ul className="flex flex-col space-y-2 divide-y-2 divide-neutral-600 p-3 bg-neutral-800 rounded-md w-full">
+            <ul className="flex flex-col space-y-2 divide-y-2 dark:divide-neutral-600 divide-neutral-400 p-3 dark:bg-neutral-800 bg-neutral-200 rounded-md w-full">
                 <ContactListItem icon={faPhone} tite="Phone" content="(xxx) xxx-xxxx" />
                 <ContactListItem icon={faEnvelope} tite="Email" content="ianskelskey@gmail.com" />
                 <ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" />
@@ -30,7 +30,7 @@ export default function FloatingContactSection() {
 function SocialIconLink({ icon, href }) {
     return (
         <a href={href} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={icon} className="text-neutral-400 text-xl p-2 bg-neutral-800 rounded-md" />
+            <FontAwesomeIcon icon={icon} className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-800 bg-neutral-200 rounded-md" />
         </a>
     );
 }
@@ -38,10 +38,10 @@ function SocialIconLink({ icon, href }) {
 function ContactListItem({ icon, tite, content }) {
     return (
         <li className="flex space-x-3 items-center py-2">
-            <FontAwesomeIcon icon={icon} className="text-neutral-400 text-xl" />
+            <FontAwesomeIcon icon={icon} className="px-2 dark:text-neutral-400 text-neutral-600 text-xl" />
             <div className="flex flex-col">
-                <div className="text-neutral-400 text-sm">{tite}</div>
-                <div className="text-white text-sm">{content}</div>
+                <div className="dark:text-neutral-400 text-neutral-600 text-sm">{tite}</div>
+                <div className="text-sm">{content}</div>
             </div>
         </li>
     );
