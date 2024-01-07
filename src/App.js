@@ -5,10 +5,13 @@ import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="min-h-screen flex w-full items-center p-12 space-x-6">
+    <div className="min-h-screen flex w-full p-12 space-x-6">
       <FloatingContactSection />
       <div className='flex flex-col space-y-6'>
-        <Nav />
+        <div className='flex justify-end'>
+          <Nav />
+        </div>
+
         <ContentCard title="About Me">
           <AboutSection />
         </ContentCard>
