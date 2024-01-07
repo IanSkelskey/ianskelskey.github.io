@@ -1,5 +1,5 @@
 import SmallCard from "./SmallCard";
-import { faLaptopCode, faSchool, faCode, faGamepad, faChalkboardTeacher, faMusic, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faSchool, faGamepad, faChalkboardTeacher, faMusic, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
 
 const thingsIDo = [
     {
