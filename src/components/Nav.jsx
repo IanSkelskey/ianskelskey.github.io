@@ -7,7 +7,7 @@ export default function Nav() {
 
     return (
         <nav className="w-fit">
-            <ul className="flex space-x-2">
+            <ul className="flex sm:space-x-2 space-x-1">
                 <NavItem icon={faUser} title="About" active={active === 0} onClick={() => setActive(0)} />
                 <NavItem icon={faFile} title="Resume" active={active === 1} onClick={() => setActive(1)} />
                 <NavItem icon={faBriefcase} title="Projects" active={active === 2} onClick={() => setActive(2)} />
