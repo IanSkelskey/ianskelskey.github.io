@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function FloatingContactSection() {
     return (
         <div className="large-card md:w-80 w-full flex-col h-full space-y-2 md:space-y-4 p-6 items-center relative md:top-31 flex">
-            <div className="flex flex-col items-center space-y-2 md:space-y-4 relative w-full sm:space-x-0 space-x-6">
+            <div className="flex flex-col sm:flex-row md:flex-col items-center space-y-2 md:space-y-4 relative w-full space-x-0 sm:space-x-6 md:space-x-0">
                 <div className="md:absolute md:-top-40 rounded-full w-40 h-40 dark:bg-[url('assets/headshot.png')] bg-[url('assets/headshot-light.png')] bg-cover" />
-                <div className="flex flex-col items-center space-y-2 md:space-y-4">
+                <div className="flex flex-col items-center sm:items-start md:items-center space-y-2 md:space-y-4">
                     <h1 className="text-2xl font-serif font-bold">Ian Skelskey</h1>
                     <p className="text-sm subtle-text dark:bg-neutral-800 bg-neutral-200 p-2 rounded-md">B.S. Software Engineering</p>
                     <div className="flex items-center space-x-3">
@@ -40,7 +40,7 @@ export default function FloatingContactSection() {
 function SocialIconLink({ icon, href }) {
     return (
         <a href={href} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={icon} className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-800 bg-neutral-200 rounded-md" />
+            <FontAwesomeIcon icon={icon} className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-800 bg-neutral-200 dark:hover:text-white hover:text-black rounded-md" />
         </a>
     );
 }
