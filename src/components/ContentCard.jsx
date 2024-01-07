@@ -4,9 +4,9 @@ export default function ContentCard({ children, title }) {
             {/* Title and horizontal line */}
             <div className="flex items-center space-x-6">
                 {/* Title text with color white and font serif */}
-                <h1 className="text-4xl font-bold text-white font-serif">{title}</h1>
+                <h1 className="text-3xl font-bold text-white font-serif">{title}</h1>
                 {/* Horizontal line with color gradation */}
-                <div className="w-1/4 bg-gradient-to-r from-theme-blue to-theme-blue-light h-1" />
+                <div className="w-1/4 bg-gradient-to-r from-theme-blue to-theme-blue-light h-0.5" />
             </div>
             {/* Content */}
             {children}

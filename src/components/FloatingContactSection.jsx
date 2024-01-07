@@ -9,12 +9,8 @@ export default function FloatingContactSection() {
             <h1 className="text-2xl text-white font-serif font-bold">Ian Skelskey</h1>
             <p className="text-sm text-neutral-400 bg-neutral-800 p-2 rounded-md">B.S. Software Engineering</p>
             <div className="flex items-center space-x-3">
-                <a href="https://github.com/ianskelskey" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faGithub} className="text-neutral-400 text-xl p-2 bg-neutral-800 rounded-md" />
-                </a>
-                <a href="https://www.linkedin.com/in/ianskelskey/" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} className="text-linkedin-blue text-xl bg-neutral-800 p-2 rounded-md" />
-                </a>
+                <SocialIconLink icon={faGithub} href="https://github.com/ianskelskey" />
+                <SocialIconLink icon={faLinkedin} href="https://www.linkedin.com/in/ianskelskey/" />
             </div>
             <ul className="flex flex-col space-y-2 divide-y-2 divide-neutral-600 p-3 bg-neutral-800 rounded-md w-full">
                 <ContactListItem icon={faPhone} tite="Phone" content="(xxx) xxx-xxxx" />
@@ -28,6 +24,14 @@ export default function FloatingContactSection() {
                 </p>
             </button>
         </div>
+    );
+}
+
+function SocialIconLink({ icon, href }) {
+    return (
+        <a href={href} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={icon} className="text-neutral-400 text-xl p-2 bg-neutral-800 rounded-md" />
+        </a>
     );
 }
 
