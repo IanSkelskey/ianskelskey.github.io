@@ -5,9 +5,11 @@ import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="min-h-screen flex w-full md:p-12 p-6 space-x-6 max-w-screen-3xl mx-auto">
-      <FloatingContactSection />
-      <div className='flex flex-col md:pt-20'>
+    <div className="min-h-screen flex w-full md:flex-row flex-col md:p-12 p-6 md:space-x-6 space-y-6 max-w-screen-3xl mx-auto">
+      <div className='h-fit'>
+        <FloatingContactSection />
+      </div>
+      <div className='flex flex-0 flex-col md:pt-14'>
         <div className='flex md:justify-end justify-center'>
           <Nav />
         </div>

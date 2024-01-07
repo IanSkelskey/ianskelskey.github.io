@@ -8,8 +8,13 @@ module.exports = {
         'theme-blue': '#0051dd',
         'linkedin-blue': '#0077b5',
       },
+      screens: {
+        'md': '840px',
+      },
       spacing: {
         '31': '7.75rem',
+        '100': '25rem',
+        '114': '29rem',
       },
       maxWidth: {
         'screen-3xl': '1800px',

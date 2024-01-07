@@ -5,7 +5,7 @@ import { faLaptopCode, faSchool, faCode } from "@fortawesome/free-solid-svg-icon
 export default function AboutSection() {
     return (
         <div className="flex flex-col w-full h-full space-y-6">
-            <p className="subtle-text pr-12 text-justify">
+            <p className="subtle-text text-justify">
                 I'm Ian Skelskey, a passionate full-stack software engineer specializing in front-end technologies. With expertise in React and Tailwind CSS, my focus is on crafting intuitive and effective software solutions. As a Professional Tutor and SI Leader, I've honed my skills in HTML, CSS, JavaScript, and complex networking concepts. Explore my portfolio to see how I blend technical skill with creativity in the dynamic world of software development.
             </p>
             <h2 className="text-2xl">What I do!</h2>
