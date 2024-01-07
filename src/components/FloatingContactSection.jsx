@@ -1,4 +1,4 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope, faLocation, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,20 +13,21 @@ export default function FloatingContactSection() {
                     <div className="flex items-center space-x-3">
                         <SocialIconLink icon={faGithub} href="https://github.com/ianskelskey" />
                         <SocialIconLink icon={faLinkedin} href="https://www.linkedin.com/in/ianskelskey/" />
+                        <SocialIconLink icon={faYoutube} href="https://www.youtube.com/channel/UC3y2Vd1vRFrihBkgaYfJ7xw" />
                     </div>
                 </div>
 
             </div>
             <ul className="grid grid-cols-2 place-items-center md:flex md:items-start items-center md:flex-col md:space-y-2 md:divide-x-0 divide-y-0 md:divide-y-2 dark:divide-neutral-600 divide-neutral-400 p-3 md:dark:bg-neutral-800 md:bg-neutral-200 rounded-md w-full">
                 <div className="md:w-full col-span-2 sm:col-span-1">
-                    <ContactListItem icon={faPhone} tite="Phone" content="(xxx) xxx-xxxx" />
+                    <ContactListItem icon={faPhone} tite="Phone" content={<a href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>} />
                 </div>
                 <div className="md:w-full col-span-2 sm:col-span-1">
-                    <ContactListItem icon={faEnvelope} tite="Email" content="ianskelskey@gmail.com" />
+                    <ContactListItem icon={faEnvelope} tite="Email" content={<a href="mailto:ianskelskey@gmail.com">ianskelskey@gmail.com</a>} />
                 </div>
                 <div className="col-span-2 md:w-full"><ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" /></div>
             </ul>
-            <button className="bg-gradient-to-r from-theme-blue to-theme-blue-light rounded-full text-white px-3 py-2 flex space-x-3">
+            <button className="bg-blue-gradient rounded-full text-white px-3 py-2 flex space-x-3">
                 <FontAwesomeIcon icon={faDownload} className="text-xl" />
                 <p>
                     Download CV
