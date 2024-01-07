@@ -8,6 +8,9 @@ module.exports = {
         'theme-blue': '#0051dd',
         'linkedin-blue': '#0077b5',
       },
+      maxWidth: {
+        'screen-3xl': '1800px',
+      }
     },
   },
   variants: {
