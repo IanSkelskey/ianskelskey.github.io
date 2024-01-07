@@ -4,12 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'theme-black': '#1F2628',
-        'theme-white': '#E6EAEA',
-        'theme-brown': '#38312A',
-        'theme-cream': '#C7ABA4',
-        'theme-blue': '#344F62',
-        'theme-pink': '#805C58'
+        'theme-blue-light': '#009cff',
+        'theme-blue': '#0051dd',
+        'linkedin-blue': '#0077b5',
       },
     },
   },

@@ -17,12 +17,12 @@ export default function AboutSection() {
                     accentColor="blue" />
                 <SmallCard
                     title="Professional Tutor"
-                    description="I am a professional tutor with a passion for teaching and learning. I have been a tutor for over 3 years, and I have experience tutoring a wide variety of subjects, including computer science, mathematics, and physics."
+                    description="I am a professional tutor with a passion for teaching and learning. I have been a tutor for over 10 years, and I have experience tutoring a wide variety of subjects, including computer science, mathematics, and physics."
                     icon={faSchool} 
                     accentColor="yellow" />
                 <SmallCard
                     title="SI Leader"
-                    description="I am a SI leader with a passion for problem solving. I have been a SI leader for over 2 years, and I have experience leading SI sessions for a wide variety of subjects, including computer science, mathematics, and physics."
+                    description="I was an SI Leader for SER321: Distributed Software Systems at Arizona State University. I led weekly study sessions and helped students understand the course material."
                     icon={faSchool}
                     accentColor="green" />
                 <SmallCard

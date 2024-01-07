@@ -6,7 +6,7 @@ export default function ContentCard({ children, title }) {
                 {/* Title text with color white and font serif */}
                 <h1 className="text-4xl font-bold text-white font-serif">{title}</h1>
                 {/* Horizontal line with color gradation */}
-                <div className="w-1/4 bg-gradient-to-r from-[#FA5252] to-[#DD2476] h-1" />
+                <div className="w-1/4 bg-gradient-to-r from-theme-blue to-theme-blue-light h-1" />
             </div>
             {/* Content */}
             {children}
