@@ -20,12 +20,14 @@ export default function FloatingContactSection() {
             </div>
             <ul className="grid grid-cols-2 place-items-center md:flex md:items-start items-center md:flex-col md:space-y-2 md:divide-x-0 divide-y-0 md:divide-y-2 dark:divide-neutral-600 divide-neutral-400 p-3 md:dark:bg-neutral-800 md:bg-neutral-200 rounded-md w-full">
                 <div className="md:w-full col-span-2 sm:col-span-1">
-                    <ContactListItem icon={faPhone} tite="Phone" content={<a href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>} />
+                    <ContactListItem icon={faPhone} tite="Phone" content={<a href="tel:860-830-5595">860-830-5595</a>} />
                 </div>
                 <div className="md:w-full col-span-2 sm:col-span-1">
                     <ContactListItem icon={faEnvelope} tite="Email" content={<a href="mailto:ianskelskey@gmail.com">ianskelskey@gmail.com</a>} />
                 </div>
-                <div className="col-span-2 md:w-full"><ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" /></div>
+                <div className="col-span-2 md:w-full">
+                <ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" />
+                </div>
             </ul>
             <button className="bg-blue-gradient rounded-full text-white px-3 py-2 flex space-x-3">
                 <FontAwesomeIcon icon={faDownload} className="text-xl" />
