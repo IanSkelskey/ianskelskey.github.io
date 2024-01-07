@@ -26,7 +26,7 @@ export default function FloatingContactSection() {
                 </div>
                 <div className="col-span-2 md:w-full"><ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" /></div>
             </ul>
-            <button className="bg-gradient-to-r from-theme-blue to-theme-blue-light rounded-full text-white px-3 py-1 flex space-x-3">
+            <button className="bg-gradient-to-r from-theme-blue to-theme-blue-light rounded-full text-white px-3 py-2 flex space-x-3">
                 <FontAwesomeIcon icon={faDownload} className="text-xl" />
                 <p>
                     Download CV

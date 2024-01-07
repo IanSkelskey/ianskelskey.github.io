@@ -20,14 +20,14 @@ export default function Nav() {
 function NavItem({ icon, title, active, onClick }) {
     let className;
     if (active) {
-        className = "p-3 flex flex-1 rounded-t-md items-center bg-gradient-to-t text-white from-theme-blue to-theme-blue-light space-x-2";
+        className = "sm:p-3 p-2 flex flex-1 rounded-t-md items-center bg-gradient-to-t text-white from-theme-blue to-theme-blue-light space-x-2";
     } else {
-        className = "p-3 flex flex-1 rounded-t-md items-center dark:text-neutral-200 text-neutral-600 dark:bg-neutral-900 bg-neutral-100 space-x-2";
+        className = "sm:p-3 p-2 flex flex-1 rounded-t-md items-center dark:text-neutral-200 text-neutral-600 dark:bg-neutral-900 bg-neutral-100 space-x-2";
     }
     return (
         <li>
             <button onClick={onClick} className={className}>
-                <FontAwesomeIcon className="text-xl" icon={icon} />
+                <FontAwesomeIcon className="sm:text-xl text:lg" icon={icon} />
                 <p className="text-sm">{title}</p>
             </button>
         </li>
