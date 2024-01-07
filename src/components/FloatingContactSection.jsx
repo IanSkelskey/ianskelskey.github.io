@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function FloatingContactSection() {
     return (
         <div className="flex flex-col w-96 h-full space-y-3 bg-black rounded-2xl p-6 items-center relative">
-            <img src="/assets/headshot.png" className="absolute -top-32 rounded-full w-36 h-36" />
+            <img src="/assets/headshot.png" className="absolute -top-32 rounded-full w-36 h-36" alt="Ian Skelskey's headshot" />
             <h1 className="text-2xl text-white font-serif font-bold">Ian Skelskey</h1>
-            <p className="text-sm text-neutral-400 bg-neutral-800 p-2 rounded-md">Software Engineer</p>
+            <p className="text-sm text-neutral-400 bg-neutral-800 p-2 rounded-md">B.S. Software Engineering</p>
             <div className="flex items-center space-x-3">
                 <a href="https://github.com/ianskelskey" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faGithub} className="text-neutral-400 text-xl p-2 bg-neutral-800 rounded-md" />
