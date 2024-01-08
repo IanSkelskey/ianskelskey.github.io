@@ -1,7 +1,8 @@
-import AboutSection from './components/AboutSection';
-import ContentCard from './components/ContentCard';
+import WhatIDoSection from './components/content/WhatIDoSection';
+import BioBlurb from './components/content/BioBlurb';
 import FloatingContactSection from './components/FloatingContactSection';
 import Nav from './components/Nav';
+import SectionTitle from './components/atoms/SectionTitle';
 
 function App() {
   return (
@@ -14,15 +15,21 @@ function App() {
           <div className='flex md:justify-end justify-center'>
             <Nav />
           </div>
-          <ContentCard title="About Me">
-            <AboutSection />
-          </ContentCard>
+          <div className="flex flex-col space-y-6 w-full relative content-card">
+            <SectionTitle
+              title="About"
+              className='pt-6 md:pt-12 px-6 md:px-12' />
+            <BioBlurb
+              className="subtle-text px-6 md:px-12 py-3 md:py-6 space-y-6" />
+            <div className='px-6 md:px-12 pb-6 md:pb-12'><WhatIDoSection /></div>
+
+          </div>
         </div>
       </div>
 
       <footer className="flex justify-center items-center pt-6">
         <p>
-          © 2023 Ian Skelskey. All rights reserved.
+          © 2024 Ian Skelskey. All rights reserved.
         </p>
       </footer>
     </div>
