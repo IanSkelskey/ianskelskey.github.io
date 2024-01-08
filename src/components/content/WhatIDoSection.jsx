@@ -36,7 +36,7 @@ const thingsIDo = [
 
 export default function WhatIDoSection() {
     return (
-        <div className="flex flex-col w-full h-full space-y-6">
+        <section className="flex flex-col w-full h-full space-y-6">
             <h2 className="text-2xl">What I do!</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 gap-6">
                 {thingsIDo.map(thing => (
@@ -49,6 +49,6 @@ export default function WhatIDoSection() {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }

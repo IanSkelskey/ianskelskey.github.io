@@ -18,9 +18,9 @@ function App() {
           <div className="flex flex-col space-y-6 w-full relative content-card">
             <SectionTitle
               title="About"
-              className='pt-6 md:pt-12 px-6 md:px-12' />
+              className='pt-6 md:pt-12 px-6 md:px-12 md:inline hidden' />
             <BioBlurb
-              className="subtle-text px-6 md:px-12 py-3 md:py-6 space-y-6" />
+              className="subtle-text px-6 md:px-12 space-y-6" />
             <div className='px-6 md:px-12 pb-6 md:pb-12'><WhatIDoSection /></div>
 
           </div>

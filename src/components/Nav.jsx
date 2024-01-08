@@ -6,8 +6,8 @@ export default function Nav() {
     const [active, setActive] = useState(0);
 
     return (
-        <nav className="w-fit">
-            <ul className="flex sm:space-x-2 space-x-1">
+        <nav className="xs:w-fit w-full">
+            <ul className="flex xs:space-x-2 space-x-1 xs:justify-center justify-between">
                 <NavItem icon={faUser} title="About" active={active === 0} onClick={() => setActive(0)} />
                 <NavItem icon={faFile} title="Resume" active={active === 1} onClick={() => setActive(1)} />
                 <NavItem icon={faBriefcase} title="Projects" active={active === 2} onClick={() => setActive(2)} />
@@ -27,8 +27,8 @@ function NavItem({ icon, title, active, onClick }) {
     return (
         <li>
             <button onClick={onClick} className={className}>
-                <FontAwesomeIcon className="sm:text-xl text:lg" icon={icon} />
-                <p className="sm:text-sm text-xs">{title}</p>
+                <FontAwesomeIcon className="xs:text-xl text:lg" icon={icon} />
+                <p className="xs:text-sm text-xs">{title}</p>
             </button>
         </li>
     );

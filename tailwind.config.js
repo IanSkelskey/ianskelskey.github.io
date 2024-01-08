@@ -10,6 +10,7 @@ module.exports = {
         'neutral-150': '#e9e9e9',
       },
       screens: {
+        'xs': '540px',
         'md': '840px',
       },
       spacing: {
