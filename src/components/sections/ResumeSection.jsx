@@ -40,7 +40,7 @@ export default function ResumeSection() {
     return (
         <Section title="Resume">
             <ContentRow>
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
                     <SubSection title={"Education"} icon={faGraduationCap}>
                         <div className="flex flex-col space-y-6">
                             {education.map(item => (
@@ -68,13 +68,62 @@ export default function ResumeSection() {
                 </div>
             </ContentRow>
             <ContentRow useAltColor>
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
                     <SubSection title="Languages" icon={faCode} useAltColor>
                         <ProgressMeter title="JavaScript" percent={75} color="orange" />
-                        <ProgressMeter title="Java" percent={80} color={"green"} />
+                        <ProgressMeter title="Java" percent={80} color="green" />
                         <ProgressMeter title="Lua" percent={65} color="purple" />
+                        <ProgressMeter title="Python" percent={60} color="blue" />
                     </SubSection>
                     <SubSection title="Skills" icon={faGears} useAltColor>
+                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                            <div>
+                                <h3 className="text-lg">Front-End</h3>
+                                <ul className="list-disc pl-8 subtle-text">
+                                    <li>
+                                        React
+                                    </li>
+                                    <li>
+                                        Vue
+                                    </li>
+                                    <li>
+                                        Tailwind CSS
+                                    </li>
+                                    <li>
+                                        Framer Motion
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="text-lg">Back-End</h3>
+                                <ul className="list-disc pl-8 subtle-text">
+                                    <li>
+                                        Node.js
+                                    </li>
+                                    <li>
+                                        Express
+                                    </li>
+                                    <li>
+                                        AWS
+                                    </li>
+                                    <li>
+                                        Firebase/Firestore
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="text-lg">Version Control</h3>
+                                <ul className="list-disc pl-8 subtle-text">
+                                    <li>
+                                        Git
+                                    </li>
+                                    <li>
+                                        GitHub
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
                     </SubSection>
                 </div>
             </ContentRow>
