@@ -1,5 +1,4 @@
 import SectionTitle from "../atoms/SectionTitle";
-import SubSection from "./SubSection";
 
 export default function Section({ title, children }) {
     return (
