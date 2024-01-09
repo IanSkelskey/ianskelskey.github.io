@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function FloatingContactSection() {
     return (
-        <div className="large-card md:w-80 w-full flex-col h-full space-y-2 md:space-y-4 p-6 items-center relative md:top-31 flex">
+        <div className="large-card w-full flex-col h-full space-y-2 md:space-y-4 p-6 items-center relative md:top-31 flex">
             <div className="flex flex-col sm:flex-row md:flex-col items-center space-y-2 md:space-y-4 relative w-full space-x-0 sm:space-x-6 md:space-x-0">
                 <div className="md:absolute md:-top-40 rounded-full w-40 h-40 dark:bg-[url('assets/headshot.png')] bg-[url('assets/headshot-light.png')] bg-cover" />
                 <div className="flex flex-col items-center sm:items-start md:items-center space-y-2 md:space-y-4">

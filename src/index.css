@@ -15,8 +15,6 @@
 
 @layer components {
     .large-card {
-        background-color: black;
-        border-radius: 100%;
         @apply dark:bg-black bg-white rounded-2xl;
     }
     .content-card {
@@ -38,4 +36,9 @@
     .bg-blue-gradient {
         @apply bg-gradient-to-t from-theme-blue to-theme-blue-light;
     }
+
+    .text-blue-gradient {
+        @apply bg-blue-gradient bg-clip-text text-transparent;
+    }
+    
 }
