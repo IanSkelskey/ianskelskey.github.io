@@ -1,5 +1,4 @@
 import { faCss3Alt, faGithubAlt, faHtml5, faReact } from "@fortawesome/free-brands-svg-icons";
-import faTailwind from "../../assets/faTailwind.svg"
 import Badge from "../atoms/Badge";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
