@@ -1,5 +1,6 @@
 import { faLaptopCode, faGamepad, faMusic, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
 import IconTitleDescriptionSmallCard from "../layout/IconTitleDescriptionSmallCard";
+import SubSection from "../layout/SubSection";
 
 const thingsIDo = [
     {
@@ -30,8 +31,7 @@ const thingsIDo = [
 
 export default function WhatIDoSection() {
     return (
-        <section className="flex flex-col w-full h-full space-y-6">
-            <h2 className="text-2xl">What I do!</h2>
+        <SubSection title="What I do!">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 gap-6">
                 {thingsIDo.map(thing => (
                     <IconTitleDescriptionSmallCard
@@ -43,6 +43,6 @@ export default function WhatIDoSection() {
                     />
                 ))}
             </div>
-        </section>
+        </SubSection>
     );
 }

@@ -9,7 +9,7 @@ export default function FloatingContactSection() {
                 <div className="md:absolute md:-top-40 rounded-full w-40 h-40 dark:bg-[url('assets/headshot.png')] bg-[url('assets/headshot-light.png')] bg-cover" />
                 <div className="flex flex-col items-center sm:items-start md:items-center space-y-2 md:space-y-4">
                     <h1 className="text-2xl font-serif font-bold">Ian Skelskey</h1>
-                    <p className="text-sm subtle-text dark:bg-neutral-800 bg-neutral-150 p-2 rounded-md">B.S. Software Engineering</p>
+                    <p className="text-sm subtle-text dark:bg-neutral-800 bg-neutral-100 p-2 rounded-md">B.S. Software Engineering</p>
                     <div className="flex items-center space-x-3">
                         <SocialIconLink icon={faGithub} href="https://github.com/ianskelskey" />
                         <SocialIconLink icon={faLinkedin} href="https://www.linkedin.com/in/ianskelskey/" />
@@ -18,7 +18,7 @@ export default function FloatingContactSection() {
                 </div>
 
             </div>
-            <ul className="grid sm:grid-cols-3 place-items-center md:flex md:items-start items-center md:flex-col md:space-y-2 divide-y-0 md:divide-y-2 dark:divide-neutral-700 divide-neutral-300 p-3 md:dark:bg-neutral-800 md:bg-neutral-150 rounded-md w-full">
+            <ul className="grid sm:grid-cols-3 place-items-center md:flex md:items-start items-center md:flex-col md:space-y-2 divide-y-0 md:divide-y-2 dark:divide-neutral-700 divide-neutral-300 p-3 md:dark:bg-neutral-800 md:bg-neutral-100 rounded-md w-full">
                 <div className="md:w-full col-span-1">
                     <ContactListItem icon={faPhone} tite="Phone" content={<a href="tel:860-830-5595">860-830-5595</a>} />
                 </div>
@@ -36,7 +36,7 @@ export default function FloatingContactSection() {
 function SocialIconLink({ icon, href }) {
     return (
         <a href={href} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={icon} className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-800 bg-neutral-150 dark:hover:text-white hover:text-black rounded-md" />
+            <FontAwesomeIcon icon={icon} className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-800 bg-neutral-100 dark:hover:text-white hover:text-black rounded-md" />
         </a>
     );
 }

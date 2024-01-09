@@ -1,7 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ExperienceSmallCard from "../layout/ExperienceSmallCard";
 import Section from "../layout/Section";
-import { faGraduationCap, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faBriefcase, faCode, faGears } from "@fortawesome/free-solid-svg-icons";
+import SubSection from "../layout/SubSection";
+import ProgressMeter from "../atoms/ProgressMeter";
+import ContentRow from "../layout/ContentRow";
 
 const education = [
     {
@@ -10,10 +12,15 @@ const education = [
         location: "Arizona State University"
     },
     {
-        title: "A.S. Mathematics/Computer Science (Honors)",
-        date: "2018",
+        title: "Certificate in Computer Programming",
+        date: "2021",
         location: "CT State Tunxis"
-    }
+    },
+    {
+        title: "A.S. Mathematics/Computer Science (Honors)",
+        date: "2019",
+        location: "CT State Tunxis"
+    },
 ]
 
 const experience = [
@@ -23,8 +30,8 @@ const experience = [
         location: "CT State Tunxis"
     },
     {
-        title: "SI Leader",
-        date: "2023",
+        title: "Supplemental Instruction (SI) Leader",
+        date: "Fall 2023",
         location: "CT State Tunxis"
     }
 ]
@@ -32,36 +39,45 @@ const experience = [
 export default function ResumeSection() {
     return (
         <Section title="Resume">
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                <div className="flex flex-col space-y-6">
-                    <div className="flex items-center text-2xl space-x-3">
-                        <FontAwesomeIcon icon={faGraduationCap} className="fa-blue-gradient" />
-                        <h2>Education</h2>
-                    </div>
+            <ContentRow>
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                    <SubSection title={"Education"} icon={faGraduationCap}>
+                        <div className="flex flex-col space-y-6">
+                            {education.map(item => (
+                                <ExperienceSmallCard
+                                    title={item.title}
+                                    date={item.date}
+                                    location={item.location}
+                                />
+                            ))}
+                        </div>
+                    </SubSection>
 
-                    {education.map(item => (
-                        <ExperienceSmallCard
-                            title={item.title}
-                            date={item.date}
-                            location={item.location}
-                        />
-                    ))}
-                </div>
-                <div className="flex flex-col space-y-6">
-                    <div className="flex items-center text-2xl space-x-3">
-                        <FontAwesomeIcon icon={faBriefcase} />
-                        <h2>Experience</h2>
-                    </div>
+                    <SubSection title={"Experience"} icon={faBriefcase}>
+                        <div className="flex flex-col space-y-6">
+                            {experience.map(item => (
+                                <ExperienceSmallCard
+                                    title={item.title}
+                                    date={item.date}
+                                    location={item.location}
+                                />
+                            ))}
+                        </div>
+                    </SubSection>
 
-                    {experience.map(item => (
-                        <ExperienceSmallCard
-                            title={item.title}
-                            date={item.date}
-                            location={item.location}
-                        />
-                    ))}
                 </div>
-            </div>
+            </ContentRow>
+            <ContentRow useAltColor>
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                    <SubSection title="Languages" icon={faCode} useAltColor>
+                        <ProgressMeter title="JavaScript" percent={75} color="orange" />
+                        <ProgressMeter title="Java" percent={80} color={"green"} />
+                        <ProgressMeter title="Lua" percent={65} color="purple" />
+                    </SubSection>
+                    <SubSection title="Skills" icon={faGears} useAltColor>
+                    </SubSection>
+                </div>
+            </ContentRow>
         </Section>
     );
 }

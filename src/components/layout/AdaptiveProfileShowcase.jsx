@@ -9,16 +9,17 @@ export default function AdaptiveProfileShowcase({ profileSection, navSection, ch
                     <div className='flex md:justify-end justify-center'>
                         {navSection}
                     </div>
-                    <div className="w-full content-card md:p-12 p-6">
+                    <div className="w-full content-card">
                         {children}
+                        <footer className="flex justify-center items-center py-6 dark:bg-neutral-900 bg-neutral-150 rounded-b-2xl">
+                            <p>
+                                © 2024 Ian Skelskey. All rights reserved.
+                            </p>
+                        </footer>
                     </div>
                 </div>
             </div>
-            <footer className="flex justify-center items-center pt-6">
-                <p>
-                    © 2024 Ian Skelskey. All rights reserved.
-                </p>
-            </footer>
+
         </div>
     )
 }
