@@ -18,7 +18,7 @@ export default function FloatingContactSection() {
                 </div>
 
             </div>
-            <ul className="grid sm:grid-cols-3 place-items-center md:flex md:items-start items-center md:flex-col md:space-y-2 md:divide-x-0 divide-y-0 md:divide-y-2 dark:divide-neutral-700 divide-neutral-300 p-3 md:dark:bg-neutral-800 md:bg-neutral-150 rounded-md w-full">
+            <ul className="grid sm:grid-cols-3 place-items-center md:flex md:items-start items-center md:flex-col md:space-y-2 divide-y-0 md:divide-y-2 dark:divide-neutral-700 divide-neutral-300 p-3 md:dark:bg-neutral-800 md:bg-neutral-150 rounded-md w-full">
                 <div className="md:w-full col-span-1">
                     <ContactListItem icon={faPhone} tite="Phone" content={<a href="tel:860-830-5595">860-830-5595</a>} />
                 </div>
@@ -26,7 +26,7 @@ export default function FloatingContactSection() {
                     <ContactListItem icon={faEnvelope} tite="Email" content={<a href="mailto:ianskelskey@gmail.com">ianskelskey@gmail.com</a>} />
                 </div>
                 <div className="col-span-1 md:w-full">
-                <ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" />
+                    <ContactListItem icon={faLocation} tite="Location" content="Connecticut, USA" />
                 </div>
             </ul>
         </div>
@@ -43,7 +43,7 @@ function SocialIconLink({ icon, href }) {
 
 function ContactListItem({ icon, tite, content }) {
     return (
-        <li className="flex md:space-x-3 space-x-2 items-center text-center md:text-left py-1 sm:py-2 w-full">
+        <li className="flex md:space-x-3 items-center text-center md:text-left py-1 sm:py-2 w-full">
             <FontAwesomeIcon icon={icon} className="px-2 dark:text-neutral-400 text-neutral-600 md:text-xl text-md" />
             <div className="flex flex-col w-full">
                 <div className="dark:text-neutral-400 text-neutral-600 text-sm md:inline hidden">{tite}</div>

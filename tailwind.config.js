@@ -11,7 +11,7 @@ module.exports = {
       },
       screens: {
         'xs': '540px',
-        'md': '840px',
+        'md': '860px',
       },
       spacing: {
         '31': '7.75rem',
