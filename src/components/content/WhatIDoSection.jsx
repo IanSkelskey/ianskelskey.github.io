@@ -3,12 +3,6 @@ import IconTitleDescriptionSmallCard from "../layout/IconTitleDescriptionSmallCa
 
 const thingsIDo = [
     {
-        title: "Education",
-        description: "I'm a seasoned tutor with over 10 years of experience at CT State Tunxis, specializing in computer science, design, and mathematics. Passionate about education, I also served as an SI Leader for SER321: Distributed Software Systems at Arizona State University, where I led weekly study sessions to help students grasp complex course material.",
-        icon: faChalkboardTeacher,
-        accentColor: "#0051dd"
-    },
-    {
         title: "Web Design",
         description: "I am a web designer with a passion for designing intuitive and effective web solutions. I specialize in front-end technologies, including React and Tailwind CSS.",
         icon: faLaptopCode,
