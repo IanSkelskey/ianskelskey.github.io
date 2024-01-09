@@ -1,4 +1,4 @@
-import { faLaptopCode, faGamepad, faChalkboardTeacher, faMusic, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faGamepad, faMusic, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
 import IconTitleDescriptionSmallCard from "../layout/IconTitleDescriptionSmallCard";
 
 const thingsIDo = [
