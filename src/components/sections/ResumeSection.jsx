@@ -79,45 +79,45 @@ export default function ResumeSection() {
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                             <div>
                                 <h3 className="text-lg">Front-End</h3>
-                                <ul className="list-disc pl-8 subtle-text">
-                                    <li>
+                                <ul className="subtle-text flex gap-2 flex-wrap items-center">
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         React
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Vue
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Tailwind CSS
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Framer Motion
                                     </li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-lg">Back-End</h3>
-                                <ul className="list-disc pl-8 subtle-text">
-                                    <li>
+                                <ul className="subtle-text flex gap-2 flex-wrap items-center">
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Node.js
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Express
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         AWS
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Firebase/Firestore
                                     </li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-lg">Version Control</h3>
-                                <ul className="list-disc pl-8 subtle-text">
-                                    <li>
+                                <ul className="subtle-text flex gap-2 flex-wrap items-center">
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Git
                                     </li>
-                                    <li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         GitHub
                                     </li>
                                 </ul>

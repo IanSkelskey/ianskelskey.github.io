@@ -9,7 +9,7 @@ export default function FloatingContactSection() {
                 <div className="md:absolute md:-top-40 rounded-full w-40 h-40 dark:bg-[url('assets/headshot.png')] bg-[url('assets/headshot-light.png')] bg-cover" />
                 <div className="flex flex-col items-center sm:items-start md:items-center space-y-2 md:space-y-4">
                     <h1 className="text-2xl font-serif font-bold">Ian Skelskey</h1>
-                    <p className="text-sm subtle-text dark:bg-neutral-800 bg-neutral-100 p-2 rounded-md">B.S. Software Engineering</p>
+                    <p className="text-sm subtle-text dark:bg-neutral-800 bg-neutral-100     p-2 rounded-md">B.S. Software Engineering</p>
                     <div className="flex items-center space-x-3">
                         <SocialIconLink icon={faGithub} href="https://github.com/ianskelskey" />
                         <SocialIconLink icon={faLinkedin} href="https://www.linkedin.com/in/ianskelskey/" />
