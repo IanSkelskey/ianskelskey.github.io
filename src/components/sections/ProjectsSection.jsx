@@ -1,7 +1,7 @@
 import ContentRow from "../layout/ContentRow";
 import Section from "../layout/Section";
 import SubSection from "../layout/SubSection";
-import ThumbnailTitleSubtitleSmallCard from "../layout/ThumbnailTitleSubtitleSmalLCard";
+import ThumbnailTitleSubtitleSmallCard from "../atoms/ThumbnailTitleSubtitleSmallCard";
 
 export default function ProjectsSection() {
     return (

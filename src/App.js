@@ -1,12 +1,13 @@
 import { faAddressBook, faBriefcase, faFile, faUser } from '@fortawesome/free-solid-svg-icons';
-import FloatingContactSection from './components/FloatingContactSection';
 import AdaptiveProfileShowcase from './components/layout/AdaptiveProfileShowcase';
 import AboutSection from './components/sections/AboutSection';
-import TabNavigation from './components/layout/TabNavigation';
 import { useState } from 'react';
 import ProjectsSection from './components/sections/ProjectsSection';
 import ResumeSection from './components/sections/ResumeSection';
 import ContactSection from './components/sections/ContactSection';
+import TabButtonBar from './components/atoms/TabButtonBar';
+import Footer from './components/content/Footer';
+import ContactCard from './components/sections/ContactCard';
 
 const pages = [
   {
@@ -37,13 +38,14 @@ function App() {
 
   return (
     <AdaptiveProfileShowcase
-      profileSection={<FloatingContactSection />}
+      profileSection={<ContactCard />}
       navSection={
-        <TabNavigation
+        <TabButtonBar
           tabs={pages}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab} />
       }
+      footer={<Footer />}
     >
       {pages[selectedTab].content}
     </AdaptiveProfileShowcase>

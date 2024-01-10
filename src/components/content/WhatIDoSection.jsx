@@ -1,5 +1,5 @@
 import { faLaptopCode, faGamepad, faMusic, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
-import IconTitleDescriptionSmallCard from "../layout/IconTitleDescriptionSmallCard";
+import IconTitleDescriptionSmallCard from "../atoms/IconTitleDescriptionSmallCard";
 import SubSection from "../layout/SubSection";
 
 const thingsIDo = [

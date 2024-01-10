@@ -1,9 +1,11 @@
-import ExperienceSmallCard from "../layout/ExperienceSmallCard";
+import ExperienceSmallCard from "../atoms/ExperienceSmallCard";
 import Section from "../layout/Section";
 import { faGraduationCap, faBriefcase, faCode, faGears } from "@fortawesome/free-solid-svg-icons";
 import SubSection from "../layout/SubSection";
 import ProgressMeter from "../atoms/ProgressMeter";
 import ContentRow from "../layout/ContentRow";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAws, faGit, faGitAlt, faGithubAlt, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
 
 const education = [
     {
@@ -81,10 +83,10 @@ export default function ResumeSection() {
                                 <h3 className="text-lg">Front-End</h3>
                                 <ul className="subtle-text flex gap-2 flex-wrap items-center">
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                                        React
+                                        <FontAwesomeIcon icon={faReact} /> React
                                     </li>
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                                        Vue
+                                        <FontAwesomeIcon icon={faVuejs} /> Vue
                                     </li>
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Tailwind CSS
@@ -98,16 +100,19 @@ export default function ResumeSection() {
                                 <h3 className="text-lg">Back-End</h3>
                                 <ul className="subtle-text flex gap-2 flex-wrap items-center">
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                                        Node.js
+                                        <FontAwesomeIcon icon={faNodeJs} /> Node.js
                                     </li>
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Express
                                     </li>
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                                        AWS
+                                        <FontAwesomeIcon icon={faAws} /> AWS
                                     </li>
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                                         Firebase/Firestore
+                                    </li>
+                                    <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
+                                        SQL
                                     </li>
                                 </ul>
                             </div>
@@ -115,10 +120,10 @@ export default function ResumeSection() {
                                 <h3 className="text-lg">Version Control</h3>
                                 <ul className="subtle-text flex gap-2 flex-wrap items-center">
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                                        Git
+                                        <FontAwesomeIcon icon={faGitAlt} /> Git
                                     </li>
                                     <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                                        GitHub
+                                        <FontAwesomeIcon icon={faGithubAlt} /> GitHub
                                     </li>
                                 </ul>
                             </div>

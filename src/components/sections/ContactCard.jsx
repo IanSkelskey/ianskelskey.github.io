@@ -2,7 +2,7 @@ import { faGithub, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-ic
 import { faPhone, faEnvelope, faLocation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function FloatingContactSection() {
+export default function ContactCard() {
     return (
         <div className="large-card w-full flex-col h-full space-y-2 md:space-y-4 p-6 items-center relative md:top-31 flex">
             <div className="flex flex-col sm:flex-row md:flex-col items-center space-y-2 md:space-y-4 relative w-full space-x-0 sm:space-x-6 md:space-x-0">
