@@ -10,7 +10,8 @@ export default function ContactSection() {
                 <SubSection>
                 <div className="w-full flex justify-center">
                     <SmallCard>
-                        <form className="flex flex-col space-y-3">
+                        <form className="flex flex-col space-y-3 p-6">
+                            <h3 className="text-xl">Get in touch</h3>
                             <p className="subtle-text">I'm always open to discussing product design work or partnership opportunities.</p>
                             <div className="flex flex-col space-y-3">
                                 <label className="subtle-text text-xs" htmlFor="name">Name</label>
