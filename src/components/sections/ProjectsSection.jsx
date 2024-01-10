@@ -31,6 +31,11 @@ export default function ProjectsSection() {
                                 I'm actively maintaining the Field Day Project, a comprehensive data collection and management tool geared towards aiding wildlife researchers and conservationists in Arizona. Dr. Heather Bateman, a biology professor at ASU, sponsors the project. The tech stack for this project includes JavaScript, React, Tailwind, Firestore, Firebase, and Framer Motion.
                             </p>
                         </ThumbnailTitleSubtitleSmallCard>
+                        <ThumbnailTitleSubtitleSmallCard title="GD50: Intro to Game Development" subtitle="edX/Harvard Course" thumbnail="/assets/gd50.png">
+                            <p>
+                                I'm currently working on the GD50: Intro to Game Development course through edX and Harvard. I'm learning how to use Lua and Love2D to create games. I'm also learning about game design and development.
+                            </p>
+                        </ThumbnailTitleSubtitleSmallCard>
                     </div>
                 </SubSection>
             </ContentRow>

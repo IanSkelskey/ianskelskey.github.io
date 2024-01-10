@@ -19,7 +19,7 @@ export default function AdaptiveProfileShowcase({ profileSection, navSection, ch
                             <p>
                                 Made with:
                             </p>
-                            <div className="flex flex-row space-x-4 gap-2 flex-wrap justify-center">
+                            <div className="flex flex-row gap-4 flex-wrap justify-center">
                                 <Badge icon={faReact} text="React" bgColorClass="bg-blue-600 rounded-md w-fit" />
                                 <Badge icon={faHtml5} text="HTML5" bgColorClass="bg-red-600 rounded-md w-fit" />
                                 <Badge icon={faCss3Alt} text="CSS3" bgColorClass="bg-green-600 rounded-md w-fit" />
