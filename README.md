@@ -25,18 +25,14 @@ Customize content and styles to match your brand and showcase your work.
 
 ## Tech Stack
 
-- ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
-  - for dynamic UI development
-- ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
-  - for utility-first styling and layout design.
-- ![Form Spree](https://img.shields.io/badge/-Form_Spree-2EA2EF?logo=formspree&logoColor=white)
-  - for contact form integration
-- ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-339AF0?logo=font-awesome&logoColor=white) 
-  - for scalable iconography.
-- ![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?logo=prettier&logoColor=white)
-  - for code formatting.
-- ![GitHub Pages](https://img.shields.io/badge/-Github_Pages-2088FF?logo=github&logoColor=white)
-  - for hosting.
+| Tech | Description |
+| --- | --- |
+| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white) | Front-end JavaScript library for building user interfaces. |
+| ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white) | Utility-first CSS framework for rapid UI development. |
+| ![Form Spree](https://img.shields.io/badge/-Form_Spree-2EA2EF?logo=formspree&logoColor=white) | Form backend service for contact form integration. |
+| ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-339AF0?logo=font-awesome&logoColor=white) | Scalable vector icons for modern web applications. |
+| ![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?logo=prettier&logoColor=white) | Opinionated code formatter for consistent code style. |
+| ![GitHub Pages](https://img.shields.io/badge/-Github_Pages-2088FF?logo=githubpages&logoColor=white) | Static site hosting for deployment. |
 
 ## Deployment
 
@@ -59,4 +55,4 @@ If you have suggestions for improvements or bug reports, please open an issue or
 
 ---
 
-© 2023 Ian Skelskey. All rights reserved.
+© 2024 Ian Skelskey. All rights reserved.
