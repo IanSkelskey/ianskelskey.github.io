@@ -1,6 +1,6 @@
 export default function AdaptiveProfileShowcase({ profileSection, navSection, footer, children }) {
     return (
-        <div className="min-h-screen flex flex-col w-full md:p-12 p-6 max-w-screen-3xl mx-auto">
+        <div className="min-h-screen flex flex-col w-full md:p-12 p-0 max-w-screen-3xl mx-auto">
             <div className='flex md:flex-row flex-col w-full md:space-x-6 space-y-6'>
                 <div className='h-fit md:w-96 w-full'>
                     {profileSection}
@@ -11,7 +11,7 @@ export default function AdaptiveProfileShowcase({ profileSection, navSection, fo
                     </div>
                     <div className="w-full content-card">
                         {children}
-                        <footer className="py-6 dark:bg-neutral-900 bg-neutral-150 rounded-b-2xl">
+                        <footer className="py-6 dark:bg-neutral-900 bg-neutral-150 md:rounded-b-2xl">
                             {footer}
                         </footer>
                     </div>

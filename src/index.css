@@ -15,10 +15,10 @@
 
 @layer components {
     .large-card {
-        @apply dark:bg-black bg-white rounded-2xl;
+        @apply dark:bg-black bg-white md:rounded-2xl;
     }
     .content-card {
-        @apply bg-white dark:bg-black rounded-b-2xl md:rounded-t-none md:rounded-tl-2xl rounded-t-none xs:rounded-t-2xl;
+        @apply bg-white dark:bg-black rounded-b-2xl md:rounded-t-none md:rounded-tl-2xl rounded-none;
     }
     .active-tab {
         @apply sm:p-3 p-2 rounded-t-md text-white bg-blue-gradient;
