@@ -11,7 +11,7 @@ Welcome to my portfolio, a showcase of my skills and projects as a full-stack so
 
 ## Getting Started
 
-To set up your own portfolio with this template:
+To set up your portfolio with this template:
 
 1. Clone the repository:
    `git clone https://github.com/IanSkelskey/ianskelskey.github.io.git`
