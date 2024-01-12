@@ -1,39 +1,43 @@
-import { faAddressBook, faBriefcase, faFile, faUser } from '@fortawesome/free-solid-svg-icons';
-import AdaptiveProfileShowcase from './components/layout/AdaptiveProfileShowcase';
-import AboutSection from './components/sections/AboutSection';
-import { useState } from 'react';
-import ProjectsSection from './components/sections/ProjectsSection';
-import ResumeSection from './components/sections/ResumeSection';
-import ContactSection from './components/sections/ContactSection';
-import TabButtonBar from './components/atoms/TabButtonBar';
-import Footer from './components/content/Footer';
-import ContactCard from './components/sections/ContactCard';
+import {
+  faAddressBook,
+  faBriefcase,
+  faFile,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import AdaptiveProfileShowcase from "./components/layout/AdaptiveProfileShowcase";
+import AboutSection from "./components/sections/AboutSection";
+import { useState } from "react";
+import ProjectsSection from "./components/sections/ProjectsSection";
+import ResumeSection from "./components/sections/ResumeSection";
+import ContactSection from "./components/sections/ContactSection";
+import TabButtonBar from "./components/atoms/TabButtonBar";
+import Footer from "./components/content/Footer";
+import ContactCard from "./components/sections/ContactCard";
 
 const pages = [
   {
     title: "About",
     icon: faUser,
-    content: <AboutSection />
+    content: <AboutSection />,
   },
   {
     title: "Resume",
     icon: faFile,
-    content: <ResumeSection />
+    content: <ResumeSection />,
   },
   {
     title: "Projects",
     icon: faBriefcase,
-    content: <ProjectsSection />
+    content: <ProjectsSection />,
   },
   {
     title: "Contact",
     icon: faAddressBook,
-    content: <ContactSection />
-  }
+    content: <ContactSection />,
+  },
 ];
 
 function App() {
-
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
@@ -43,7 +47,8 @@ function App() {
         <TabButtonBar
           tabs={pages}
           selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab} />
+          setSelectedTab={setSelectedTab}
+        />
       }
       footer={<Footer />}
     >

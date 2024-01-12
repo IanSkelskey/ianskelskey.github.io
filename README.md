@@ -1,46 +1,51 @@
 # Ian Skelskey's Portfolio
 
-This is a personal portfolio web application developed using React and Tailwind CSS. It's designed to showcase software engineering projects and skills, and it's perfect for anyone looking to create a professional online presence.
+Welcome to my portfolio, a showcase of my skills and projects as a full-stack software engineer. This web application is crafted with React and Tailwind CSS, featuring a clean, responsive, and accessible design.
 
 ## Features
 
-- Responsive design that works on desktop and mobile
-- Dark mode for better readability in different lighting conditions
-- Smooth page transitions for a polished user experience
-- Easy to customize with your own projects and information
+- Responsive layout with adaptive components for optimal viewing on any device.
+- Dark mode toggle for accessibility and user preference.
+- Contact form integrated with Formspree for direct messaging.
+- Projects section with detailed cards for each portfolio item.
 
-## Using This Repository as a Template
+## Getting Started
 
-To use this repository as a template for your own portfolio:
+To set up your own portfolio with this template:
 
-1. Clone the repository to your local machine:
-```git clone https://github.com/IanSkelskey/ianskelskey.github.io.git```
+1. Clone the repository:
+   `git clone https://github.com/IanSkelskey/ianskelskey.github.io.git`
 2. Install the necessary dependencies:
-```npm install```
+   `npm install`
 3. Start the development server:
-```npm start```
+   `npm start`
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can then begin to customize the `About` and `Projects` components with your own content.
+Customize content and styles to match your brand and showcase your work.
 
 ## Tech Stack
 
-This portfolio uses a number of open-source projects and technologies:
-
-- ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white) for the UI
-- ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) for styling
-- ![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white) for animations
-- ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-339AF0?style=flat-square&logo=font-awesome&logoColor=white) for icons
+- ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)
+  - for dynamic UI development
+- ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+  - for utility-first styling and layout design.
+- ![Form Spree](https://img.shields.io/badge/-Form_Spree-2EA2EF?logo=formspree&logoColor=white)
+  - for contact form integration
+- ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-339AF0?logo=font-awesome&logoColor=white) 
+  - for scalable iconography.
+- ![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?logo=prettier&logoColor=white)
+  - for code formatting.
+- ![GitHub Pages](https://img.shields.io/badge/-Github_Pages-2088FF?logo=github&logoColor=white)
+  - for hosting.
 
 ## Deployment
 
-This portfolio is set up to deploy to GitHub Pages using the `gh-pages` package. To deploy your own version:
+This portfolio is set up to deploy to GitHub Pages using the `gh-pages` package. To deploy your version:
 
 1. Run the build script:
-```npm run build```
+   `npm run build`
 2. Deploy to GitHub Pages:
-```npm run deploy```
-
+   `npm run deploy`
 
 ## Customization
 

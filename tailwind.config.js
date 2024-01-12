@@ -1,32 +1,30 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'media',
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
-        'theme-blue-light': '#009cff',
-        'theme-blue': '#0051dd',
-        'linkedin-blue': '#0077b5',
-        'neutral-150': '#e9e9e9',
+        "theme-blue-light": "#009cff",
+        "theme-blue": "#0051dd",
+        "linkedin-blue": "#0077b5",
+        "neutral-150": "#e9e9e9",
       },
       screens: {
-        'xs': '540px',
-        'md': '860px',
+        xs: "540px",
+        md: "860px",
       },
       spacing: {
-        '31': '7.75rem',
-        '100': '25rem',
-        '114': '29rem',
+        31: "7.75rem",
+        100: "25rem",
+        114: "29rem",
       },
       maxWidth: {
-        'screen-3xl': '1800px',
-      }
+        "screen-3xl": "1800px",
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

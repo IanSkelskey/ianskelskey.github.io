@@ -2,43 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://use.typekit.net/wkp2qiw.css');
+@import url("https://use.typekit.net/wkp2qiw.css");
 
 @layer base {
-    a {
-        @apply text-theme-blue dark:text-theme-blue-light underline hover:text-theme-blue-light dark:hover:text-blue-400;
-    }
-    body {
-        @apply text-black dark:text-white dark:bg-neutral-800 bg-neutral-100;
-    }
+  a {
+    @apply text-theme-blue dark:text-theme-blue-light underline hover:text-theme-blue-light dark:hover:text-blue-400;
+  }
+  body {
+    @apply text-black dark:text-white dark:bg-neutral-800 bg-neutral-100;
+  }
 }
 
 @layer components {
-    .large-card {
-        @apply dark:bg-black bg-white md:rounded-2xl;
-    }
-    .content-card {
-        @apply bg-white dark:bg-black rounded-b-2xl md:rounded-t-none md:rounded-tl-2xl rounded-none;
-    }
-    .active-tab {
-        @apply sm:p-3 p-2 rounded-t-md text-white bg-blue-gradient;
-    }
-    .inactive-tab {
-        @apply sm:p-3 p-2 rounded-t-md text-neutral-600 dark:text-neutral-200 bg-neutral-200 dark:bg-neutral-900;
-    }
-    
+  .large-card {
+    @apply dark:bg-black bg-white md:rounded-2xl;
+  }
+  .content-card {
+    @apply bg-white dark:bg-black rounded-b-2xl md:rounded-t-none md:rounded-tl-2xl rounded-none;
+  }
+  .active-tab {
+    @apply sm:p-3 p-2 rounded-t-md text-white bg-blue-gradient;
+  }
+  .inactive-tab {
+    @apply sm:p-3 p-2 rounded-t-md text-neutral-600 dark:text-neutral-200 bg-neutral-200 dark:bg-neutral-900;
+  }
 }
 
 @layer utilities {
-    .subtle-text {
-        @apply text-neutral-600 dark:text-neutral-300;
-    }
-    .bg-blue-gradient {
-        @apply bg-gradient-to-t from-theme-blue to-theme-blue-light;
-    }
+  .subtle-text {
+    @apply text-neutral-600 dark:text-neutral-300;
+  }
+  .bg-blue-gradient {
+    @apply bg-gradient-to-t from-theme-blue to-theme-blue-light;
+  }
 
-    .text-blue-gradient {
-        @apply bg-blue-gradient bg-clip-text text-transparent;
-    }
-    
+  .text-blue-gradient {
+    @apply bg-blue-gradient bg-clip-text text-transparent;
+  }
 }
