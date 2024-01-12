@@ -13,6 +13,7 @@ export default function Footer() {
                 <Badge icon={faHtml5} text="HTML5" bgColorClass="bg-red-600 rounded-md w-fit" />
                 <Badge icon={faCss3Alt} text="CSS3" bgColorClass="bg-green-600 rounded-md w-fit" />
                 <Badge icon={faSquareFontAwesome} text="FontAwesome" bgColorClass="bg-yellow-600 rounded-md w-fit" />
+                <Badge text="Formspree" bgColorClass="bg-orange-600 rounded-md w-fit" />
                 <Badge icon={faGithubAlt} text="Github Pages" bgColorClass="bg-gray-600 rounded-md w-fit" />
                 <Badge icon={faHeart} text="Love" bgColorClass="bg-pink-500 rounded-md w-fit" />
             </div>
