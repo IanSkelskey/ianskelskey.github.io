@@ -2,7 +2,7 @@ import TabButton from "./TabButton";
 
 export default function TabButtonBar({ tabs, selectedTab, setSelectedTab }) {
   return (
-    <nav className="sm:w-fit w-full">
+    <nav className="w-fit">
       <ul className="flex space-x-1 justify-around">
         {tabs.map((tab, index) => (
           <TabButton

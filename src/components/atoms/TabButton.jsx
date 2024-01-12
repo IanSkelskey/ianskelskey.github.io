@@ -6,8 +6,8 @@ export default function TabButton({ icon, text, active, onClick }) {
     <li>
       <button onClick={onClick} className={className}>
         <div className="flex flex-1 items-center space-x-2">
-          <FontAwesomeIcon className="xs:text-xl text:lg" icon={icon} />
-          <p className="xs:text-sm text-xs">{text}</p>
+          <FontAwesomeIcon className="text-xl" icon={icon} />
+          <p className="text-sm">{text}</p>
         </div>
       </button>
     </li>
