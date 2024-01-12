@@ -18,10 +18,10 @@
     @apply dark:bg-black bg-white md:rounded-2xl;
   }
   .active-tab {
-    @apply p-3 rounded-t-md text-white bg-blue-gradient;
+    @apply p-2 sm:p-3 rounded-t-md text-white bg-blue-gradient;
   }
   .inactive-tab {
-    @apply p-3 rounded-t-md text-neutral-600 dark:text-neutral-200 bg-neutral-200 dark:bg-neutral-900;
+    @apply p-2 sm:p-3 rounded-t-md text-neutral-600 dark:text-neutral-200 bg-neutral-200 dark:bg-neutral-900;
   }
 }
 
