@@ -5,7 +5,7 @@ import SubSection from "../layout/SubSection";
 import ProgressMeter from "../atoms/ProgressMeter";
 import ContentRow from "../layout/ContentRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAws, faGit, faGitAlt, faGithubAlt, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
+import { faAws, faGitAlt, faGithubAlt, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
 
 const education = [
     {
