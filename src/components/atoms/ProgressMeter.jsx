@@ -1,8 +1,15 @@
-export default function ProgressMeter({ title, percent, color }) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export default function ProgressMeter({ title, faIcon, siIcon, percent, color }) {
   return (
     <div className="flex flex-col space-y-2 w-full">
       <div className="flex flex-row justify-between">
-        <p className="subtle-text">{title}</p>
+        <div className="flex space-x-2 items-center">
+          {faIcon && <FontAwesomeIcon className="text-xl" icon={faIcon} />}
+          {siIcon && siIcon}
+          <p className="subtle-text">{title}</p>
+        </div>
+
         <p className="subtle-text">{percent + "%"}</p>
       </div>
       {/** Progress bar based on percent and color */}

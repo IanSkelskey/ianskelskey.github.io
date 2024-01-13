@@ -14,10 +14,14 @@ import {
   faAws,
   faGitAlt,
   faGithubAlt,
+  faJava,
+  faJs,
   faNodeJs,
+  faPython,
   faReact,
   faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
+import { SiTailwindcss, SiFirebase, SiMysql, SiLua } from "@icons-pack/react-simple-icons";
 
 const education = [
   {
@@ -83,10 +87,10 @@ export default function ResumeSection() {
       <ContentRow useAltColor>
         <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
           <SubSection title="Languages" icon={faCode} useAltColor>
-            <ProgressMeter title="JavaScript" percent={75} color="orange" />
-            <ProgressMeter title="Java" percent={80} color="green" />
-            <ProgressMeter title="Lua" percent={65} color="purple" />
-            <ProgressMeter title="Python" percent={60} color="blue" />
+            <ProgressMeter title="JavaScript" faIcon={faJs} percent={75} color="orange" />
+            <ProgressMeter title="Java" faIcon={faJava} percent={80} color="green" />
+            <ProgressMeter title="Lua" siIcon={<SiLua size={20} />} percent={65} color="purple" />
+            <ProgressMeter title="Python" faIcon={faPython} percent={60} color="blue" />
           </SubSection>
           <SubSection title="Skills" icon={faGears} useAltColor>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -99,8 +103,8 @@ export default function ResumeSection() {
                   <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                     <FontAwesomeIcon icon={faVuejs} /> Vue
                   </li>
-                  <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                    Tailwind CSS
+                  <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md flex items-center space">
+                    <SiTailwindcss size={16} /> Tailwind CSS
                   </li>
                   <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                     Framer Motion
@@ -119,11 +123,11 @@ export default function ResumeSection() {
                   <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
                     <FontAwesomeIcon icon={faAws} /> AWS
                   </li>
-                  <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                    Firebase/Firestore
+                  <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md flex items-center">
+                    <SiFirebase size={16} /> Firebase/Firestore
                   </li>
-                  <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md">
-                    SQL
+                  <li className="px-2 py-1 dark:bg-neutral-800 bg-neutral-300 w-fit rounded-md flex items-center">
+                    <SiMysql size={16} /> MySQL
                   </li>
                 </ul>
               </div>
