@@ -11,10 +11,7 @@ export default function ContactForm() {
   const [messageError, setMessageError] = useState("");
 
   /**Use Effect hook to update form when errors change */
-  useEffect(() => {
-    
-  }, [emailError, nameError, messageError]);
-
+  useEffect(() => {}, [emailError, nameError, messageError]);
 
   function validateName(value) {
     if (value.length <= 0) {
@@ -84,7 +81,10 @@ export default function ContactForm() {
     <SubSection title="Get in touch">
       <div className="w-full flex justify-center">
         <SmallCard>
-          <form className="flex flex-col space-y-3 p-6" onSubmit={handleFormSubmit}>
+          <form
+            className="flex flex-col space-y-3 p-6"
+            onSubmit={handleFormSubmit}
+          >
             <p className="subtle-text py-6">
               I'm always open to discussing product design work or partnership
               opportunities.
@@ -128,7 +128,7 @@ export default function ContactForm() {
               />
             </div>
             <div className="flex flex-col space-y-3">
-            <div className="flex justify-between">
+              <div className="flex justify-between">
                 <label className="subtle-text text-xs" htmlFor="name">
                   Message
                 </label>

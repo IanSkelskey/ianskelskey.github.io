@@ -7,7 +7,7 @@ export default function TabButtonBar({ tabs, selectedTab, setSelectedTab }) {
         {tabs.map((tab, index) => (
           <TabButton
             key={index}
-            icon={tab.icon}
+            iconName={tab.icon}
             text={tab.title}
             active={selectedTab === index}
             onClick={() => setSelectedTab(index)}

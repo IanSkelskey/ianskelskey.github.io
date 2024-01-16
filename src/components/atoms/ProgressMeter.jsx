@@ -1,12 +1,16 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from "./Icon";
 
-export default function ProgressMeter({ title, faIcon, siIcon, percent, color }) {
+export default function ProgressMeter({
+  title,
+  iconName,
+  percent,
+  color,
+}) {
   return (
     <div className="flex flex-col space-y-2 w-full">
       <div className="flex flex-row justify-between">
         <div className="flex space-x-2 items-center">
-          {faIcon && <FontAwesomeIcon className="text-xl" icon={faIcon} />}
-          {siIcon && siIcon}
+          <Icon name={iconName} className="text-xl" />
           <p className="subtle-text">{title}</p>
         </div>
 
