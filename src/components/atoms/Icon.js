@@ -1,60 +1,7 @@
-import { faAws, faGitAlt, faGithub, faGithubAlt, faJava, faJs, faLinkedin, faNodeJs, faPython, faReact, faSquareFontAwesome, faVuejs, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faAddressBook, faBriefcase, faCode, faEnvelope, faFile, faGamepad, faGears, faGraduationCap, faHeart, faLaptopCode, faLocation, faMusic, faPaintBrush, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SiFirebase, SiLua, SiPrettier, SiSimpleicons, SiTailwindcss } from "@icons-pack/react-simple-icons";
+import { faIcons, siIcons, svgIcons } from "../data/icons";
 import { createElement } from "react";
-import FormspreeSvg from "../../assets/FormspreeSvg";
-import FramerMotionSvg from "../../assets/FramerMotionSvg";
-import ExpressSvg from "../../assets/ExpressSvg";
-import MySqlSvg from "../../assets/MySqlSvg";
 
-const faIcons = {
-  user: faUser,
-  resume: faFile,
-  projects: faBriefcase,
-  contact: faAddressBook,
-  phone: faPhone,
-  email: faEnvelope,
-  location: faLocation,
-  github: faGithub,
-  linkedin: faLinkedin,
-  youtube: faYoutube,
-  laptopCode: faLaptopCode,
-  gameController: faGamepad,
-  musicNote: faMusic,
-  paintBrush: faPaintBrush,
-  react: faReact,
-  fontAwesome: faSquareFontAwesome,
-  githubPages: faGithubAlt,
-  heart: faHeart,
-  javascript: faJs,
-  java: faJava,
-  code: faCode,
-  python: faPython,
-  vue: faVuejs,
-  aws: faAws,
-  git: faGitAlt,
-  node: faNodeJs,
-  gradCap: faGraduationCap,
-  gears: faGears,
-};
-
-const siIcons = {
-  tailwind: SiTailwindcss,
-  prettier: SiPrettier,
-  simpleIcons: SiSimpleicons,
-  lua: SiLua,
-  firebase: SiFirebase,
-};
-
-const svgIcons = {
-  formspree: FormspreeSvg,
-  framerMotion: FramerMotionSvg,
-  express: ExpressSvg,
-  mySql: MySqlSvg,
-};
-
-// Function to translate Tailwind text size classes into numeric values
 const getTextSizeInPx = (className) => {
   const sizeMap = {
     'text-xs': 12,
@@ -72,10 +19,9 @@ const getTextSizeInPx = (className) => {
     'text-9xl': 128,
   };
   const foundClass = className.split(' ').find(cn => sizeMap[cn]);
-  return sizeMap[foundClass] || sizeMap['text-base']; // Default size
+  return sizeMap[foundClass] || sizeMap['text-base']; 
 };
 
-// A single icon component for FontAwesome Icons, Simple Icons, and SVG Icons
 const Icon = ({ name, className = '' }) => {
   const isFontAwesome = faIcons.hasOwnProperty(name);
   const isSimpleIcon = siIcons.hasOwnProperty(name);
@@ -85,7 +31,7 @@ const Icon = ({ name, className = '' }) => {
 
   if (!icon) {
     console.error(`Icon "${name}" does not exist.`);
-    return null; // Or some default icon
+    return null;
   }
   const size = getTextSizeInPx(className);
   if (isFontAwesome) {
