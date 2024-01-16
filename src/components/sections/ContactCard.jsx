@@ -32,7 +32,7 @@ function SocialIconLink({ icon, href }) {
     <a href={href} target="_blank" rel="noreferrer">
       <Icon
         name={icon}
-        className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-800 bg-neutral-100 dark:hover:text-white hover:text-black rounded-md"
+        className="dark:text-neutral-400 text-neutral-600 text-xl p-2 dark:bg-neutral-900 bg-neutral-200 dark:hover:text-white hover:text-black rounded-md"
       />
     </a>
   );
@@ -58,3 +58,5 @@ function ContactListItem({ icon, tite, link, content }) {
     </li>
   );
 }
+
+export { SocialIconLink, ContactListItem };

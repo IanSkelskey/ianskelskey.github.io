@@ -57,6 +57,27 @@ const skills = [
                 icon: "github"
             }
         ]
+    },
+    {
+        category: "Design",
+        skills: [
+            {
+                name: "Figma",
+                icon: "figma"
+            },
+            {
+                name: "Adobe XD",
+                icon: "xd"
+            },
+            {
+                name: "Adobe Illustrator",
+                icon: "illustrator"
+            },
+            {
+                name: "Adobe Photoshop",
+                icon: "photoshop"
+            }
+        ]
     }
 ];
 

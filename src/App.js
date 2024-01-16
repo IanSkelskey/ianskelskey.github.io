@@ -7,6 +7,7 @@ import ContactSection from "./components/sections/ContactSection";
 import TabButtonBar from "./components/atoms/TabButtonBar";
 import Footer from "./components/content/Footer";
 import ContactCard from "./components/sections/ContactCard";
+import Icon from "./components/atoms/Icon";
 
 const pages = [
   {
@@ -38,11 +39,17 @@ function App() {
     <AdaptiveProfileShowcase
       profileSection={<ContactCard />}
       navSection={
-        <TabButtonBar
-          tabs={pages}
-          selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
-        />
+        <div className="w-full flex flex-col items-center">
+          <nav className="flex flex-col justify-center w-full text-xl space-y-4">
+            {pages.map((page, index) => (
+              <button className="flex flex-row space-x-4 w-2/3 justify-center items-center" key={index} onClick={() => setSelectedTab(index)}>
+                <Icon name={page.icon} className="text-xl w-8" />
+                <p className="subtle-text">{page.title}</p>
+              </button>
+            ))}
+          </nav>
+        </div>
+
       }
       footer={<Footer />}
     >
