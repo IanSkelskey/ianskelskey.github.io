@@ -1,9 +1,3 @@
-import {
-  faAddressBook,
-  faBriefcase,
-  faFile,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
 import AdaptiveProfileShowcase from "./components/layout/AdaptiveProfileShowcase";
 import AboutSection from "./components/sections/AboutSection";
 import { useState } from "react";
@@ -17,22 +11,22 @@ import ContactCard from "./components/sections/ContactCard";
 const pages = [
   {
     title: "About",
-    icon: faUser,
+    icon: "user",
     content: <AboutSection />,
   },
   {
     title: "Resume",
-    icon: faFile,
+    icon: "resume",
     content: <ResumeSection />,
   },
   {
     title: "Projects",
-    icon: faBriefcase,
+    icon: "projects",
     content: <ProjectsSection />,
   },
   {
     title: "Contact",
-    icon: faAddressBook,
+    icon: "contact",
     content: <ContactSection />,
   },
 ];

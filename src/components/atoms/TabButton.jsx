@@ -1,12 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from "./Icon";
 
-export default function TabButton({ icon, text, active, onClick }) {
+export default function TabButton({ iconName, text, active, onClick }) {
   let className = active ? "active-tab" : "inactive-tab";
   return (
     <li>
       <button onClick={onClick} className={className}>
         <div className="flex flex-1 items-center space-x-2">
-          <FontAwesomeIcon className="text-xl" icon={icon} />
+          <Icon className="text-xl" name={iconName} />
           <p className="text-sm">{text}</p>
         </div>
       </button>
