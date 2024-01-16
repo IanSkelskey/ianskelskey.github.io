@@ -3,10 +3,10 @@ import { faAddressBook, faBriefcase, faCode, faEnvelope, faFile, faGamepad, faGe
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SiFirebase, SiLua, SiPrettier, SiSimpleicons, SiTailwindcss } from "@icons-pack/react-simple-icons";
 import { createElement } from "react";
-import formspree from "../../assets/formspree.svg"
-import framerMotion from "../../assets/framerMotion.svg"
-import express from "../../assets/express.svg"
-import mySql from "../../assets/mySql.svg"
+import FormspreeSvg from "../../assets/FormspreeSvg";
+import FramerMotionSvg from "../../assets/FramerMotionSvg";
+import ExpressSvg from "../../assets/ExpressSvg";
+import MySqlSvg from "../../assets/MySqlSvg";
 
 const faIcons = {
   user: faUser,
@@ -48,10 +48,10 @@ const siIcons = {
 };
 
 const svgIcons = {
-  formspree: formspree,
-  framerMotion: framerMotion,
-  express: express,
-  mySql: mySql,
+  formspree: FormspreeSvg,
+  framerMotion: FramerMotionSvg,
+  express: ExpressSvg,
+  mySql: MySqlSvg,
 };
 
 // Function to translate Tailwind text size classes into numeric values
@@ -94,7 +94,8 @@ const Icon = ({ name, className = '' }) => {
 
     return createElement(icon, { size, className });
   } else if (isSVG) {
-    return <img src={icon} className={className} style={{ width: size, height: size }} alt={name} />;
+    const SvgIcon = icon;
+    return <SvgIcon className={className} style={{ width: size, height: size }} alt={name} />;
   } else {
     console.error(`Icon "${name}" is not supported`);
     return null;

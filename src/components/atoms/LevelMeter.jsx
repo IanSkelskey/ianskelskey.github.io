@@ -25,8 +25,8 @@ export default function LevelMeter({
 
     return (
         <div className="flex flex-col space-y-3 min-w-full">
-            <div className="flex space-x-2 items-center justify-start">
-                <Icon name={iconName} className="text-xl" />
+            <div className="flex space-x-2 items-center justify-between">
+                <Icon name={iconName} className="text-3xl" />
                 <p className="subtle-text">{title}</p>
             </div>
             <div className="flex flex-row space-x-1 justify-between">
