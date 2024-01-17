@@ -3,7 +3,7 @@ import { useState } from "react";
 import Footer from "./components/content/Footer";
 import Profile from "./components/content/Profile";
 import NavList from "./components/atoms/NavList";
-import pages from "./components/data/pages";
+import pages from "./data/pages";
 
 function App() {
   const [selectedPageIndex, setSelectedPageIndex] = useState(0);

@@ -38,25 +38,61 @@ Customize content and styles to match your brand and showcase your work.
 | ![GitHub Pages](https://img.shields.io/badge/-Github_Pages-2088FF?logo=githubpages&logoColor=white)  | Static site hosting for deployment.                        |
 | ![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?logo=framer&logoColor=white)     | Production-ready motion library for React.                 |
 
+## Project File Structure
+
+The project follows a standard React application structure, organized for clarity and easy navigation. Here's a brief overview of the main directories and files:
+
+```bash
+.
+├── .github/                  # GitHub workflows for CI/CD
+│   ├── workflows/            # Workflows for CI/CD
+├── public/                   # Static files such as index.html, favicon.ico
+├── src/                      # Source files
+│   ├── components/           # Reusable components
+│       ├── atoms/            # Atom components (e.g., Badge, Icon)
+│       ├── layout/           # Layout components (e.g., Header, Footer)
+│   ├── pages/                # Page components (e.g., Home, About, Resume)
+│       ├── projects/         # Project page components
+│   ├── assets/               # Static assets (e.g., images, fonts)
+│   ├── App.js                # Main application component
+│   ├── App.test.js           # Application test file
+│   ├── index.css             # Global CSS styles
+│   ├── index.js              # Application entry point
+├── .gitignore                # Files and directories to ignore in Git
+├── .prettierrc               # Configuration for Prettier code formatter
+├── .prettierignore           # Files and directories to ignore in Prettier
+├── postcss.config.js         # Configuration for PostCSS
+├── tailwind.config.js        # Configuration for Tailwind CSS
+├── node_modules/             # Installed project dependencies
+├── package.json              # Project metadata and dependencies
+├── package-lock.json         # Exact dependency tree for the project
+└── README.md                 # Project documentation
+```
+
+`.github/workflows/`
+
+GitHub workflows for CI/CD. The `deploy.yml` workflow is configured to deploy the application to GitHub Pages on every push to the `main` branch. The `prettier.yml` workflow is configured to run Prettier on every push to the `main` or `dev` branches.
+
+`public/`
+
+Static files such as `index.html`, `favicon.ico`, and `robots.txt`.
+
+`src/`
+
+Source files for the application. The `components/` directory contains reusable components, and the `pages/` directory contains page components. The `assets/` directory contains static assets such as images and fonts. The `App.js` file is the main application component, and the `index.js` file is the application entry point.
 
 ## Deployment
 
-This portfolio is set up to deploy to GitHub Pages using the `gh-pages` package. To deploy your version:
+This portfolio is set up to deploy to GitHub Pages using the `gh-pages` package. There are workflows configured to automatically deploy the application to GitHub Pages on every push to the `main` branch. You can also deploy the application manually by running the following commands in your terminal:
 
 1. Run the build script:
    `npm run build`
 2. Deploy to GitHub Pages:
    `npm run deploy`
 
-## Customization
-
-You can customize the color scheme, fonts, and other Tailwind CSS settings in the `tailwind.config.js` file.
-
-For detailed instructions on how to customize your portfolio, check out the [Tailwind CSS documentation](https://tailwindcss.com/docs).
-
 ## Contributions
 
-If you have suggestions for improvements or bug reports, please open an issue or a pull request.
+I would like for other developers to review my code. I want to get better at writing clean, readable code, and I want to learn more about React. If you have any suggestions for improvements, please feel free to open an issue. I would also appreciate any feedback on my design and code.
 
 ---
 

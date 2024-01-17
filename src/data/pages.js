@@ -1,7 +1,7 @@
-import AboutPage from "../../pages/AboutPage";
-import ContactPage from "../../pages/ContactPage";
-import ProjectsPage from "../../pages/ProjectsPage";
-import ResumePage from "../../pages/ResumePage";
+import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import ProjectsPage from "../pages/ProjectsPage";
+import ResumePage from "../pages/ResumePage";
 
 const pages = [
     {
