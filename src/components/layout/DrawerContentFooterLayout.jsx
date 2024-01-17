@@ -13,7 +13,9 @@ export default function DrawerContentFooterLayout({
         {/** Main content */}
         <div className="flex flex-col w-full dark:bg-black bg-white min-h-screen max-h-screen md:overflow-y-auto">
           {/** Content */}
-          <div className="w-full flex-grow">{content}</div>
+          <div className="w-full flex-grow">
+            {content}
+          </div>
           {/** Footer */}
           <footer className="p-6 dark:bg-neutral-900 bg-neutral-150">
             {footer}

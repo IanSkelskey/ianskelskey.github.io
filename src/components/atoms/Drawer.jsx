@@ -19,11 +19,11 @@ export default function Drawer({ title, children }) {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-    
+
     return (
         <div className="flex flex-col space-y-6 items-center w-full md:w-96 md:max-h-screen md:overflow-y-auto">
             <div className="flex flex-row justify-between items-center w-full relative h-11 dark:bg-neutral-800 bg-neutral-100">
-                {drawerButtonVisible && <IconButton icon="hamburger" className="absolute top-0 left-2" onClick={() => toggleDrawer()} />}
+                {drawerButtonVisible && <IconButton icon="hamburger" className="absolute top-0 left-2 z-50" onClick={() => toggleDrawer()} />}
                 <h1 className="text-xl font-serif font-bold w-full text-center">{title}</h1>
             </div>
 
