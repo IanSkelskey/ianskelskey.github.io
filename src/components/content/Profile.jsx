@@ -1,5 +1,5 @@
 import IconLink from "../atoms/IconLink";
-import personalData from "../data/personalData";
+import personalData from "../../data/personalData";
 
 export default function Profile() {
   return (

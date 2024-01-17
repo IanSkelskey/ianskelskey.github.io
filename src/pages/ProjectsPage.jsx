@@ -1,9 +1,9 @@
-import ContentRow from "../layout/ContentRow";
-import Section from "../layout/Section";
-import SubSection from "../layout/SubSection";
-import ThumbnailTitleSubtitleSmallCard from "../atoms/ThumbnailTitleSubtitleSmallCard";
+import ContentRow from "../components/layout/ContentRow";
+import Section from "../components/layout/Section";
+import SubSection from "../components/layout/SubSection";
+import ThumbnailTitleSubtitleSmallCard from "../components/atoms/ThumbnailTitleSubtitleSmallCard";
 
-export default function ProjectsSection() {
+export default function ProjectsPage() {
   return (
     <Section title="Projects">
       <ContentRow>

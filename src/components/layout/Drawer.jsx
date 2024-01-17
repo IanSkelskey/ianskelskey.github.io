@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import IconButton from "./IconButton";
+import IconButton from "../atoms/IconButton";
 import { useEffect, useState } from "react";
 
 export default function Drawer({ title, children }) {

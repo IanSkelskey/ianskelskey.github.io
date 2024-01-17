@@ -1,17 +1,23 @@
-import ExperienceSmallCard from "../atoms/ExperienceSmallCard";
-import Section from "../layout/Section";
-import SubSection from "../layout/SubSection";
-import ContentRow from "../layout/ContentRow";
+import ExperienceSmallCard from "../components/atoms/ExperienceSmallCard";
+import Section from "../components/layout/Section";
+import SubSection from "../components/layout/SubSection";
+import ContentRow from "../components/layout/ContentRow";
 import education from "../data/education";
 import experience from "../data/experience";
-import LevelMeter from "../atoms/LevelMeter";
+import LevelMeter from "../components/atoms/LevelMeter";
 import languages from "../data/languages";
 import skills from "../data/skills";
-import Badge from "../atoms/Badge";
+import Badge from "../components/atoms/Badge";
 
-export default function ResumeSection() {
+export default function ResumePage() {
   return (
     <Section title="Resume">
+      <ContentRow>
+        <p>Aspiring software engineer that recently completed a B BS in Softftware Engineering
+          at Arizona State University, with a strong foundatition in React and a passion
+          for interactition design and accessibility. Eager to contribute to a company whose products and mission align with my values and skillset.</p>
+      </ContentRow>
+
       <ContentRow>
         <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
           <SubSection title={"Education"} iconName="gradCap">
@@ -47,11 +53,11 @@ export default function ResumeSection() {
           <SubSection title="Languages" iconName="code" useAltColor>
             {languages.map((item) => (
               <LevelMeter
-                key={item.title}
-                title={item.title}
-                iconName={item.iconName}
+                key={item.name}
+                title={item.name}
+                iconName={item.icon}
                 level={item.level}
-                color={item.accentColor}
+                color={item.color}
               />
             ))}
           </SubSection>

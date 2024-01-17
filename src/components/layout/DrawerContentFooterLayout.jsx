@@ -1,4 +1,4 @@
-import Drawer from "../atoms/Drawer";
+import Drawer from "./Drawer";
 
 export default function DrawerContentFooterLayout({
   drawerContents,

@@ -44,9 +44,9 @@ import {
   SiSimpleicons,
   SiTailwindcss,
 } from "@icons-pack/react-simple-icons";
-import FormspreeSvg from "../../assets/FormspreeSvg";
-import ExpressSvg from "../../assets/ExpressSvg";
-import MySqlSvg from "../../assets/MySqlSvg";
+import FormspreeSvg from "../assets/FormspreeSvg";
+import ExpressSvg from "../assets/ExpressSvg";
+import MySqlSvg from "../assets/MySqlSvg";
 
 const faIcons = {
   user: faUser,

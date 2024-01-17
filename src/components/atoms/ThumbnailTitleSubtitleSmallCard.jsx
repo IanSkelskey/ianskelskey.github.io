@@ -9,7 +9,7 @@ export default function ThumbnailTitleSubtitleSmallCard({
   return (
     <SmallCard>
       <div className="flex flex-col">
-        <img src={thumbnail} alt={title} className="w-full rounded-t-md" />
+        <img src={thumbnail} alt={title} className="w-full" />
         <div className="flex flex-col space-y-3 p-3">
           <div className="flex items-center space-x-3">
             <div className="flex flex-col space-y-1">

@@ -6,5 +6,7 @@ export default function ContentRow({ children, useAltColor }) {
   } else {
     className = "min-w-full dark:bg-neutral-950 bg-white px-6 md:px-12 pb-9 pt-3";
   }
-  return <div className={className}>{children}</div>;
+  return (
+    <div className={className}>{children}</div>
+  );
 }

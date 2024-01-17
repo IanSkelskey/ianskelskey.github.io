@@ -1,5 +1,5 @@
 import Badge from "../atoms/Badge";
-import techStack from "../data/techStack";
+import techStack from "../../data/techStack";
 
 export default function Footer() {
   return (
@@ -9,9 +9,9 @@ export default function Footer() {
         {techStack.map((tech) => (
           <Badge
             key={tech.title}
-            iconName={tech.iconName}
-            text={tech.title}
-            color={tech.accentColor}
+            iconName={tech.icon}
+            text={tech.name}
+            color={tech.color}
           />
         ))}
       </div>

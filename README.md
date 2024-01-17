@@ -1,6 +1,6 @@
 # Ian Skelskey's Portfolio
 
-Welcome to my portfolio, a showcase of my skills and projects as a full-stack software engineer. This web application is crafted with React and Tailwind CSS, featuring a clean, responsive, and accessible design.
+Welcome to my portfolio, a showcase of my skills and projects as a full-stack software engineer. This web application is crafted with React Tailwind CSS, and Framer Motion featuring a clean, responsive, and accessible design.
 
 ## Features
 
@@ -9,6 +9,7 @@ Welcome to my portfolio, a showcase of my skills and projects as a full-stack so
 - Contact form integrated with Formspree for direct messaging.
 - Projects section with detailed cards for each portfolio item.
 - Animated drawer for mobile navigation.
+- GitHub workflows to automate deployment and code formatting.
 
 ## Getting Started
 

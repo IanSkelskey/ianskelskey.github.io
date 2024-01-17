@@ -1,7 +1,7 @@
 import DrawerContentFooterLayout from "./components/layout/DrawerContentFooterLayout";
 import { useState } from "react";
 import Footer from "./components/content/Footer";
-import Profile from "./components/sections/Profile";
+import Profile from "./components/content/Profile";
 import NavList from "./components/atoms/NavList";
 import pages from "./components/data/pages";
 
