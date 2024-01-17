@@ -1,8 +1,49 @@
-import { faAws, faGitAlt, faGithub, faGithubAlt, faJava, faJs, faLinkedin, faNodeJs, faPython, faReact, faSquareFontAwesome, faVuejs, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faAddressBook, faBriefcase, faCode, faEnvelope, faFile, faGamepad, faGears, faGraduationCap, faHeart, faLaptopCode, faLocation, faMusic, faPaintBrush, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
-import { SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiFigma, SiFirebase, SiLua, SiPrettier, SiSimpleicons, SiTailwindcss } from "@icons-pack/react-simple-icons";
+import {
+  faAws,
+  faGitAlt,
+  faGithub,
+  faGithubAlt,
+  faJava,
+  faJs,
+  faLinkedin,
+  faNodeJs,
+  faPython,
+  faReact,
+  faSquareFontAwesome,
+  faVuejs,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faAddressBook,
+  faBars,
+  faBriefcase,
+  faCode,
+  faEnvelope,
+  faFile,
+  faGamepad,
+  faGears,
+  faGraduationCap,
+  faHeart,
+  faLaptopCode,
+  faLocation,
+  faMusic,
+  faPaintBrush,
+  faPhone,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAdobexd,
+  SiFigma,
+  SiFirebase,
+  SiFramer,
+  SiLua,
+  SiPrettier,
+  SiSimpleicons,
+  SiTailwindcss,
+} from "@icons-pack/react-simple-icons";
 import FormspreeSvg from "../../assets/FormspreeSvg";
-import FramerMotionSvg from "../../assets/FramerMotionSvg";
 import ExpressSvg from "../../assets/ExpressSvg";
 import MySqlSvg from "../../assets/MySqlSvg";
 
@@ -35,6 +76,7 @@ const faIcons = {
   node: faNodeJs,
   gradCap: faGraduationCap,
   gears: faGears,
+  hamburger: faBars
 };
 
 const siIcons = {
@@ -46,12 +88,12 @@ const siIcons = {
   figma: SiFigma,
   xd: SiAdobexd,
   illustrator: SiAdobeillustrator,
-  photoshop: SiAdobephotoshop
+  photoshop: SiAdobephotoshop,
+  framerMotion: SiFramer,
 };
 
 const svgIcons = {
   formspree: FormspreeSvg,
-  framerMotion: FramerMotionSvg,
   express: ExpressSvg,
   mySql: MySqlSvg,
 };

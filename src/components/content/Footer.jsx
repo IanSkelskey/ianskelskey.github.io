@@ -14,7 +14,6 @@ export default function Footer() {
             color={tech.accentColor}
           />
         ))}
-
       </div>
       <p>© 2024 Ian Skelskey. All rights reserved.</p>
     </section>

@@ -14,15 +14,7 @@
 }
 
 @layer components {
-  .large-card {
-    @apply dark:bg-black bg-white md:rounded-2xl;
-  }
-  .active-tab {
-    @apply p-2 sm:p-3 rounded-t-md text-white bg-blue-gradient;
-  }
-  .inactive-tab {
-    @apply p-2 sm:p-3 rounded-t-md text-neutral-600 dark:text-neutral-200 bg-neutral-200 dark:bg-neutral-900;
-  }
+
 }
 
 @layer utilities {
@@ -31,9 +23,5 @@
   }
   .bg-blue-gradient {
     @apply bg-gradient-to-t from-theme-blue to-theme-blue-light;
-  }
-
-  .text-blue-gradient {
-    @apply bg-blue-gradient bg-clip-text text-transparent;
   }
 }

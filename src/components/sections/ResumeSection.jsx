@@ -20,8 +20,8 @@ export default function ResumeSection() {
                 <ExperienceSmallCard
                   key={item.title}
                   title={item.title}
-                  date={item.date}
                   location={item.location}
+                  date={item.date}
                 />
               ))}
             </div>
@@ -33,8 +33,9 @@ export default function ResumeSection() {
                 <ExperienceSmallCard
                   key={item.title}
                   title={item.title}
-                  date={item.date}
                   location={item.location}
+                  employer={item.employer}
+                  date={item.date}
                 />
               ))}
             </div>

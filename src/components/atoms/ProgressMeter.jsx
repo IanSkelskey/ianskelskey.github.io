@@ -1,11 +1,6 @@
 import Icon from "./Icon";
 
-export default function ProgressMeter({
-  title,
-  iconName,
-  percent,
-  color,
-}) {
+export default function ProgressMeter({ title, iconName, percent, color }) {
   return (
     <div className="flex flex-col space-y-2 w-full">
       <div className="flex flex-row justify-between">
@@ -16,7 +11,6 @@ export default function ProgressMeter({
 
         <p className="subtle-text">{percent + "%"}</p>
       </div>
-      {/** Progress bar based on percent and color */}
       <div className="w-full h-2 dark:bg-neutral-400 bg-neutral-300 rounded-md">
         <div
           style={{ width: percent + "%", backgroundColor: color }}

@@ -11,10 +11,10 @@ export default function IconTitleDescriptionSmallCard({
     <SmallCard>
       <div className="flex flex-col space-y-3 p-3">
         <div className="flex items-center space-x-3 text-2xl">
-        <div style={{color: accentColor}} >
-          <Icon name={iconName} />
-        </div>
-          
+          <div style={{ color: accentColor }}>
+            <Icon name={iconName} />
+          </div>
+
           <h3 className="text-xl">{title}</h3>
         </div>
         <p className="subtle-text">{description}</p>

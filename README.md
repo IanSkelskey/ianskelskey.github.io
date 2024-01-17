@@ -8,6 +8,7 @@ Welcome to my portfolio, a showcase of my skills and projects as a full-stack so
 - Dark mode toggle for accessibility and user preference.
 - Contact form integrated with Formspree for direct messaging.
 - Projects section with detailed cards for each portfolio item.
+- Animated drawer for mobile navigation.
 
 ## Getting Started
 
@@ -31,8 +32,11 @@ Customize content and styles to match your brand and showcase your work.
 | ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white) | Utility-first CSS framework for rapid UI development.      |
 | ![Form Spree](https://img.shields.io/badge/-Form_Spree-2EA2EF?logo=formspree&logoColor=white)        | Form backend service for contact form integration.         |
 | ![Font Awesome](https://img.shields.io/badge/-Font_Awesome-339AF0?logo=font-awesome&logoColor=white) | Scalable vector icons for modern web applications.         |
+| ![Simple Icons](https://img.shields.io/badge/-Simple_Icons-111111?logo=simpleicons&logoColor=white)  | Free SVG icons for popular brands.                         |
 | ![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?logo=prettier&logoColor=white)             | Opinionated code formatter for consistent code style.      |
 | ![GitHub Pages](https://img.shields.io/badge/-Github_Pages-2088FF?logo=githubpages&logoColor=white)  | Static site hosting for deployment.                        |
+| ![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?logo=framer&logoColor=white)     | Production-ready motion library for React.                 |
+
 
 ## Deployment
 
