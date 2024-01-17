@@ -2,8 +2,9 @@ import SmallCard from "./SmallCard";
 
 export default function ExperienceSmallCard({
   children,
-  title,
   date,
+  title,
+  employer,
   location,
 }) {
   return (
@@ -13,7 +14,7 @@ export default function ExperienceSmallCard({
         <div className="flex items-center space-x-3 text-2xl">
           <h3 className="text-xl">{title}</h3>
         </div>
-        <p className="subtle-text">{location}</p>
+        <p className="subtle-text">{(employer) ? employer + " - " : null}{location}</p>
         {children}
       </div>
     </SmallCard>
