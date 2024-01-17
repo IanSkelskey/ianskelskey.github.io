@@ -66,16 +66,8 @@ const skills = [
         icon: "figma",
       },
       {
-        name: "Adobe XD",
-        icon: "xd",
-      },
-      {
-        name: "Adobe Illustrator",
-        icon: "illustrator",
-      },
-      {
-        name: "Adobe Photoshop",
-        icon: "photoshop",
+        name: "Adobe Creative Cloud",
+        icon: "creativeCloud",
       },
     ],
   },

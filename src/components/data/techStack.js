@@ -7,22 +7,22 @@ const techStack = [
   {
     title: "Tailwind CSS",
     iconName: "tailwind",
-    accentColor: "#38B2AC",
+    accentColor: "#06B6D4",
   },
   {
     title: "FontAwesome",
     iconName: "fontAwesome",
-    accentColor: "#47A248",
+    accentColor: "#528DD7",
   },
   {
     title: "Simple Icons",
     iconName: "simpleIcons",
-    accentColor: "#000000",
+    accentColor: "#111111",
   },
   {
     title: "Formspree",
     iconName: "formspree",
-    accentColor: "#222222",
+    accentColor: "#E5122E",
   },
   {
     title: "Prettier",
@@ -32,18 +32,18 @@ const techStack = [
   {
     title: "Github Pages",
     iconName: "github",
-    accentColor: "#24292E",
+    accentColor: "#222222",
   },
 
   {
     title: "Framer Motion",
     iconName: "framerMotion",
-    accentColor: "#121212",
+    accentColor: "#0055FF",
   },
   {
     title: "Love",
     iconName: "heart",
-    accentColor: "#FF0000",
+    accentColor: "#D7707E",
   },
 ];
 

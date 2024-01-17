@@ -32,6 +32,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {
+  SiAdobecreativecloud,
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiAdobexd,
@@ -76,7 +77,7 @@ const faIcons = {
   node: faNodeJs,
   gradCap: faGraduationCap,
   gears: faGears,
-  hamburger: faBars
+  hamburger: faBars,
 };
 
 const siIcons = {
@@ -86,6 +87,7 @@ const siIcons = {
   lua: SiLua,
   firebase: SiFirebase,
   figma: SiFigma,
+  creativeCloud: SiAdobecreativecloud,
   xd: SiAdobexd,
   illustrator: SiAdobeillustrator,
   photoshop: SiAdobephotoshop,
