@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIcons, siIcons, svgIcons } from "../data/icons";
+import { faIcons, siIcons, svgIcons } from "../data/icons";
 import { createElement } from "react";
 
-// Function to translate Tailwind text size classes into numeric values
 const getTextSizeInPx = (className) => {
   const sizeMap = {
     "text-xs": 12,
@@ -23,8 +23,7 @@ const getTextSizeInPx = (className) => {
   return sizeMap[foundClass] || sizeMap["text-base"]; // Default size
 };
 
-// A single icon component for FontAwesome Icons, Simple Icons, and SVG Icons
-const Icon = ({ name, className = "" }) => {
+const Icon = ({ name, className = '' }) => {
   const isFontAwesome = faIcons.hasOwnProperty(name);
   const isSimpleIcon = siIcons.hasOwnProperty(name);
   const isSVG = svgIcons.hasOwnProperty(name);
@@ -39,7 +38,7 @@ const Icon = ({ name, className = "" }) => {
 
   if (!icon) {
     console.error(`Icon "${name}" does not exist.`);
-    return null; // Or some default icon
+    return null;
   }
   const size = getTextSizeInPx(className);
   if (isFontAwesome) {
