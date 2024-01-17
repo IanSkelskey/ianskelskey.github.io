@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIcons, siIcons, svgIcons } from "../data/icons";
-import { faIcons, siIcons, svgIcons } from "../data/icons";
 import { createElement } from "react";
 
 const getTextSizeInPx = (className) => {
