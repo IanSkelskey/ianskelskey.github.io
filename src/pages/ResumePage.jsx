@@ -9,12 +9,12 @@ import Badge from "../components/atoms/Badge";
 import Page from "../components/layout/Page";
 
 export default function ResumePage() {
-  const blurb = "Aspiring software engineer that recently completed a B BS in Softftware Engineering at Arizona State University, with a strong foundatition in React and a passion for interactition design and accessibility. Eager to contribute to a company whose products and mission align with my values and skillset."
+  const blurb = "Aspiring software engineer that recently completed a BS in Softftware Engineering at Arizona State University, with a strong foundation in React and a passion for interaction design and accessibility. Eager to contribute to a company whose products and mission align with my values and skillset."
   return (
     <Page title="Resume" blurb={blurb}>
-      <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <SubSection title={"Education"} iconName="gradCap">
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col gap-4">
             {education.map((item) => (
               <ExperienceSmallCard
                 key={item.title}
@@ -27,7 +27,7 @@ export default function ResumePage() {
         </SubSection>
 
         <SubSection title={"Experience"} iconName="projects">
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col gap-4">
             {experience.map((item) => (
               <ExperienceSmallCard
                 key={item.title}
@@ -40,7 +40,7 @@ export default function ResumePage() {
           </div>
         </SubSection>
       </div>
-      <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <SubSection title="Languages" iconName="code" useAltColor>
           {languages.map((item) => (
             <LevelMeter
