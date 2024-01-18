@@ -13,6 +13,7 @@ export default function Drawer({ title, children }) {
                 setDrawerOpen(true);
                 setDrawerButtonVisible(false);
             } else {
+                setDrawerOpen(false);
                 setDrawerButtonVisible(true);
             }
         };
