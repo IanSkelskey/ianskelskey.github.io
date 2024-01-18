@@ -1,17 +1,17 @@
-import BioBlurb from "../components/content/BioBlurb";
+import FeaturedProjectsSection from "../components/content/FeaturedProjectsSection";
+import TechStackSection from "../components/content/TechStackSection";
+import WelcomeSection from "../components/content/WelcomeSection";
 import WhatIDoSection from "../components/content/WhatIDoSection";
-import ContentRow from "../components/layout/ContentRow";
-import Section from "../components/layout/Section";
+import Page from "../components/layout/Page";
 
 export default function AboutPage() {
   return (
-    <Section title="About Me">
-      <ContentRow>
-        <BioBlurb />
-      </ContentRow>
-      <ContentRow>
-        <WhatIDoSection />
-      </ContentRow>
-    </Section>
+    <Page>
+      <WelcomeSection />
+      <WhatIDoSection />
+      <FeaturedProjectsSection />
+      <TechStackSection />
+    </Page>
+
   );
 }

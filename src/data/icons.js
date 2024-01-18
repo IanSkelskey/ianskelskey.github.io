@@ -23,11 +23,15 @@ import {
   faGamepad,
   faGears,
   faGraduationCap,
+  faGuitar,
   faHeart,
   faLaptopCode,
+  faLayerGroup,
   faLocation,
+  faMicrophone,
   faMusic,
   faPaintBrush,
+  faPaperPlane,
   faPhone,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -36,6 +40,7 @@ import {
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiAdobexd,
+  SiAseprite,
   SiFigma,
   SiFirebase,
   SiFramer,
@@ -78,6 +83,10 @@ const faIcons = {
   gradCap: faGraduationCap,
   gears: faGears,
   hamburger: faBars,
+  guitar: faGuitar,
+  microphone: faMicrophone,
+  stack: faLayerGroup,
+  paperPlane: faPaperPlane,
 };
 
 const siIcons = {
@@ -92,6 +101,7 @@ const siIcons = {
   illustrator: SiAdobeillustrator,
   photoshop: SiAdobephotoshop,
   framerMotion: SiFramer,
+  aseprite: SiAseprite
 };
 
 const svgIcons = {

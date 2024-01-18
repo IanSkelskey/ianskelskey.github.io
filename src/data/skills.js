@@ -1,4 +1,4 @@
-import { aws, creativeCloud, express, figma, firebase, framerMotion, git, github, mySql, node, react, tailwind, vue } from "./brands";
+import { aseprite, aws, creativeCloud, express, figma, firebase, framerMotion, git, github, mySql, node, react, tailwind, vue } from "./brands";
 
 const skills = [
   {
@@ -32,6 +32,7 @@ const skills = [
     skills: [
       figma,
       creativeCloud,
+      aseprite,
     ],
   },
 ];

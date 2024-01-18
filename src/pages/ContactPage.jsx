@@ -1,13 +1,10 @@
-import ContentRow from "../components/layout/ContentRow";
-import Section from "../components/layout/Section";
 import ContactForm from "../components/content/ContactForm";
+import Page from "../components/layout/Page";
 
 export default function ContactPage() {
   return (
-    <Section title="Contact">
-      <ContentRow>
+    <Page title="Contact Me" blurb="Feel free to contact me if you have any questions or would like to work together.">
         <ContactForm />
-      </ContentRow>
-    </Section>
+    </Page>
   );
 }

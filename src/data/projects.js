@@ -5,6 +5,7 @@ const projects = [
     category: "Game Mod",
     description:
       "A community-driven high resolution texture pack for The Legend of Zelda: Ocarina of Time.",
+    thumbnail: "/assets/zelda-screenshot-2.png",
   },
   {
     title: "Field Day",
@@ -12,6 +13,7 @@ const projects = [
     category: "Web App",
     description:
       "A comprehensive data collection and management tool geared towards aiding wildlife researchers and conservationists in Arizona. Dr. Heather Bateman, a biology professor at ASU, sponsors the project. The tech stack for this project includes JavaScript, React, Tailwind, Firestore, Firebase, and Framer Motion.",
+    thumbnail: "/assets/field-day.png",
   },
   {
     title: "Connecticut Community Holiday Toy Drive",
@@ -19,6 +21,7 @@ const projects = [
     category: "Web App",
     description:
       "A website for a local charity event that I helped organize. The website was used to collect donations and provide information about the event.",
+    thumbnail: "/assets/toy-drive.png",
   },
   {
     title: "GD50: Intro to Game Development",
@@ -26,6 +29,7 @@ const projects = [
     category: "Game Development",
     description:
       "A course offered by Harvard University through edX. The course covers the fundamentals of game development using the Lua programming language and the LÖVE game engine.",
+    thumbnail: "/assets/gd50.png",
   },
 ];
 

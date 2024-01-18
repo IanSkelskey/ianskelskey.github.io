@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SmallCard from "../atoms/SmallCard";
 import SubSection from "../layout/SubSection";
 import { useForm, ValidationError } from "@formspree/react";
+import IconButton from "../atoms/IconButton";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("mdoqkavq");
@@ -11,7 +12,7 @@ export default function ContactForm() {
   const [messageError, setMessageError] = useState("");
 
   /**Use Effect hook to update form when errors change */
-  useEffect(() => {}, [emailError, nameError, messageError]);
+  useEffect(() => { }, [emailError, nameError, messageError]);
 
   function validateName(value) {
     if (value.length <= 0) {
@@ -78,86 +79,78 @@ export default function ContactForm() {
     return <p>Thanks for getting in touch!</p>;
   }
   return (
-    <SubSection title="Get in touch">
-      <div className="w-full flex justify-center">
-        <SmallCard>
-          <form
-            className="flex flex-col space-y-3 p-6"
-            onSubmit={handleFormSubmit}
-          >
-            <p className="subtle-text py-6">
-              I'm always open to discussing product design work or partnership
-              opportunities.
-            </p>
-            <div className="flex flex-col space-y-3">
-              <div className="flex justify-between">
-                <label className="subtle-text text-xs" htmlFor="name">
-                  Name
-                </label>
-                <p className="text-red-500 text-xs">{nameError}</p>
-              </div>
-              <input
-                className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
-                type="text"
-                name="name"
-                id="name"
-              />
-              <ValidationError
-                prefix="Name"
-                field="name"
-                errors={state.errors}
-              />
+    <div className="w-full flex justify-center">
+      <SmallCard>
+        <form
+          className="flex flex-col space-y-3 p-6"
+          onSubmit={handleFormSubmit}
+        >
+          <p className="subtle-text py-6">
+            I'm always open to discussing product design work or partnership
+            opportunities.
+          </p>
+          <div className="flex flex-col space-y-3">
+            <div className="flex justify-between">
+              <label className="subtle-text text-xs" htmlFor="name">
+                Name
+              </label>
+              <p className="text-red-500 text-xs">{nameError}</p>
             </div>
-            <div className="flex flex-col space-y-3">
-              <div className="flex justify-between">
-                <label className="subtle-text text-xs" htmlFor="name">
-                  Email
-                </label>
-                <p className="text-red-500 text-xs">{emailError}</p>
-              </div>
-              <input
-                className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
-                type="email"
-                name="email"
-                id="email"
-              />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
+            <input
+              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
+              type="text"
+              name="name"
+              id="name"
+            />
+            <ValidationError
+              prefix="Name"
+              field="name"
+              errors={state.errors}
+            />
+          </div>
+          <div className="flex flex-col space-y-3">
+            <div className="flex justify-between">
+              <label className="subtle-text text-xs" htmlFor="name">
+                Email
+              </label>
+              <p className="text-red-500 text-xs">{emailError}</p>
             </div>
-            <div className="flex flex-col space-y-3">
-              <div className="flex justify-between">
-                <label className="subtle-text text-xs" htmlFor="name">
-                  Message
-                </label>
-                <p className="text-red-500 text-xs">{messageError}</p>
-              </div>
-              <textarea
-                className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
-                name="message"
-                id="message"
-                rows="5"
-              />
-              <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-              />
+            <input
+              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+          </div>
+          <div className="flex flex-col space-y-3">
+            <div className="flex justify-between">
+              <label className="subtle-text text-xs" htmlFor="name">
+                Message
+              </label>
+              <p className="text-red-500 text-xs">{messageError}</p>
             </div>
-            <div className="w-full flex">
-              <button
-                type="submit"
-                disabled={state.submitting}
-                className="bg-blue-gradient rounded-md w-fit py-1 px-3 text-white"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </SmallCard>
-      </div>
-    </SubSection>
+            <textarea
+              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
+              name="message"
+              id="message"
+              rows="5"
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+          </div>
+          <div className="w-full flex">
+            <IconButton type="submit" icon="paperPlane" text="Send" className="bg-theme-blue rounded-md" />
+          </div>
+        </form>
+      </SmallCard>
+    </div>
   );
 }

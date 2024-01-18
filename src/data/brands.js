@@ -129,3 +129,9 @@ export const python = {
     icon: "python",
     color: "#ffde57",
 };
+
+export const aseprite = {
+    name: "Aseprite",
+    icon: "aseprite",
+    color: "#7D929E",
+};
