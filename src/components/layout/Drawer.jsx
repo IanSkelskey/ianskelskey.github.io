@@ -16,6 +16,7 @@ export default function Drawer({ title, children }) {
                 setDrawerButtonVisible(true);
             }
         };
+        window.onload = handleResize;
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
