@@ -17,7 +17,7 @@ export default function WelcomeSection() {
                     <IconButton icon="resume" text="View Resume" className="bg-theme-blue rounded-md font-bold text-white" />
                 </div>
             </div>
-            <img src="assets/casual-photo.jpeg" alt="A photo of Ian Skelskey" className="grayscale opacity-90 2xl:w-114 xl:w-96 " />
+            <img src="assets/casual-photo.jpeg" alt="Ian Skelskey in the San Francisco Bay area" className="grayscale opacity-90 2xl:w-114 xl:w-96 " />
         </div>
     )
 }
