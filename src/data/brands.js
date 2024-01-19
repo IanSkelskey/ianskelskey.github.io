@@ -135,3 +135,33 @@ export const aseprite = {
     icon: "aseprite",
     color: "#7D929E",
 };
+
+export const love2d = {
+    name: "LÖVE",
+    icon: "heart",
+    color: "#e64a99",
+};
+
+export const photoshop = {
+    name: "Photoshop",
+    icon: "photoshop",
+    color: "#31A8FF",
+};
+
+export const illustrator = {
+    name: "Illustrator",
+    icon: "illustrator",
+    color: "#FF7C00",
+};
+
+export const openAI = {
+    name: "OpenAI",
+    icon: "openAI",
+    color: "#412991",
+};
+
+export const spotify = {
+    name: "Spotify",
+    icon: "spotify",
+    color: "#1DB954",
+};

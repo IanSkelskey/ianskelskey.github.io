@@ -18,9 +18,12 @@ export default function TechStackSection() {
       <p>
         Check out the source code on my GitHub repository!
       </p>
-      <p>
+      <p className="flex flex-row gap-4">
         <a href="https://github.com/ianskelskey/ianskelskey.github.io" target="_blank" rel="noreferrer">
           <IconButton text="View Source" icon="github" className="bg-theme-blue rounded-md text-white w-fit" />
+        </a>
+        <a href="https://github.com/IanSkelskey/ianskelskey.github.io/issues/new/choose" target="_blank" rel="noreferrer">
+          <IconButton text="Report Issue" icon="bug" className="bg-neutral-700  rounded-md text-white w-fit" />
         </a>
       </p>
     </SubSection>

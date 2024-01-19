@@ -17,6 +17,7 @@ import {
   faAddressBook,
   faBars,
   faBriefcase,
+  faBug,
   faCode,
   faEnvelope,
   faFile,
@@ -38,6 +39,7 @@ import {
 import {
   SiAdobecreativecloud,
   SiAdobeillustrator,
+  SiAdobeindesign,
   SiAdobephotoshop,
   SiAdobexd,
   SiAseprite,
@@ -45,8 +47,10 @@ import {
   SiFirebase,
   SiFramer,
   SiLua,
+  SiOpenai,
   SiPrettier,
   SiSimpleicons,
+  SiSpotify,
   SiTailwindcss,
 } from "@icons-pack/react-simple-icons";
 import FormspreeSvg from "../assets/FormspreeSvg";
@@ -87,6 +91,7 @@ const faIcons = {
   microphone: faMicrophone,
   stack: faLayerGroup,
   paperPlane: faPaperPlane,
+  bug: faBug
 };
 
 const siIcons = {
@@ -101,7 +106,10 @@ const siIcons = {
   illustrator: SiAdobeillustrator,
   photoshop: SiAdobephotoshop,
   framerMotion: SiFramer,
-  aseprite: SiAseprite
+  aseprite: SiAseprite,
+  inDesign: SiAdobeindesign,
+  openAI: SiOpenai,
+  spotify: SiSpotify
 };
 
 const svgIcons = {

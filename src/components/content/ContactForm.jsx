@@ -79,15 +79,10 @@ export default function ContactForm() {
   }
   return (
     <div className="w-full flex justify-center">
-      <SmallCard>
         <form
-          className="flex flex-col space-y-3 p-6"
+          className="flex flex-col space-y-3 p-6 w-full max-w-2xl"
           onSubmit={handleFormSubmit}
         >
-          <p className="subtle-text py-6">
-            I'm always open to discussing product design work or partnership
-            opportunities.
-          </p>
           <div className="flex flex-col space-y-3">
             <div className="flex justify-between">
               <label className="subtle-text text-xs" htmlFor="name">
@@ -96,9 +91,10 @@ export default function ContactForm() {
               <p className="text-red-500 text-xs">{nameError}</p>
             </div>
             <input
-              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
+              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-md"
               type="text"
               name="name"
+              placeholder="Name"
               id="name"
             />
             <ValidationError
@@ -115,9 +111,10 @@ export default function ContactForm() {
               <p className="text-red-500 text-xs">{emailError}</p>
             </div>
             <input
-              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
+              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-e-md"
               type="email"
               name="email"
+              placeholder="Email"
               id="email"
             />
             <ValidationError
@@ -134,9 +131,10 @@ export default function ContactForm() {
               <p className="text-red-500 text-xs">{messageError}</p>
             </div>
             <textarea
-              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-200 p-2"
+              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-md"
               name="message"
               id="message"
+              placeholder="Enter your message here..."
               rows="5"
             />
             <ValidationError
@@ -146,10 +144,9 @@ export default function ContactForm() {
             />
           </div>
           <div className="w-full flex">
-            <IconButton type="submit" icon="paperPlane" text="Send" className="bg-theme-blue rounded-md" />
+            <IconButton type="submit" icon="paperPlane" text="Send" className="bg-theme-blue rounded-md text-white" />
           </div>
         </form>
-      </SmallCard>
     </div>
   );
 }
