@@ -10,7 +10,7 @@ export default function IconTitleDescriptionSmallCard({
   return (
     <SmallCard>
       <div className="flex flex-col space-y-3 p-3">
-        <div className="flex items-center space-x-3 text-2xl">
+        <div className="flex items-center space-x-3 text-xl">
           <div style={{ color: accentColor }}>
             <Icon name={iconName} />
           </div>

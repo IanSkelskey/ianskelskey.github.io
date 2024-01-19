@@ -12,6 +12,7 @@ const projects = [
   },
   {
     title: "Field Day",
+    icon: "fieldDay",
     date: "2022",
     category: "Web App",
     description:

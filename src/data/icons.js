@@ -56,6 +56,7 @@ import {
 import FormspreeSvg from "../assets/FormspreeSvg";
 import ExpressSvg from "../assets/ExpressSvg";
 import MySqlSvg from "../assets/MySqlSvg";
+import FieldDaySvg from "../assets/FieldDaySvg";
 
 const faIcons = {
   user: faUser,
@@ -116,6 +117,7 @@ const svgIcons = {
   formspree: FormspreeSvg,
   express: ExpressSvg,
   mySql: MySqlSvg,
+  fieldDay: FieldDaySvg
 };
 
 export { faIcons, siIcons, svgIcons };
