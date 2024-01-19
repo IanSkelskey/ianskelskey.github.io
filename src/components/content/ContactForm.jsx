@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import SmallCard from "../atoms/SmallCard";
 import { useForm, ValidationError } from "@formspree/react";
 import IconButton from "../atoms/IconButton";
 
