@@ -12,7 +12,7 @@ export default function CV() {
                 <p className="text-lg">Software Engineer</p>
             </div>
             {/* Professional Summary and Contact Info*/}
-            <div className="flex justify-between items-center gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                 <p className="italic border-l-4 border-theme-blue p-4">
                     Software engineer that recently completed a BS in Software Engineering at Arizona State University, with a strong foundation in React and a passion for interaction design and accessibility. Eager to contribute to a company whose products and mission align with my values and skillset.
                 </p>
@@ -23,7 +23,7 @@ export default function CV() {
                 </ul>
             </div>
 
-            <div className="flex gap-4 w-full p-4">
+            <div className="flex flex-col md:flex-row gap-4 w-full p-4">
                 {/* Education, Experience, and Projects */}
                 <div className="flex flex-col gap-4 w-full">
                     <EducationSection />
