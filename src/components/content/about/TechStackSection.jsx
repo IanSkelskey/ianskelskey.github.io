@@ -1,7 +1,7 @@
-import techStack from "../../data/techStack";
-import Badge from "../atoms/Badge";
-import IconButton from "../atoms/IconButton";
-import SubSection from "../layout/SubSection";
+import techStack from "../../../data/techStack";
+import Badge from "../../atoms/Badge";
+import IconButton from "../../atoms/IconButton";
+import SubSection from "../../layout/SubSection";
 
 export default function TechStackSection() {
   return (

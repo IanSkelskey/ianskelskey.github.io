@@ -1,7 +1,7 @@
-import FeaturedProjectsSection from "../components/content/FeaturedProjectsSection";
-import TechStackSection from "../components/content/TechStackSection";
-import WelcomeSection from "../components/content/WelcomeSection";
-import WhatIDoSection from "../components/content/WhatIDoSection";
+import FeaturedProjectsSection from "../components/content/about/FeaturedProjectsSection";
+import TechStackSection from "../components/content/about/TechStackSection";
+import WelcomeSection from "../components/content/about/WelcomeSection";
+import WhatIDoSection from "../components/content/about/WhatIDoSection";
 import Page from "../components/layout/Page";
 
 export default function AboutPage() {

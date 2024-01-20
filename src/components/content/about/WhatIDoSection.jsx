@@ -1,6 +1,6 @@
-import IconTitleDescriptionSmallCard from "../atoms/IconTitleDescriptionSmallCard";
-import professionalInterests from "../../data/professionalInterests";
-import SubSection from "../layout/SubSection";
+import IconTitleDescriptionSmallCard from "../../atoms/IconTitleDescriptionSmallCard";
+import professionalInterests from "../../../data/professionalInterests";
+import SubSection from "../../layout/SubSection";
 
 export default function WhatIDoSection() {
   return (

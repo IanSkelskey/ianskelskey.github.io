@@ -1,17 +1,16 @@
-import experience from "../../data/experience";
-import ExperienceSmallCard from "../atoms/ExperienceSmallCard";
-import SubSection from "../layout/SubSection";
+import education from "../../../data/education";
+import ExperienceSmallCard from "../../atoms/ExperienceSmallCard";
+import SubSection from "../../layout/SubSection";
 
-export default function ExperienceSection() {
+export default function EducationSection() {
     return (
-        <SubSection title={"Experience"} iconName="projects">
+        <SubSection title={"Education"} iconName="gradCap">
             <div className="flex flex-col gap-4">
-                {experience.map((item) => (
+                {education.map((item) => (
                     <ExperienceSmallCard
                         key={item.title}
                         title={item.title}
                         location={item.location}
-                        employer={item.employer}
                         date={item.date}
                     />
                 ))}

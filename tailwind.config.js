@@ -5,9 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "theme-blue-light": "#009cff",
-        "theme-blue": "#0051dd",
-        "linkedin-blue": "#0077b5",
-        "neutral-150": "#e9e9e9",
+        "theme-blue": "#0077b5",
       },
       screens: {
         xs: "540px",

@@ -1,6 +1,6 @@
-import languages from "../../data/languages";
-import LevelMeter from "../atoms/LevelMeter";
-import SubSection from "../layout/SubSection";
+import languages from "../../../data/languages";
+import LevelMeter from "../../atoms/LevelMeter";
+import SubSection from "../../layout/SubSection";
 
 export default function LanguagesSection() {
     return (

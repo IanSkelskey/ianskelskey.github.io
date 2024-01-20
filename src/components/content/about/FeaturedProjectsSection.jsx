@@ -1,7 +1,7 @@
-import projects from "../../data/projects";
-import Badge from "../atoms/Badge";
-import ThumbnailTitleSubtitleSmallCard from "../atoms/ThumbnailTitleSubtitleSmallCard";
-import SubSection from "../layout/SubSection";
+import projects from "../../../data/projects";
+import Badge from "../../atoms/Badge";
+import ThumbnailTitleSubtitleSmallCard from "../../atoms/ThumbnailTitleSubtitleSmallCard";
+import SubSection from "../../layout/SubSection";
 
 export default function FeaturedProjectsSection() {
   return (

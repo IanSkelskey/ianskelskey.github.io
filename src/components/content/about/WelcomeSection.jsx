@@ -1,4 +1,5 @@
-import IconButton from "../atoms/IconButton";
+import { Link } from "react-router-dom";
+import IconButton from "../../atoms/IconButton";
 
 export default function WelcomeSection() {
     return (
@@ -13,8 +14,12 @@ export default function WelcomeSection() {
                     I hope you find my portfolio engaging and reflective of my skills.
                 </blockquote>
                 <div className="flex flex-row gap-6">
-                    <IconButton icon="projects" text="View Projects" className="bg-theme-blue rounded-md font-bold text-white" />
-                    <IconButton icon="resume" text="View Resume" className="bg-neutral-700 rounded-md font-bold text-white" />
+                    <Link to="/projects">
+                        <IconButton icon="projects" text="View Projects" className="bg-theme-blue rounded-md font-bold text-white" />
+                    </Link>
+                    <Link to="/resume">
+                        <IconButton icon="resume" text="View Resume" className="bg-neutral-700 rounded-md font-bold text-white" />
+                    </Link>
                 </div>
             </div>
             <img src="assets/casual-photo.jpeg" alt="Ian Skelskey in the San Francisco Bay area" className="grayscale opacity-90 2xl:w-114 xl:w-96" />
