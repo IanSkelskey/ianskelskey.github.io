@@ -1,5 +1,4 @@
 import experience from "../../../data/experience";
-import Icon from "../../atoms/Icon";
 
 export default function ExperienceSection() {
     return (
