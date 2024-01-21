@@ -1,4 +1,3 @@
-import SubSection from "../components/layout/SubSection";
 import ThumbnailTitleSubtitleSmallCard from "../components/atoms/ThumbnailTitleSubtitleSmallCard";
 import Page from "../components/layout/Page";
 import projects from "../data/projects";

@@ -12,8 +12,8 @@ export default function NavListItem({ name, icon, path }) {
   return (
     <Link to={path}>
       <div className={colorClass}>
-        <div className="flex flex-row space-x-4 w-full justify-center items-center py-3">
-          <Icon name={icon} className="text-xl w-8" />
+        <div className="flex flex-row gap-5 w-full justify-center items-center py-3">
+          <Icon name={icon} />
           <p>{name}</p>
         </div>
       </div>

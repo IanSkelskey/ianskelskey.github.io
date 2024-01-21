@@ -18,6 +18,7 @@ const getTextSizeInPx = (className) => {
     "text-8xl": 96,
     "text-9xl": 128,
   };
+
   const foundClass = className.split(" ").find((cn) => sizeMap[cn]);
   return sizeMap[foundClass] || sizeMap["text-base"]; // Default size
 };
@@ -27,36 +28,41 @@ const Icon = ({ name, className = "" }) => {
   const isSimpleIcon = siIcons.hasOwnProperty(name);
   const isSVG = svgIcons.hasOwnProperty(name);
 
+  if (!isFontAwesome && !isSimpleIcon && !isSVG) {
+    console.error(`Icon "${name}" is not supported`);
+    return null;
+  }
+
   const icon = isFontAwesome
     ? faIcons[name]
     : isSimpleIcon
       ? siIcons[name]
-      : isSVG
-        ? svgIcons[name]
-        : null;
+      : svgIcons[name];
 
-  if (!icon) {
-    console.error(`Icon "${name}" does not exist.`);
-    return null;
-  }
   const size = getTextSizeInPx(className);
+
   if (isFontAwesome) {
     return <FontAwesomeIcon icon={icon} className={className} />;
   } else if (isSimpleIcon) {
-    return createElement(icon, { size, className });
+    return <SiIcon icon={icon} size={size} className={className} />;
   } else if (isSVG) {
-    const SvgIcon = icon;
-    return (
-      <SvgIcon
-        className={className}
-        style={{ width: size, height: size }}
-        alt={name}
-      />
-    );
-  } else {
-    console.error(`Icon "${name}" is not supported`);
-    return null;
+    return <SvgIcon icon={icon} size={size} className={className} alt={name} />;
   }
 };
+
+function SiIcon({ icon, size, className }) {
+  return createElement(icon, { size, className });
+}
+
+function SvgIcon({ icon, size, alt, className }) {
+  const SVG = icon;
+  return (
+    <SVG
+      className={className}
+      style={{ width: size, height: size }}
+      alt={alt}
+    />
+  );
+}
 
 export default Icon;

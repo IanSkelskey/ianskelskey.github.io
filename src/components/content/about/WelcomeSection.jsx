@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import IconButton from "../../atoms/IconButton";
+import { motion } from "framer-motion";
 
 export default function WelcomeSection() {
   return (
@@ -33,10 +34,13 @@ export default function WelcomeSection() {
           </Link>
         </div>
       </div>
-      <img
+      <motion.img
         src="assets/casual-photo.jpeg"
         alt="Ian Skelskey in the San Francisco Bay area"
         className="grayscale opacity-90 2xl:w-114 xl:w-96"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       />
     </div>
   );
