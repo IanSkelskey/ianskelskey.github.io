@@ -1,20 +1,14 @@
 import education from "../../../data/education";
-import ExperienceSmallCard from "../../atoms/ExperienceSmallCard";
-import SubSection from "../../layout/SubSection";
+import CVSection from "../../layout/CVSection";
 
 export default function EducationSection() {
     return (
-        <SubSection title={"Education"} iconName="gradCap">
-            <div className="flex flex-col gap-4">
-                {education.map((item) => (
-                    <ExperienceSmallCard
-                        key={item.title}
-                        title={item.title}
-                        location={item.location}
-                        date={item.date}
-                    />
-                ))}
-            </div>
-        </SubSection>
+        <CVSection title="Education">
+            {education.map((item) => (
+                <div key={item.title} className="flex flex-col gap-2">
+                    <p className="subltle-text italic">{item.title + " | " + item.location + " | " + item.date}</p>
+                </div>
+            ))}
+        </CVSection>
     );
 }

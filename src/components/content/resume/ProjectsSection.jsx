@@ -1,12 +1,12 @@
-import experience from "../../../data/experience";
 import CVSection from "../../layout/CVSection";
+import cvProjects from "../../../data/cvProjects";
 
-export default function ExperienceSection() {
+export default function ProjectsSection() {
     return (
-        <CVSection title="Experience">
-            {experience.map((item) => (
+        <CVSection title="Projects">
+            {cvProjects.map((item) => (
                 <div key={item.title} className="flex flex-col gap-2">
-                    <p className="subltle-text italic">{item.title + " | " + item.employer + " | " + item.location + " | " + item.date}</p>
+                    <p className="subltle-text italic">{item.title + " | " + item.date}</p>
                     <ul className="pl-5">
                         {item.bullets.map((bullet) => (
                             <li key={bullet} className="subltle-text list-disc">{bullet}</li>
@@ -15,5 +15,5 @@ export default function ExperienceSection() {
                 </div>
             ))}
         </CVSection>
-    );
+    )
 }
