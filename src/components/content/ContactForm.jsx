@@ -10,7 +10,7 @@ export default function ContactForm({ formId }) {
   const [messageError, setMessageError] = useState("");
 
   /**Use Effect hook to update form when errors change */
-  useEffect(() => {}, [emailError, nameError, messageError]);
+  useEffect(() => { }, [emailError, nameError, messageError]);
 
   function validateName(value) {
     if (value.length <= 0) {
@@ -96,7 +96,11 @@ export default function ContactForm({ formId }) {
             placeholder="Name"
             id="name"
           />
-          <ValidationError prefix="Name" field="name" errors={state.errors} />
+          <ValidationError
+            prefix="Name"
+            field="name"
+            errors={state.errors}
+          />
         </div>
         <div className="flex flex-col space-y-3">
           <div className="flex justify-between">
@@ -112,7 +116,11 @@ export default function ContactForm({ formId }) {
             placeholder="Email"
             id="email"
           />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <ValidationError
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+          />
         </div>
         <div className="flex flex-col space-y-3">
           <div className="flex justify-between">
@@ -135,12 +143,7 @@ export default function ContactForm({ formId }) {
           />
         </div>
         <div className="w-full flex">
-          <IconButton
-            type="submit"
-            icon="paperPlane"
-            text="Send"
-            className="bg-theme-blue rounded-md text-white"
-          />
+          <IconButton type="submit" icon="paperPlane" text="Send" className="bg-theme-blue rounded-md text-white" />
         </div>
       </form>
     </div>

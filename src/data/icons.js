@@ -19,6 +19,7 @@ import {
   faBriefcase,
   faBug,
   faCode,
+  faDesktop,
   faEnvelope,
   faFile,
   faGamepad,
@@ -31,10 +32,12 @@ import {
   faLayerGroup,
   faLocation,
   faMicrophone,
+  faMobile,
   faMusic,
   faPaintBrush,
   faPaperPlane,
   faPhone,
+  faRocket,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -99,6 +102,9 @@ const faIcons = {
   paperPlane: faPaperPlane,
   bug: faBug,
   gift: faGift,
+  rocket: faRocket,
+  mobile: faMobile,
+  desktop: faDesktop
 };
 
 const siIcons = {

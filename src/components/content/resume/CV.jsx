@@ -20,7 +20,7 @@ export default function CV({ cvDetails }) {
   return (
     <div className="flex flex-col bg-neutral-100 dark:bg-neutral-900 max-w-screen-xl mx-auto xl:p-4">
       {/* Title Section */}
-      <div className="w-full text-center bg-theme-blue py-8 text-white italic flex flex-col -space-y-1">
+      <div className="w-full text-center bg-theme-blue py-8 text-white italic flex flex-col -space-y-1 shadow-lg shadow-neutral-400 dark:shadow-neutral-900 z-50">
         <h1 className="text-3xl font-serif font-bold">{name}</h1>
         <p className="font-serif">{title}</p>
       </div>

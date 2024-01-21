@@ -7,8 +7,8 @@ export default function NavListItem({ name, icon, path }) {
   const active = currentPath === path;
 
   const colorClass = active
-    ? "bg-theme-blue text-white"
-    : "bg-neutral-200 dark:bg-neutral-900 subtle-text";
+    ? "bg-theme-blue text-white hover:bg-theme-blue-light"
+    : "bg-neutral-200 dark:bg-neutral-900 subtle-text hover:invert";
   return (
     <Link to={path}>
       <div className={colorClass}>

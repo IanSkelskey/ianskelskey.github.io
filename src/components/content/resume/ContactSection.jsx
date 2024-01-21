@@ -4,7 +4,7 @@ export default function ContactSection({ contactInfo }) {
   const { phone, email, linkedin, github } = contactInfo;
 
   return (
-    <ul className="flex xl:flex-col items-center xl:items-start justify-around space-y-2 xl:w-80 flex-shrink-0 flex-grow min-h-full w-full xl:p-12 p-4 bg-neutral-200 dark:bg-neutral-800 subtle-text text-xl xl:text-base">
+    <ul className="flex xl:flex-col items-center xl:items-start justify-around xl:space-y-2 xl:w-80 flex-shrink-0 flex-grow min-h-full w-full xl:p-12 p-4 bg-neutral-200 dark:bg-neutral-800 subtle-text text-xl xl:text-base">
       <li>
         <a
           href={`tel:${phone}`}

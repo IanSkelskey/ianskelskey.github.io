@@ -1,11 +1,11 @@
 import projects from "../../../data/projects";
 import Badge from "../../atoms/Badge";
 import ThumbnailTitleSubtitleSmallCard from "../../atoms/ThumbnailTitleSubtitleSmallCard";
-import SubSection from "../../layout/SubSection";
+import TitleIconSection from "../../layout/TitleIconSection";
 
 export default function FeaturedProjectsSection() {
   return (
-    <SubSection title="Featured Projects" iconName="projects">
+    <TitleIconSection title="Featured Projects" iconName="projects">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 gap-4">
         {projects.map((project) => (
           <ThumbnailTitleSubtitleSmallCard
@@ -27,6 +27,6 @@ export default function FeaturedProjectsSection() {
           </ThumbnailTitleSubtitleSmallCard>
         ))}
       </div>
-    </SubSection>
+    </TitleIconSection>
   );
 }

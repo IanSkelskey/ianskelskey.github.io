@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         "theme-blue-light": "#009cff",
         "theme-blue": "#0077b5",
+        'asu-maroon': '#8C1D40',
+        'asu-gold': '#FFC627',
       },
       screens: {
         xs: "540px",

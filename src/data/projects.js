@@ -3,6 +3,7 @@ import {
   firebase,
   framerMotion,
   illustrator,
+  javascript,
   love2d,
   lua,
   openAI,
@@ -25,13 +26,18 @@ const projects = [
   },
   {
     title: "Field Day",
+    subtitle: "Wildlife Research Data Management Tool",
     icon: "fieldDay",
     date: "2022",
+    github: "https://github.com/Field-Day-2022",
+    pwaUrl: "https://asu-field-day-pwa.web.app/",
+    webUiUrl: "https://asu-field-day-webui.web.app/",
     category: "Web App",
+    pageBlurb: "Field Day is my capstone project for my undergraduate degree at ASU. I was a member of a five person team that worked on the project. There were two components to this project: a PWA for mobile data collection in the field, and a data management tool designed for larger screens. My contributions include designing the UI, implementing the desktop UI using React and Tailwind, and connecting the backend to the desktop data management tool.",
     description:
       "A comprehensive data collection and management tool geared towards aiding wildlife researchers and conservationists in Arizona. Dr. Heather Bateman, a biology professor at ASU, sponsors the project. The tech stack for this project includes JavaScript, React, Tailwind, Firestore, Firebase, and Framer Motion.",
     thumbnail: "/assets/field-day.png",
-    skills: [react, tailwind, firebase, framerMotion, illustrator],
+    skills: [javascript, react, tailwind, firebase, framerMotion],
   },
   {
     title: "Connecticut Community Holiday Toy Drive",

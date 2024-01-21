@@ -50,8 +50,9 @@ The project follows a standard React application structure, organized for clarit
 ├── src/                      # Source files
 │   ├── components/           # Reusable components
 │       ├── atoms/            # Atom components (e.g., Badge, Icon)
-│       ├── layout/           # Layout components (e.g., Header, Footer)
-│   ├── pages/                # Page components (e.g., Home, About, Resume)
+│       ├── content/          # Content components (e.g., Profile, Footer)
+│       ├── layout/           # Layout components (e.g., Page, Drawer)
+│   ├── pages/                # Page components (e.g., About, Resume)
 │       ├── projects/         # Project page components
 │   ├── assets/               # Static assets (e.g., images, fonts)
 │   ├── App.js                # Main application component

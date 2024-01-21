@@ -1,11 +1,11 @@
 import techStack from "../../../data/techStack";
 import Badge from "../../atoms/Badge";
 import IconButton from "../../atoms/IconButton";
-import SubSection from "../../layout/SubSection";
+import TitleIconSection from "../../layout/TitleIconSection";
 
 export default function TechStackSection() {
   return (
-    <SubSection title="This Portfolio's Tech Stack" iconName="stack">
+    <TitleIconSection title="This Portfolio's Tech Stack" iconName="stack">
       <p>This portfolio was built using the following technologies:</p>
       <div className="flex flex-wrap gap-3">
         {techStack.map((tech) => (
@@ -49,6 +49,6 @@ export default function TechStackSection() {
           />
         </a>
       </p>
-    </SubSection>
+    </TitleIconSection>
   );
 }
