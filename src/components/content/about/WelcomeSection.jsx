@@ -15,10 +15,10 @@ export default function WelcomeSection() {
                 </blockquote>
                 <div className="flex flex-row gap-6">
                     <Link to="/projects">
-                        <IconButton icon="projects" text="View Projects" className="bg-theme-blue rounded-md font-bold text-white" />
+                        <IconButton icon="projects" text="View Projects" className="bg-theme-blue rounded-md text-white" />
                     </Link>
                     <Link to="/resume">
-                        <IconButton icon="resume" text="View Resume" className="bg-neutral-700 rounded-md font-bold text-white" />
+                        <IconButton icon="resume" text="View Resume" className="bg-neutral-700 rounded-md text-white" />
                     </Link>
                 </div>
             </div>
