@@ -43,9 +43,12 @@ import {
   SiAdobephotoshop,
   SiAdobexd,
   SiAseprite,
+  SiCplusplus,
+  SiCss3,
   SiFigma,
   SiFirebase,
   SiFramer,
+  SiHtml5,
   SiLua,
   SiOpenai,
   SiPrettier,
@@ -111,7 +114,10 @@ const siIcons = {
   aseprite: SiAseprite,
   inDesign: SiAdobeindesign,
   openAI: SiOpenai,
-  spotify: SiSpotify
+  spotify: SiSpotify,
+  cpp: SiCplusplus,
+  html: SiHtml5,
+  css: SiCss3
 };
 
 const svgIcons = {

@@ -8,7 +8,7 @@ export default function ResumePage() {
       <p>
         View my professional resume below or download it as a PDF.
       </p>
-      <IconButton icon="resume" text="Download" className="bg-theme-blue rounded-md font-bold text-white" />
+      <IconButton icon="resume" text="Download" className="bg-theme-blue rounded-md text-white" />
     </div>
   return (
     <Page title="Resume" blurb={blurb}>

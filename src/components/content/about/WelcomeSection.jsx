@@ -13,7 +13,7 @@ export default function WelcomeSection() {
                     Right now, I'm focused on creating games using Love2D and Lua, as well as web apps with React. I'm looking to join a company that values creativity and innovation.
                     I hope you find my portfolio engaging and reflective of my skills.
                 </blockquote>
-                <div className="flex flex-row gap-6">
+                <div className="flex flex-row gap-4">
                     <Link to="/projects">
                         <IconButton icon="projects" text="View Projects" className="bg-theme-blue rounded-md text-white" />
                     </Link>

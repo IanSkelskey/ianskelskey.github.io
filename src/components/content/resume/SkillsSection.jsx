@@ -7,7 +7,7 @@ export default function SkillsSection() {
         <CVSection title="Skills">
             {skills.map((item) => (
                 <div key={item.category} className="gap-4">
-                    <h4 className="subtle-text italic">{item.category}</h4>
+                    <h4 className="subtle-text italic pb-2">{item.category}</h4>
                     <ul className="subtle-text flex gap-2 flex-wrap items-center">
                         {item.skills.map((skill) => (
                             <li key={skill.name} className="flex gap-1 items-center">

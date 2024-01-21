@@ -18,21 +18,41 @@ export default function CV() {
             <div className="flex flex-col xl:flex-row justify-between items-center w-full">
                 <SummarySection />
 
-                <ul className="flex flex-col space-y-2 xl:w-80 flex-shrink-0 flex-grow min-h-full w-full p-4 bg-neutral-200 dark:bg-neutral-800">
-                    <li className="w-full flex gap-2 items-center"><Icon name="phone" /> 8608305595</li>
-                    <li className="w-full flex gap-2 items-center"><Icon name="email" />ianskelskey@gmail.com</li>
-                    <li className="w-full flex gap-2 items-center"><Icon name="linkedin" />in/ianskelskey</li>
-                    <li className="w-full flex gap-2 items-center"><Icon name="github" /> github.com/ianskelskey</li>
+                <ul className="flex xl:flex-col items-center xl:items-start justify-around space-y-2 xl:w-80 flex-shrink-0 flex-grow min-h-full w-full xl:p-12 p-4 bg-neutral-200 dark:bg-neutral-800 subtle-text text-xl xl:text-base">
+                    <li>
+                        <a href="tel:8608305595" className="flex gap-4 items-center">
+                            <Icon name="phone" />
+                            <div className="hidden xl:inline">8608305595</div>
+                        </a>
+                    </li>
+                    <li className="flex gap-4 items-center">
+                        <a href="mailto:ianskelskey@gmail.com" className="flex gap-4 items-center">
+                            <Icon name="email" />
+                            <div className="hidden xl:inline">ianskelskey@gmail.com</div>
+                        </a>
+                    </li>
+                    <li className="flex gap-4 items-center">
+                        <a href="https://www.linkedin.com/in/ianskelskey" className="flex gap-4 items-center">
+                            <Icon name="linkedin" />
+                            <div className="hidden xl:inline">in/ianskelskey</div>
+                        </a>
+                    </li>
+                    <li className="flex gap-4 items-center">
+                        <a href="https://github.com/ianskelskey" className="flex gap-4 items-center">
+                            <Icon name="github" />
+                            <div className="hidden xl:inline">github.com/ianskelskey</div>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div className="flex flex-col xl:flex-row w-full">
-                {/* Education, Experience, and Projects */}
+                {/* Main Content */}
                 <div className="flex flex-col gap-4 w-full">
                     <ExperienceSection />
                     <ProjectsSection />
                 </div>
-                {/* Skills and Languages*/}
+                {/* Right Side Bar*/}
                 <div className="xl:w-80 min-h-full flex-shrink-0 bg-neutral-200 dark:bg-neutral-800">
                     <SkillsSection />
                     <EducationSection />

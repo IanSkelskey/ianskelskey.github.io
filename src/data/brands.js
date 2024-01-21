@@ -165,3 +165,21 @@ export const spotify = {
     icon: "spotify",
     color: "#1DB954",
 };
+
+export const cpp = {
+    name: "C++",
+    icon: "cpp",
+    color: "#00599C",
+};
+
+export const html = {
+    name: "HTML5",
+    icon: "html",
+    color: "#E34F26",
+};
+
+export const css = {
+    name: "CSS3",
+    icon: "css",
+    color: "#1572B6",
+};
