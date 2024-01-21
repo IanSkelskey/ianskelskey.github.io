@@ -23,6 +23,7 @@ import {
   faFile,
   faGamepad,
   faGears,
+  faGift,
   faGraduationCap,
   faGuitar,
   faHeart,
@@ -96,7 +97,8 @@ const faIcons = {
   microphone: faMicrophone,
   stack: faLayerGroup,
   paperPlane: faPaperPlane,
-  bug: faBug
+  bug: faBug,
+  gift: faGift,
 };
 
 const siIcons = {
@@ -117,7 +119,7 @@ const siIcons = {
   spotify: SiSpotify,
   cpp: SiCplusplus,
   html: SiHtml5,
-  css: SiCss3
+  css: SiCss3,
 };
 
 const svgIcons = {
@@ -125,7 +127,7 @@ const svgIcons = {
   express: ExpressSvg,
   mySql: MySqlSvg,
   fieldDay: FieldDaySvg,
-  ocarina: OcarinaSvg
+  ocarina: OcarinaSvg,
 };
 
 export { faIcons, siIcons, svgIcons };

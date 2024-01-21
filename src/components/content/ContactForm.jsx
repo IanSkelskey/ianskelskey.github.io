@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import IconButton from "../atoms/IconButton";
 
-export default function ContactForm() {
-  const [state, handleSubmit] = useForm("mdoqkavq");
+export default function ContactForm({ formId }) {
+  const [state, handleSubmit] = useForm(formId);
 
   const [emailError, setEmailError] = useState("");
   const [nameError, setNameError] = useState("");
   const [messageError, setMessageError] = useState("");
 
   /**Use Effect hook to update form when errors change */
-  useEffect(() => { }, [emailError, nameError, messageError]);
+  useEffect(() => {}, [emailError, nameError, messageError]);
 
   function validateName(value) {
     if (value.length <= 0) {
@@ -78,74 +78,71 @@ export default function ContactForm() {
   }
   return (
     <div className="w-full flex justify-center">
-        <form
-          className="flex flex-col space-y-3 w-full max-w-2xl"
-          onSubmit={handleFormSubmit}
-        >
-          <div className="flex flex-col space-y-3">
-            <div className="flex justify-between">
-              <label className="subtle-text text-xs" htmlFor="name">
-                Name
-              </label>
-              <p className="text-red-500 text-xs">{nameError}</p>
-            </div>
-            <input
-              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-md"
-              type="text"
-              name="name"
-              placeholder="Name"
-              id="name"
-            />
-            <ValidationError
-              prefix="Name"
-              field="name"
-              errors={state.errors}
-            />
+      <form
+        className="flex flex-col space-y-3 w-full max-w-2xl"
+        onSubmit={handleFormSubmit}
+      >
+        <div className="flex flex-col space-y-3">
+          <div className="flex justify-between">
+            <label className="subtle-text text-xs" htmlFor="name">
+              Name
+            </label>
+            <p className="text-red-500 text-xs">{nameError}</p>
           </div>
-          <div className="flex flex-col space-y-3">
-            <div className="flex justify-between">
-              <label className="subtle-text text-xs" htmlFor="name">
-                Email
-              </label>
-              <p className="text-red-500 text-xs">{emailError}</p>
-            </div>
-            <input
-              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-e-md"
-              type="email"
-              name="email"
-              placeholder="Email"
-              id="email"
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
+          <input
+            className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-md"
+            type="text"
+            name="name"
+            placeholder="Name"
+            id="name"
+          />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
+        </div>
+        <div className="flex flex-col space-y-3">
+          <div className="flex justify-between">
+            <label className="subtle-text text-xs" htmlFor="name">
+              Email
+            </label>
+            <p className="text-red-500 text-xs">{emailError}</p>
           </div>
-          <div className="flex flex-col space-y-3">
-            <div className="flex justify-between">
-              <label className="subtle-text text-xs" htmlFor="name">
-                Message
-              </label>
-              <p className="text-red-500 text-xs">{messageError}</p>
-            </div>
-            <textarea
-              className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-md"
-              name="message"
-              id="message"
-              placeholder="Enter your message here..."
-              rows="5"
-            />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
+          <input
+            className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-e-md"
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="email"
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </div>
+        <div className="flex flex-col space-y-3">
+          <div className="flex justify-between">
+            <label className="subtle-text text-xs" htmlFor="name">
+              Message
+            </label>
+            <p className="text-red-500 text-xs">{messageError}</p>
           </div>
-          <div className="w-full flex">
-            <IconButton type="submit" icon="paperPlane" text="Send" className="bg-theme-blue rounded-md text-white" />
-          </div>
-        </form>
+          <textarea
+            className="dark:bg-black bg-white border-2 dark:border-neutral-800 border-neutral-300 p-2 rounded-md"
+            name="message"
+            id="message"
+            placeholder="Enter your message here..."
+            rows="5"
+          />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+        </div>
+        <div className="w-full flex">
+          <IconButton
+            type="submit"
+            icon="paperPlane"
+            text="Send"
+            className="bg-theme-blue rounded-md text-white"
+          />
+        </div>
+      </form>
     </div>
   );
 }

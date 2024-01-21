@@ -1,5 +1,5 @@
 import IconLink from "../atoms/IconLink";
-import personalData from "../../data/personalData";
+import socials from "../../data/socials";
 
 export default function Profile() {
   return (
@@ -16,15 +16,10 @@ export default function Profile() {
         I'm a software engineer and creative. Welcome to my portfolio!
       </p>
       <div className="flex items-center space-x-3">
-        {personalData.socials.map((social) => (
-          <IconLink
-            key={social.name}
-            icon={social.icon}
-            href={social.link}
-          />
+        {socials.map((social) => (
+          <IconLink key={social.name} icon={social.icon} href={social.link} />
         ))}
       </div>
     </div>
   );
 }
-

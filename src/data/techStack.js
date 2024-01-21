@@ -1,4 +1,13 @@
-import { fontAwesome, formspree, framerMotion, githubPages, prettier, react, simpleIcons, tailwind } from "./brands";
+import {
+  fontAwesome,
+  formspree,
+  framerMotion,
+  githubPages,
+  prettier,
+  react,
+  simpleIcons,
+  tailwind,
+} from "./badges";
 
 const techStack = [
   react,

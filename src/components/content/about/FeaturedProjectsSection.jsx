@@ -16,7 +16,12 @@ export default function FeaturedProjectsSection() {
           >
             <div className="flex gap-2 flex-wrap">
               {project.skills.map((skill) => (
-                <Badge key={skill.name} iconName={skill.icon} text={skill.name} color={skill.color} />
+                <Badge
+                  key={skill.name}
+                  iconName={skill.icon}
+                  text={skill.name}
+                  color={skill.color}
+                />
               ))}
             </div>
           </ThumbnailTitleSubtitleSmallCard>

@@ -22,7 +22,7 @@ const getTextSizeInPx = (className) => {
   return sizeMap[foundClass] || sizeMap["text-base"]; // Default size
 };
 
-const Icon = ({ name, className = '' }) => {
+const Icon = ({ name, className = "" }) => {
   const isFontAwesome = faIcons.hasOwnProperty(name);
   const isSimpleIcon = siIcons.hasOwnProperty(name);
   const isSVG = svgIcons.hasOwnProperty(name);

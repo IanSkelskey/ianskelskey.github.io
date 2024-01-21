@@ -1,5 +1,3 @@
 export default function FieldDayPage() {
-    return (
-        <div></div>
-    )
+  return <div></div>;
 }

@@ -6,17 +6,15 @@ import pages from "./data/pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-
   const mainPages = pages.filter((page) => page.main);
 
   return (
     <BrowserRouter>
       <DrawerContentFooterLayout
-        drawerContents={
-          [
-            <Profile key='profile'/>,
-            <NavList key='navlist' pages={mainPages} />
-          ]}
+        drawerContents={[
+          <Profile key="profile" />,
+          <NavList key="navlist" pages={mainPages} />,
+        ]}
         content={
           <Routes>
             {pages.map((page) => (
@@ -27,7 +25,6 @@ function App() {
         footer={<Footer />}
       />
     </BrowserRouter>
-
   );
 }
 
