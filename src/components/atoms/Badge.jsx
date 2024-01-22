@@ -14,7 +14,7 @@ export default function Badge({ iconName, text, color }) {
   }
   return (
     <div
-      className={"rounded-md w-fit dark:bg-neutral-700 bg-neutral-500 text-sm"}
+      className={"rounded-md w-fit dark:bg-neutral-700 bg-neutral-500 text-sm select-none"}
       style={style}
     >
       <div className="flex items-center space-x-2 px-2 py-0.5 w-fit">

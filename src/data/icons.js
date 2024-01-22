@@ -37,6 +37,7 @@ import {
   faPaintBrush,
   faPaperPlane,
   faPhone,
+  faRecordVinyl,
   faRocket,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -104,7 +105,8 @@ const faIcons = {
   gift: faGift,
   rocket: faRocket,
   mobile: faMobile,
-  desktop: faDesktop
+  desktop: faDesktop,
+  recordVinyl: faRecordVinyl
 };
 
 const siIcons = {

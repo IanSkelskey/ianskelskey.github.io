@@ -61,9 +61,11 @@ const projects = [
   },
   {
     title: "AI Playlist Assistant",
-    icon: "musicNote",
+    subtitle: "A Custom GPT",
+    icon: "recordVinyl",
     date: "Current",
     category: "Generative AI",
+    pageBlurb: "A pet project of mine that I've been working on in my free time. The goal of this project is to create a custom GPT that can analyze a playlist and generate artwork and descriptions for the playlist.",
     description:
       "A custom GPT that analyzes playlist contents and generates artwork and descriptions for the playlist.",
     thumbnail: "/assets/playlist-assistant.png",

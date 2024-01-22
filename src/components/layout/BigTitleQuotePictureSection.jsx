@@ -1,5 +1,6 @@
 import Icon from "../atoms/Icon";
 
+
 export default function BigTitleQuotePictureSection({ title, icon, subtitle, quote, children, image, imageAlt }) {
     return (
         <div className="flex flex-col xl:flex-row items-center gap-12 p-4">

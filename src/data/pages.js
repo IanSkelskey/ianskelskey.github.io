@@ -5,6 +5,7 @@ import ResumePage from "../pages/ResumePage";
 import FieldDayPage from "../pages/projects/FieldDayPage";
 import GD50Page from "../pages/projects/GD50Page";
 import OotRetexturePage from "../pages/projects/OotRetexturePage";
+import PlaylistAssistantPage from "../pages/projects/PlaylistAssistantPage";
 import ToyDrivePage from "../pages/projects/ToyDrivePage";
 
 const pages = [
@@ -64,6 +65,13 @@ const pages = [
     content: <ToyDrivePage />,
     main: false,
   },
+  {
+    title: "AI Playlist Assistant",
+    icon: "musicNote",
+    path: "/projects/aiPlaylistAssistant",
+    content: <PlaylistAssistantPage />,
+    main: false,
+  }
 ];
 
 export default pages;
