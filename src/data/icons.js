@@ -31,7 +31,9 @@ import {
   faLaptopCode,
   faLayerGroup,
   faLocation,
+  faMaximize,
   faMicrophone,
+  faMinimize,
   faMobile,
   faMusic,
   faPaintBrush,
@@ -106,7 +108,9 @@ const faIcons = {
   rocket: faRocket,
   mobile: faMobile,
   desktop: faDesktop,
-  recordVinyl: faRecordVinyl
+  recordVinyl: faRecordVinyl,
+  maximize: faMaximize,
+  minimize: faMinimize
 };
 
 const siIcons = {
