@@ -21,6 +21,7 @@ import {
   faCode,
   faDesktop,
   faEnvelope,
+  faEye,
   faFile,
   faGamepad,
   faGears,
@@ -110,7 +111,8 @@ const faIcons = {
   desktop: faDesktop,
   recordVinyl: faRecordVinyl,
   maximize: faMaximize,
-  minimize: faMinimize
+  minimize: faMinimize,
+  eye: faEye,
 };
 
 const siIcons = {
