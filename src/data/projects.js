@@ -36,7 +36,7 @@ const projects = [
     pageBlurb: "Field Day is my capstone project for my undergraduate degree at ASU. I was a member of a five person team that worked on the project. There were two components to this project: a PWA for mobile data collection in the field, and a data management tool designed for larger screens. My contributions include designing the UI, implementing the desktop UI using React and Tailwind, and connecting the backend to the desktop data management tool.",
     description:
       "A comprehensive data collection and management tool geared towards aiding wildlife researchers and conservationists in Arizona. Dr. Heather Bateman, a biology professor at ASU, sponsors the project. The tech stack for this project includes JavaScript, React, Tailwind, Firestore, Firebase, and Framer Motion.",
-    thumbnail: "/assets/field-day.png",
+    thumbnail: "/assets/lizard.jpg",
     skills: [javascript, react, tailwind, firebase, framerMotion],
   },
   {

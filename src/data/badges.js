@@ -183,3 +183,15 @@ export const css = {
   icon: "css",
   color: "#1572B6",
 };
+
+export const guitar = {
+  name: "Guitar",
+  icon: "guitar",
+  color: "#FFA0FF",
+};
+
+export const vocals = {
+  name: "Vocals",
+  icon: "microphone",
+  color: "#00AFFF",
+};

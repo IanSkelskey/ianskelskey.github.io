@@ -1,9 +1,9 @@
 import SmallCard from "./SmallCard";
 import Icon from "./Icon";
 
-export default function IconTitleDescriptionSmallCard({
+export default function IconTitleCard({
   title,
-  description,
+  children,
   iconName,
   accentColor,
 }) {
@@ -17,7 +17,7 @@ export default function IconTitleDescriptionSmallCard({
 
           <h3 className="text-xl">{title}</h3>
         </div>
-        <p className="subtle-text">{description}</p>
+        {children}
       </div>
     </SmallCard>
   );

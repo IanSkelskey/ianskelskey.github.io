@@ -10,7 +10,7 @@ export default function SkillsSection({ skills }) {
           <ul className="subtle-text flex gap-2 flex-wrap items-center">
             {item.skills.map((skill) => (
               <li key={skill.name} className="flex gap-1 items-center">
-                <Badge iconName={skill.icon} text={skill.name}  />
+                <Badge iconName={skill.icon} text={skill.name} />
               </li>
             ))}
           </ul>
