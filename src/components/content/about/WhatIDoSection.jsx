@@ -1,7 +1,6 @@
 import IconTitleCard from "../../atoms/IconTitleCard";
 import professionalInterests from "../../../data/professionalInterests";
 import TitleIconSection from "../../layout/TitleIconSection";
-import Icon from "../../atoms/Icon";
 
 export default function WhatIDoSection() {
   return (

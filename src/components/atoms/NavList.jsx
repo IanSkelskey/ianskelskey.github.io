@@ -1,6 +1,6 @@
 import NavListItem from "./NavListItem";
 
-export default function NavList({ pages }) {
+export default function NavList({ pages, minimize }) {
   return (
     <nav className="flex flex-col justify-center w-full gap-2">
       {pages.map((page, index) => (
@@ -9,6 +9,7 @@ export default function NavList({ pages }) {
           name={page.title}
           icon={page.icon}
           path={page.path}
+          minimize={minimize}
         />
       ))}
     </nav>
