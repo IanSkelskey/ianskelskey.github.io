@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Page from "../components/layout/Page";
 import ProjectCard from "../components/layout/ProjectCard";
 import projects from "../data/projects";
+import { AnimatePresence } from "framer-motion";
 
 export default function ProjectsPage() {
   const blurb = "Here are some of the projects I've worked on.";
@@ -29,9 +30,12 @@ export default function ProjectsPage() {
         <li><button className={filter === "Generative AI" ? "border-b-2 border-b-theme-blue p-2" : "p-2"} onClick={() => setFilter("Generative AI")}>Generative AI</button></li>
       </ul>
       <div className="grid grid-cols-1 2xl:grid-cols-2 gap-4 p-4">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+        <AnimatePresence>
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </AnimatePresence>
+
       </div>
     </Page>
   );

@@ -45,17 +45,25 @@ export default function Drawer({ title, children }) {
   });
 
   return (
-    <div className="flex flex-col space-y-6 items-center w-full md:max-w-fit md:max-h-screen md:overflow-y-auto md:overflow-x-hidden dark:bg-neutral-800 bg-neutral-100">
-      <div className="flex flex-row justify-between items-center w-full relative h-14 dark:bg-neutral-800 bg-neutral-100">
+    <motion.div className="flex flex-col space-y-6 items-center w-full md:max-w-fit md:max-h-screen md:overflow-y-auto md:overflow-x-hidden dark:bg-neutral-800 bg-neutral-100" layout>
+      <motion.div className="flex flex-row justify-between items-center w-full relative h-14 dark:bg-neutral-800 bg-neutral-100">
         <IconButton
           icon="hamburger"
           className="absolute top-2.5 left-2 z-50"
           onClick={toggleDrawer}
         />
-        <h1 className="text-2xl font-serif font-bold w-full text-center">
-          {!minimized && title}
-        </h1>
-      </div>
+        <AnimatePresence>
+          {!minimized && <motion.h1 className="text-2xl font-serif font-bold w-full text-center"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0, width: 0, height: 0 }}
+          >
+            {title}
+          </motion.h1>}
+        </AnimatePresence>
+
+
+      </motion.div>
 
       <AnimatePresence>
         {drawerOpen && (
@@ -70,6 +78,6 @@ export default function Drawer({ title, children }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }
