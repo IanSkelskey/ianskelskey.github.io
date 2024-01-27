@@ -6,17 +6,31 @@ import { motion } from "framer-motion";
 export default function ProjectCard({ project }) {
     return (
         <motion.div
-            className="flex dark:bg-neutral-900 bg-neutral-100"
+            className="flex flex-col md:flex-row dark:bg-neutral-900 bg-neutral-100 relative"
             key={project.title}
-            initial={{ scale: 0}}
-            animate={{ scale: 1}}
-            exit={{ scale: 0}}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
         >
-            <div style={{ backgroundImage: `url(${project.thumbnail})` }} className="w-1/3 bg-cover bg-center flex-shrink-0 flex justify-center items-center">
-                <Link to={project.path}>
-                    <IconButton className="bg-theme-blue rounded-md text-white text-sm" text="View More" icon="eye" />
-                </Link>
-            </div>
+            {/* View More Button Container - Should only be visible on hover*/}
+            <motion.div className="absolute w-full h-full dark:bg-neutral-800 bg-neutral-200 dark:bg-opacity-60 bg-opacity-60"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+
+            >
+                {/* Center the button on the card */}
+                <div className="flex flex-col items-center justify-center w-full h-full">
+                    <Link to={project.path}>
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}>
+                            <IconButton className="bg-theme-blue rounded-md text-white text-sm w-fit" text="View More" icon="eye" />
+                        </motion.div>
+                    </Link>
+                </div>
+            </motion.div>
+
+
+            <div style={{ backgroundImage: `url(${project.thumbnail})` }} className="w-full md:w-1/3 min-h-70 md:min-h-fit bg-cover bg-center flex-shrink-0 flex justify-center items-center" />
 
             <div className="flex flex-col p-4 gap-4">
                 <h4 className="text-xl font-bold">{project.title}</h4>
