@@ -20,7 +20,7 @@ const projects = [
     path: "/projects/ocarina",
     icon: "ocarina",
     date: "2014",
-    category: "Game Mod",
+    category: "Game Development",
     description:
       "A community-driven high resolution texture pack for The Legend of Zelda: Ocarina of Time.",
     thumbnail: "/assets/zelda-screenshot-2.png",
@@ -54,7 +54,7 @@ const projects = [
       "A website for a local charity event that I helped organize. The website was used to collect donations and provide information about the event.",
     thumbnail: "/assets/toy-drive.png",
     skills: [react, tailwind, firebase, illustrator],
-    featured: false,
+    featured: true,
   },
   {
     title: "GD50: Intro to Game Development",
@@ -85,7 +85,7 @@ const projects = [
   {
     title: "Masks of Malik Minecraft Mod",
     path: "/projects/masksOfMalik",
-    category: "Game Mod",
+    category: "Game Development",
     date: "2023",
     description: "A mod for Minecraft made for the band Masks of Malik. Contains a custom music disc with the band's music. And some paintings of the logo and a cat.",
     thumbnail: "/assets/masks-of-malik.png",

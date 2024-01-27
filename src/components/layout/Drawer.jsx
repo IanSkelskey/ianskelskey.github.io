@@ -6,7 +6,7 @@ export default function Drawer({ title, children }) {
   const DEFAULT_WIDTH = "280px"; // Initial width for large screen
   const MINIMIZED_WIDTH = "60px"; // Initial width for small screen
 
-  const [drawerOpen, setDrawerOpen] = useState(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerWidth, setDrawerWidth] = useState(DEFAULT_WIDTH);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 860);
 
@@ -70,7 +70,7 @@ export default function Drawer({ title, children }) {
           <motion.div
             initial={isLargeScreen ? { width: drawerWidth } : { height: 0 }}
             animate={isLargeScreen ? { width: drawerWidth } : { height: drawerOpen ? "auto" : 0 }}
-            exit={isLargeScreen ? { width: 0 } : { height: 0 }}
+            exit={{ width: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="flex flex-col space-y-6 items-center w-full"
           >

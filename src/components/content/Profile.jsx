@@ -12,6 +12,9 @@ export default function Profile({ minimize }) {
         src="assets/headshot.png"
         alt="Headshot of Ian Skelskey"
         className="rounded-full w-44 aspect-square"
+        initial={{  opacity: 0, scale: 0}}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ width: 0, opacity: 0, height: 0, scale: 0 }}
         layout
       />
       <AnimatePresence>

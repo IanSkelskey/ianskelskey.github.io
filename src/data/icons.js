@@ -15,6 +15,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAddressBook,
+  faArrowDownAZ,
+  faArrowUpAZ,
   faBars,
   faBriefcase,
   faBug,
@@ -113,6 +115,8 @@ const faIcons = {
   maximize: faMaximize,
   minimize: faMinimize,
   eye: faEye,
+  sortUp: faArrowUpAZ,
+  sortDown: faArrowDownAZ,
 };
 
 const siIcons = {
