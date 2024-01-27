@@ -5,7 +5,7 @@ import projects from "../data/projects";
 import { AnimatePresence } from "framer-motion";
 
 export default function ProjectsPage() {
-  const blurb = "Here are some of the projects I've worked on.";
+  const blurb = "Here are some of the projects I've worked on. Click on a project to learn more. Filter by category to focus on a specific type of project.";
 
   const [filter, setFilter] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState(projects);

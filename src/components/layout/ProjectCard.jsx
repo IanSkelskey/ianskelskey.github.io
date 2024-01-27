@@ -32,7 +32,7 @@ export default function ProjectCard({ project }) {
             </motion.div>
 
 
-            <div style={{ backgroundImage: `url(${project.thumbnail})` }} className="w-full lg:w-1/3 min-h-70 lg:min-h-fit bg-cover bg-center flex-shrink-0 flex justify-center items-center" />
+            <div style={{ backgroundImage: `url(${project.thumbnail})` }} className="w-full lg:w-1/3 min-h-70 bg-cover bg-center flex-shrink-0 flex justify-center items-center" />
 
             <div className="flex flex-col p-4 gap-4 w-full">
                 <h4 className="text-xl font-bold">{project.title}</h4>

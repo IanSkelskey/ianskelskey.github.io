@@ -3,6 +3,7 @@ import {
   firebase,
   framerMotion,
   illustrator,
+  java,
   javascript,
   love2d,
   lua,
@@ -81,6 +82,15 @@ const projects = [
     skills: [spotify, openAI],
     featured: true,
   },
+  {
+    title: "Masks of Malik Minecraft Mod",
+    path: "/projects/masksOfMalik",
+    category: "Game Mod",
+    date: "2023",
+    description: "A mod for Minecraft made for the band Masks of Malik. Contains a custom music disc with the band's music. And some paintings of the logo and a cat.",
+    thumbnail: "/assets/masks-of-malik.png",
+    skills: [java, aseprite],
+  }
 ];
 
 export default projects;

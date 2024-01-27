@@ -16,7 +16,7 @@ export default function DrawerContentFooterLayout({
             {/** Content */}
             <motion.div layout className="w-full flex-grow">{content}</motion.div>
             {/** Footer */}
-            <motion.footer layout className="p-6 dark:bg-neutral-900 bg-neutral-150">
+            <motion.footer layout className="p-6 dark:bg-neutral-900 bg-neutral-200">
               {footer}
             </motion.footer>
           </motion.div>
