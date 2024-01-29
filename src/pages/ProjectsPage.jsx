@@ -46,7 +46,7 @@ export default function ProjectsPage() {
 
   return (
     <Page title="Projects" blurb={blurb}>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 p-4">
         <ul className="flex items-center justify-center gap-4 flex-wrap">
           <li><button className={filter === "All" ? "border-b-2 border-b-theme-blue p-2" : "p-2"} onClick={() => setFilter("All")}>All</button></li>
           <li><button className={filter === "Game Development" ? "border-b-2 border-b-theme-blue p-2" : "p-2"} onClick={() => setFilter("Game Development")}>Game Development</button></li>

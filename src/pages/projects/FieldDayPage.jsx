@@ -4,6 +4,7 @@ import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePi
 import Page from "../../components/layout/Page";
 import TitleIconSection from "../../components/layout/TitleIconSection";
 import projects from "../../data/projects";
+import { motion } from "framer-motion";
 
 export default function FieldDayPage() {
   const fieldDayProject = projects.find(
@@ -59,7 +60,9 @@ export default function FieldDayPage() {
           </a>
         </div>
       </BigTitleQuotePictureSection>
-      <img src="/assets/mockup.png" alt="Field Day mockup" className="w-full" />
+      <motion.img src="/assets/field-day-web-ui-mockup.png" alt="Field Day webui mockup" className="max-w-screen-2xl" whileHover={{ scale: 1.05 }} />
+      <motion.img src="/assets/field-day-pwa-mockup.png" alt="Field Day pwa mockup" className="max-w-lg" whileHover={{ scale: 1.05 }} />
+
       <TitleIconSection
         title="Overview"
         iconName="fieldDay"
