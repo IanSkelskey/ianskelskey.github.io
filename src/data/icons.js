@@ -45,6 +45,7 @@ import {
   faRecordVinyl,
   faRocket,
   faUser,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   SiAdobecreativecloud,
@@ -117,6 +118,7 @@ const faIcons = {
   eye: faEye,
   sortUp: faArrowUpAZ,
   sortDown: faArrowDownAZ,
+  video: faVideo
 };
 
 const siIcons = {

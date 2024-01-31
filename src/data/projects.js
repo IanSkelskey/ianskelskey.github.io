@@ -16,11 +16,13 @@ import {
 
 const projects = [
   {
-    title: "Zelda Ocarina of Time Community Retexture",
+    title: "Ocarina of Time Retexture",
     path: "/projects/ocarina",
+    subtitle: "Community-driven Retexture Project",
     icon: "ocarina",
     date: "2014",
     category: "Game Development",
+    pageBlurb: "I was part of a team that worked on the community-driven retexturing project for Zelda Ocarina of Time, specifically Zelda Ocarina of Time Community Retexture V7. My contributions include designing menus and HUD elements.",
     description:
       "A community-driven high resolution texture pack for The Legend of Zelda: Ocarina of Time.",
     thumbnail: "/assets/zelda-screenshot-2.png",
@@ -45,11 +47,15 @@ const projects = [
     featured: true,
   },
   {
-    title: "Connecticut Community Holiday Toy Drive",
+    title: "Community Toy Drive",
     path: "/projects/toydrive",
+    subtitle: "Give a toy, get the joy.",
     icon: "gift",
     date: "2023",
+    github: "https://github.com/IanSkelskey/toy.drive",
+    deploymentUrl: "https://ianskelskey.github.io/toy.drive/",
     category: "Web App",
+    pageBlurb: "I have organized annual holiday toy drives since 2019. The drive sponsors Connecticut Children's Medical Center. In 2023, I built this website to help better organize the drives and provide information about events and sponsors.",
     description:
       "A website for a local charity event that I helped organize. The website was used to collect donations and provide information about the event.",
     thumbnail: "/assets/toy-drive.png",
