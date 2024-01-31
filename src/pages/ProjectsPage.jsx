@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Page from "../components/layout/Page";
 import ProjectCard from "../components/layout/ProjectCard";
 import projects from "../data/projects";
-import { AnimatePresence } from "framer-motion";
 import Icon from "../components/atoms/Icon";
+import MotionGrid from "../components/layout/MotionGrid";
 
 export default function ProjectsPage() {
   const blurb = "Here are some of the projects I've worked on. Click on a project to learn more. Filter by category to focus on a specific type of project.";
@@ -64,14 +64,11 @@ export default function ProjectsPage() {
           </select>
           <button onClick={() => setSortDirection(sortDirection === "Ascending" ? "Descending" : "Ascending")}>{(sortDirection === "Ascending" ? <Icon name="sortUp" className="text-xl" /> : <Icon name="sortDown" className="text-xl" />)}</button>
         </div>
-        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-4">
-          <AnimatePresence>
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </AnimatePresence>
-
-        </div>
+        <MotionGrid>
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </MotionGrid>
       </div>
 
 
