@@ -24,7 +24,7 @@ export default function Drawer({ title, children }) {
       setDrawerOpen(false);
       
     }
-  }, [location]);
+  }, [location, isLargeScreen]);
 
   const toggleDrawer = () => {
     if (isLargeScreen) {
