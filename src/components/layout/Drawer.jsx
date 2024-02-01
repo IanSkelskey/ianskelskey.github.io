@@ -1,14 +1,30 @@
 import { AnimatePresence, motion } from "framer-motion";
 import IconButton from "../atoms/IconButton";
 import { useEffect, useState, Children, cloneElement, isValidElement } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Drawer({ title, children }) {
   const DEFAULT_WIDTH = "280px"; // Initial width for large screen
   const MINIMIZED_WIDTH = "60px"; // Initial width for small screen
 
+
+
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerWidth, setDrawerWidth] = useState(DEFAULT_WIDTH);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 860);
+
+  // Use history to track page changes
+  const location = useLocation();
+
+  // If the location changes, then minimize the drawer on large screens and close it on small screens
+  useEffect(() => {
+    if (isLargeScreen) {
+      setDrawerWidth(MINIMIZED_WIDTH);
+    } else {
+      setDrawerOpen(false);
+      
+    }
+  }, [location]);
 
   const toggleDrawer = () => {
     if (isLargeScreen) {

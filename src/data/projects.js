@@ -65,9 +65,12 @@ const projects = [
   {
     title: "GD50: Intro to Game Development",
     path: "/projects/gd50",
+    subtitle: "Harvard/edX Course",
     icon: "gameController",
     date: "Current",
+    github: "https://github.com/IanSkelskey/GD50-Submissions",
     category: "Game Development",
+    pageBlurb: "A course offered by Harvard University through edX. The course covers the fundamentals of game development using the Lua programming language and the LÖVE game engine.",
     description:
       "A course offered by Harvard University through edX. The course covers the fundamentals of game development using the Lua programming language and the LÖVE game engine.",
     thumbnail: "/assets/gd50.png",

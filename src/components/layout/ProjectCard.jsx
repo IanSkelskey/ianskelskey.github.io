@@ -8,9 +8,10 @@ export default function ProjectCard({ project }) {
         <motion.div
             className="flex flex-col lg:flex-row dark:bg-neutral-900 bg-neutral-100 relative"
             key={project.title}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
+            initial={{ opacity: 0, scale: 0.4 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.4 }}
+            transition={{ duration: 0.35 }}
             layout
         >
 

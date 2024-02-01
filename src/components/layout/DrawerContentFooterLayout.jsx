@@ -7,7 +7,7 @@ export default function DrawerContentFooterLayout({
   content,
 }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <motion.div className="min-h-screen flex flex-col" layout>
       <AnimatePresence>
         <motion.div className="flex md:flex-row flex-col w-full" layout>
           <Drawer title="Ian Skelskey">{drawerContents}</Drawer>
@@ -23,6 +23,6 @@ export default function DrawerContentFooterLayout({
         </motion.div>
       </AnimatePresence>
 
-    </div>
+    </motion.div>
   );
 }
