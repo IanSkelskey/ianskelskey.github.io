@@ -1,7 +1,6 @@
 import IconButton from "../../components/atoms/IconButton";
 import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePictureSection";
 import Page from "../../components/layout/Page";
-import TitleIconSection from "../../components/layout/TitleIconSection";
 import projects from "../../data/projects";
 
 export default function MasksOfMalikPage() {
