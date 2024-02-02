@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function BigTitleQuotePictureSection({ title, icon, subtitle, quote, children, image, imageAlt }) {
     const [iconClass, setIconClass] = useState('text-3xl');
 
-    {/** Keep track of device size */}
     useEffect(() => {
         function handleResize() {
             if (window.innerWidth > 1536) {
