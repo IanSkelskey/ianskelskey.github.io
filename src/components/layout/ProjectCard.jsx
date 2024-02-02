@@ -17,7 +17,7 @@ export default function ProjectCard({ project }) {
         >
 
             {/* Project Icon */}
-            <motion.div layout className="absolute top-4 right-4 z-50">
+            <motion.div layout className="absolute top-4 right-4">
                 <Icon name={project.icon} className="text-3xl" />
             </motion.div>
 
