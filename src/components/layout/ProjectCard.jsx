@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Badge from "../atoms/Badge";
 import IconButton from "../atoms/IconButton";
 import { motion } from "framer-motion";
+import Icon from "../atoms/Icon";
 
 export default function ProjectCard({ project }) {
     return (
@@ -14,6 +15,11 @@ export default function ProjectCard({ project }) {
             transition={{ duration: 0.35 }}
             layout
         >
+
+            {/* Project Icon */}
+            <motion.div layout className="absolute top-4 right-4 z-50">
+                <Icon name={project.icon} className="text-3xl" />
+            </motion.div>
 
             {/* View More Button Container - Should only be visible on hover*/}
             <motion.div className="absolute w-full h-full dark:bg-neutral-800 bg-neutral-200 dark:bg-opacity-60 bg-opacity-60"
@@ -36,7 +42,7 @@ export default function ProjectCard({ project }) {
             <motion.div layout style={{ backgroundImage: `url(${project.thumbnail})` }} className="w-full lg:w-1/3 min-h-70 bg-cover bg-center flex-shrink-0 flex justify-center items-center" />
 
             <motion.div layout className="flex flex-col p-4 gap-4 w-full">
-                <h4 className="text-xl font-bold">{project.title}</h4>
+                <h4 className="text-xl font-bold pr-12">{project.title}</h4>
                 <div className="flex justify-between">
                     <p className="subtle-text">{project.category}</p>
                     <p className="subtle-text">{project.date}</p>

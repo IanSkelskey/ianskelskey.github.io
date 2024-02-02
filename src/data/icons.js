@@ -21,6 +21,7 @@ import {
   faBriefcase,
   faBug,
   faCode,
+  faCube,
   faDesktop,
   faEnvelope,
   faEye,
@@ -118,7 +119,8 @@ const faIcons = {
   eye: faEye,
   sortUp: faArrowUpAZ,
   sortDown: faArrowDownAZ,
-  video: faVideo
+  video: faVideo,
+  cube: faCube
 };
 
 const siIcons = {

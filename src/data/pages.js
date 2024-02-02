@@ -4,6 +4,7 @@ import ProjectsPage from "../pages/ProjectsPage";
 import ResumePage from "../pages/ResumePage";
 import FieldDayPage from "../pages/projects/FieldDayPage";
 import GD50Page from "../pages/projects/GD50Page";
+import MasksOfMalikPage from "../pages/projects/MasksOfMalikPage";
 import OotRetexturePage from "../pages/projects/OotRetexturePage";
 import PlaylistAssistantPage from "../pages/projects/PlaylistAssistantPage";
 import ToyDrivePage from "../pages/projects/ToyDrivePage";
@@ -71,6 +72,12 @@ const pages = [
     path: "/projects/aiPlaylistAssistant",
     content: <PlaylistAssistantPage />,
     main: false,
+  },
+  {
+    title: "Masks of Malik Minecraft Mod",
+    icon: "minecraft",
+    path: "/projects/masksOfMalik",
+    content: <MasksOfMalikPage />,
   }
 ];
 

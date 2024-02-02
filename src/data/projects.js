@@ -94,7 +94,10 @@ const projects = [
   {
     title: "Masks of Malik Minecraft Mod",
     path: "/projects/masksOfMalik",
+    subtitle: "Custom Music Disc and Paintings",
+    icon: "cube",
     category: "Game Development",
+    pageBlurb: "A mod for Minecraft made for the band Masks of Malik. Contains a custom music disc with the band's music. And some paintings of the logo and a cat.",
     date: "2023",
     description: "A mod for Minecraft made for the band Masks of Malik. Contains a custom music disc with the band's music. And some paintings of the logo and a cat.",
     thumbnail: "/assets/masks-of-malik.png",
