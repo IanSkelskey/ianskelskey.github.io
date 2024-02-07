@@ -4,9 +4,11 @@
 
 - [ ] View more icons for project cards should be visible on mobile.
 - [ ] Curate content for the remaining pages.
-  - [ ] About
+  - [x] About
   - [ ] Projects
     - [ ] Field Day
+      - [ ] Layout Device Mockups
+      - [ ] Innovation Showcase Poster
     - [ ] GD50
     - [ ] Toy Drive
     - [ ] Playlist Assistant
