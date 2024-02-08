@@ -1,6 +1,7 @@
 import IconButton from "../../components/atoms/IconButton";
 import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePictureSection";
 import Page from "../../components/layout/Page";
+import TitleIconSection from "../../components/layout/TitleIconSection";
 import projects from "../../data/projects";
 
 export default function GD50Page() {
@@ -34,6 +35,36 @@ export default function GD50Page() {
           </a>
         </div>
       </BigTitleQuotePictureSection>
+      <TitleIconSection title="Pong" iconName="video">
+        <iframe
+          className="w-full max-w-2xl aspect-[16/9]"
+          src="https://www.youtube.com/embed/RxwTPHQn6Cc?si=VhSbSRG9-68OZI-2"
+          title="GD50 Assignment 0: Pong"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </TitleIconSection>
+      <TitleIconSection title="Flappy Bird" iconName="video">
+      <iframe
+        className="w-full max-w-2xl aspect-[16/9]"
+        src="https://www.youtube.com/embed/WDggad8ArJ8?si=VhSbSRG9-68OZI-2"
+        title="GD50 Assignment 1: Flappy Bird"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      </TitleIconSection>
+      <TitleIconSection title="Breakout" iconName="video">
+      <iframe
+        className="w-full max-w-2xl aspect-[16/9]"
+        src="https://www.youtube.com/embed/FTwQ3LYJrfM?si=VhSbSRG9-68OZI-2"
+        title="GD50 Assignment 2: Breakout"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      </TitleIconSection>
     </Page>
   );
 }
