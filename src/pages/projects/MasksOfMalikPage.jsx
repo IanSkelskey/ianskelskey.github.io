@@ -1,6 +1,7 @@
 import IconButton from "../../components/atoms/IconButton";
 import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePictureSection";
 import Page from "../../components/layout/Page";
+import SpotifyPlayer from "../../components/media/SpotifyPlayer";
 import projects from "../../data/projects";
 
 export default function MasksOfMalikPage() {
@@ -35,6 +36,7 @@ export default function MasksOfMalikPage() {
                     </a>
                 </div>
             </BigTitleQuotePictureSection>
+            <SpotifyPlayer id="5qJkijS1URdFwUFSENoLzO" type="track" className="w-full" title="Masks of Malik Theme" />
         </Page>
     );
 }

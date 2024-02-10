@@ -12,7 +12,7 @@
       - [ ] Layout Device Mockups
       - [ ] Innovation Showcase Poster
     - [ ] GD50
-      - [ ] Submission Videos
+      - [x] Submission Videos
       - [ ] Game Downloads
     - [ ] Toy Drive
       - [ ] Device Mockups?
@@ -25,7 +25,7 @@
     - [ ] Masks of Malik
       - [ ] Screenshots
       - [ ] Visual Assets
-      - [ ] Link to Masks of Malik's Music
+      - [x] Link to Masks of Malik's Music
   - [x] Contact
   - [ ] Resume
     - [ ] Add PDF download functionality
