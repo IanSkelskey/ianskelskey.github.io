@@ -23,17 +23,14 @@ export default function MasksOfMalikPage() {
                     The code can be found on GitHub.
                 </p>
                 <div className="flex gap-4 flex-wrap text-sm">
-                    <a
-                        href={masksOfMalikProject.github}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <IconButton
-                            icon="github"
-                            text="View on GitHub"
-                            className="bg-neutral-700 rounded-md text-white w-fit"
-                        />
-                    </a>
+                    <IconButton
+                        onClick={() => {
+                            window.open(masksOfMalikProject.github, "_blank");
+                        }}
+                        icon="github"
+                        text="View on GitHub"
+                        className="bg-neutral-700 rounded-md text-white w-fit"
+                    />
                 </div>
             </BigTitleQuotePictureSection>
             <SpotifyPlayer id="5qJkijS1URdFwUFSENoLzO" type="track" className="w-full" title="Masks of Malik Theme" />

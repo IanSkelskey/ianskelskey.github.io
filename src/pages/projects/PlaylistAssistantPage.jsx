@@ -28,7 +28,7 @@ export default function PlaylistAssistantPage() {
                 <div className="grid grid-cols-1 3xl:grid-cols-2 gap-4">
                     {plists.map((plist, index) => {
                         return (
-                            <SmallCard>
+                            <SmallCard key={index}>
                                 <div className="flex flex-col lg:flex-row items-center"  >
                                     <img src={plist.coverArt} alt={plist.name} className="lg:max-w-sm md:max-w-md sm:max-w-lg p-4" />
                                     <div className="flex flex-col gap-4 p-4">

@@ -22,17 +22,14 @@ export default function GD50Page() {
           The code can be found on GitHub.
         </p>
         <div className="flex gap-4 flex-wrap text-sm">
-          <a
-            href={gd50Project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconButton
-              icon="github"
-              text="View on GitHub"
-              className="bg-neutral-700 rounded-md text-white w-fit"
-            />
-          </a>
+          <IconButton
+            onClick={() => {
+              window.open(gd50Project.github, "_blank");
+            }}
+            icon="github"
+            text="View on GitHub"
+            className="bg-neutral-700 rounded-md text-white w-fit"
+          />
         </div>
       </BigTitleQuotePictureSection>
 

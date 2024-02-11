@@ -17,7 +17,7 @@
     - [ ] Toy Drive
       - [ ] Device Mockups?
       - [ ] Toy Drive Photos?
-      - [ ] Poster Designs?
+      - [x] Poster Designs?
     - [ ] Playlist Assistant
     - [ ] Oot Retexture
       - [ ] Comparison Images/ Videos
