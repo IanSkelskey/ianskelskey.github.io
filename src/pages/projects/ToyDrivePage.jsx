@@ -39,7 +39,7 @@ export default function ToyDrivePage() {
           />
         </div>
       </BigTitleQuotePictureSection>
-      <iframe src='/assets/projects/toydrive/8x11_poster_2023.pdf' className="w-1/2 aspect-[8/11]" />
+      <iframe title='2023 Toy Drive Poster Design' src='/assets/projects/toydrive/8x11_poster_2023.pdf' className="w-1/2 aspect-[8/11]" />
     </Page>
   );
 }
