@@ -1,7 +1,7 @@
 import IconButton from "../../components/atoms/IconButton";
 import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePictureSection";
 import Page from "../../components/layout/Page";
-import YouTubeVideo from "../../components/media/YouTubeVideo";
+import YouTubePlayer from "../../components/media/YouTubePlayer";
 import projects from "../../data/projects";
 
 export default function GD50Page() {
@@ -34,7 +34,7 @@ export default function GD50Page() {
       </BigTitleQuotePictureSection>
 
       <div className="w-full flex md:items-start gap-6 md:flex-row flex-col items-center px-4">
-        <YouTubeVideo id="RxwTPHQn6Cc?si=VhSbSRG9-68OZI-2" className="md:w-1/2 w-full max-w-2xl aspect-[16/9]" title="GD50 Assignment 0: Pong" />
+        <YouTubePlayer id="RxwTPHQn6Cc?si=VhSbSRG9-68OZI-2" className="md:w-1/2 w-full max-w-2xl aspect-[16/9]" title="GD50 Assignment 0: Pong" />
         <div className="flex flex-col gap-4 flex-grow">
           <h2 className="text-2xl">🏓 Pong</h2>
           <p>
@@ -43,7 +43,7 @@ export default function GD50Page() {
         </div>
       </div>
       <div className="w-full flex md:items-start gap-6 md:flex-row-reverse flex-col items-center px-4">
-        <YouTubeVideo id="WDggad8ArJ8" className="md:w-1/2 w-full max-w-2xl aspect-[16/9]" title="GD50 Assignment 1: Flappy Bird" />
+        <YouTubePlayer id="WDggad8ArJ8" className="md:w-1/2 w-full max-w-2xl aspect-[16/9]" title="GD50 Assignment 1: Flappy Bird" />
         <div className="flex flex-col gap-4 flex-grow">
           <h2 className="text-2xl">🐦 Flappy Bird</h2>
           <p>
@@ -52,7 +52,7 @@ export default function GD50Page() {
         </div>
       </div>
       <div className="w-full flex md:items-start gap-6 md:flex-row flex-col items-center px-4">
-        <YouTubeVideo id="FTwQ3LYJrfM" className="md:w-1/2 w-full max-w-2xl aspect-[16/9]" title="GD50 Assignment 2: Breakout" />
+        <YouTubePlayer id="FTwQ3LYJrfM" className="md:w-1/2 w-full max-w-2xl aspect-[16/9]" title="GD50 Assignment 2: Breakout" />
         <div className="flex flex-col gap-4 flex-grow">
           <h2 className="text-2xl">🧱 Breakout</h2>
           <p>

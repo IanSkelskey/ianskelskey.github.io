@@ -24,6 +24,7 @@ import {
   faCube,
   faDesktop,
   faEnvelope,
+  faExclamation,
   faEye,
   faFile,
   faGamepad,
@@ -67,6 +68,7 @@ import {
   SiSimpleicons,
   SiSpotify,
   SiTailwindcss,
+  SiVite,
 } from "@icons-pack/react-simple-icons";
 import FormspreeSvg from "../assets/FormspreeSvg";
 import ExpressSvg from "../assets/ExpressSvg";
@@ -120,7 +122,8 @@ const faIcons = {
   sortUp: faArrowUpAZ,
   sortDown: faArrowDownAZ,
   video: faVideo,
-  cube: faCube
+  cube: faCube,
+  exclamation: faExclamation,
 };
 
 const siIcons = {
@@ -142,6 +145,7 @@ const siIcons = {
   cpp: SiCplusplus,
   html: SiHtml5,
   css: SiCss3,
+  vite: SiVite,
 };
 
 const svgIcons = {

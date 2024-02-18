@@ -1,7 +1,7 @@
 import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePictureSection";
 import Page from "../../components/layout/Page";
 import TitleIconSection from "../../components/layout/TitleIconSection";
-import YouTubeVideo from "../../components/media/YouTubeVideo";
+import YouTubePlayer from "../../components/media/YouTubePlayer";
 import projects from "../../data/projects";
 
 export default function OotRetexturePage() {
@@ -25,7 +25,7 @@ export default function OotRetexturePage() {
           Demo Video by:{" "}
           <a href="https://www.youtube.com/@HydefHyde">Hydef Hyde</a>
         </h3>
-        <YouTubeVideo id="ommmSq5YeXE?si=VhSbSRG9-68OZI-2" className="w-full max-w-2xl aspect-[16/9]" title="Ocarina of Time Community Retexture Demo Video" />
+        <YouTubePlayer id="ommmSq5YeXE?si=VhSbSRG9-68OZI-2" className="w-full max-w-2xl aspect-[16/9]" title="Ocarina of Time Community Retexture Demo Video" />
       </TitleIconSection>
     </Page>
   );

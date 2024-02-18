@@ -195,3 +195,9 @@ export const vocals = {
   icon: "microphone",
   color: "#00AFFF",
 };
+
+export const vite = {
+  name: "Vite",
+  icon: "vite",
+  color: "#646CFF",
+};

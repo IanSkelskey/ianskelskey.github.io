@@ -8,7 +8,7 @@
     - [ ] Rewrite what I do sections
     - [ ] Consider animating or redesigning the individual cards.
   - [ ] Projects
-    - [ ] Field Day
+    - [ ] Field Day 
       - [ ] Layout Device Mockups
       - [ ] Innovation Showcase Poster
     - [ ] GD50
@@ -41,6 +41,7 @@
 - [ ] Create reusable animated grid component.
 - [ ] Create reusable mockup components.
   - [ ] Accepts screenshot and device type as props.
+- [ ] Consider adding flicks UI mockups to the projects page.
 
 ##  Reach
 

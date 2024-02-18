@@ -12,6 +12,7 @@ import {
   react,
   spotify,
   tailwind,
+  vite,
 } from "./badges";
 
 const projects = [
@@ -43,7 +44,7 @@ const projects = [
     description:
       "A comprehensive data collection and management tool geared towards aiding wildlife researchers and conservationists in Arizona. Dr. Heather Bateman, a biology professor at ASU, sponsors the project. The tech stack for this project includes JavaScript, React, Tailwind, Firestore, Firebase, and Framer Motion.",
     thumbnail: "/assets/projects/fieldday/lizard.jpg",
-    skills: [javascript, react, tailwind, firebase, framerMotion],
+    skills: [javascript, react, tailwind, firebase, framerMotion, vite],
     featured: true,
   },
   {
