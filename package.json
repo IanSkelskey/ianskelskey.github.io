@@ -25,8 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run minify",
-    "minify": "babel src --out-dir build/src --copy-files && terser build/src --compress --mangle --output build/src",
+    "build": "react-scripts build",
     "lint": "react-scripts lint",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -54,9 +53,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.6",
-    "@babel/preset-env": "^7.24.6",
-    "@babel/preset-react": "^7.24.6",
     "gh-pages": "^6.0.0",
     "prettier": "^3.1.1"
   }
