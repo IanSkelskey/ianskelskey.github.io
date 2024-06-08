@@ -9,7 +9,7 @@ export default function Profile({ minimize }) {
   return (
     <motion.div style={{ paddingLeft: paddingStyle, paddingRight: paddingStyle }} className="flex flex-col items-center space-y-4" layout>
       <motion.img
-        src="assets/headshot.png"
+        src="assets/headshot.webp"
         alt="Headshot of Ian Skelskey"
         className="rounded-full w-44 aspect-square"
         initial={{  opacity: 0, scale: 0}}

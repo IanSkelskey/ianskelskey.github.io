@@ -8,7 +8,7 @@ export default function WelcomeSection() {
             title="Ian Skelskey"
             subtitle="Software Engineer"
             quote="I'm a software engineer and creative living in Connecticut. My background is in mathematics, computer science, and software engineering. I've always had a strong interest in video games, leading me to explore game design and development. Right now, I'm focused on creating games using Love2D and Lua, as well as web apps with React. I'm looking to join a company that values creativity and innovation. I hope you find my portfolio engaging and reflective of my skills."
-            image="assets/casual-photo.jpeg"
+            image="assets/casual-photo.webp"
             imageAlt="Ian Skelskey in the San Francisco Bay area">
             <div className="flex flex-row gap-4">
                 <Link to="/projects">

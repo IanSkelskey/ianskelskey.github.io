@@ -64,6 +64,7 @@ export default function Drawer({ title, children }) {
     <motion.div className="flex flex-col space-y-6 items-center w-full md:max-w-fit md:max-h-screen md:overflow-y-auto md:overflow-x-hidden dark:bg-neutral-800 bg-neutral-100" layout>
       <motion.div className="flex flex-row justify-between items-center w-full relative h-14 dark:bg-neutral-800 bg-neutral-100">
         <IconButton
+          alt="Toggle Drawer"
           icon="hamburger"
           className="absolute top-2.5 left-2 z-50"
           onClick={toggleDrawer}
