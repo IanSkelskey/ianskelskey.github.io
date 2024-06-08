@@ -26,7 +26,7 @@ const projects = [
     pageBlurb: "I was part of a team that worked on the community-driven retexturing project for Zelda Ocarina of Time, specifically Zelda Ocarina of Time Community Retexture V7. My contributions include designing menus and HUD elements.",
     description:
       "A community-driven high resolution texture pack for The Legend of Zelda: Ocarina of Time.",
-    thumbnail: "/assets/projects/oot/thumbnail.png",
+    thumbnail: "/assets/projects/oot/thumbnail.webp",
     skills: [photoshop],
     featured: false,
   },
@@ -43,7 +43,7 @@ const projects = [
     pageBlurb: "Field Day is my capstone project for my undergraduate degree at ASU. I was a member of a five person team that worked on the project. There were two components to this project: a PWA for mobile data collection in the field, and a data management tool designed for larger screens. My contributions include designing the UI, implementing the desktop UI using React and Tailwind, and connecting the backend to the desktop data management tool.",
     description:
       "A comprehensive data collection and management tool geared towards aiding wildlife researchers and conservationists in Arizona. Dr. Heather Bateman, a biology professor at ASU, sponsors the project. The tech stack for this project includes JavaScript, React, Tailwind, Firestore, Firebase, and Framer Motion.",
-    thumbnail: "/assets/projects/fieldday/lizard.jpg",
+    thumbnail: "/assets/projects/fieldday/lizard.webp",
     skills: [javascript, react, tailwind, firebase, framerMotion, vite],
     featured: true,
   },
@@ -59,7 +59,7 @@ const projects = [
     pageBlurb: "I have organized annual holiday toy drives since 2019. The drive sponsors Connecticut Children's Medical Center. In 2023, I built this website to help better organize the drives and provide information about events and sponsors.",
     description:
       "A website for a local charity event that I helped organize. The website was used to collect donations and provide information about the event.",
-    thumbnail: "/assets/projects/toydrive/thumbnail.png",
+    thumbnail: "/assets/projects/toydrive/thumbnail.webp",
     skills: [react, tailwind, firebase, illustrator],
     featured: true,
   },
@@ -74,7 +74,7 @@ const projects = [
     pageBlurb: "A course offered by Harvard University through edX. The course covers the fundamentals of game development using the Lua programming language and the LÖVE game engine.",
     description:
       "A course offered by Harvard University through edX. The course covers the fundamentals of game development using the Lua programming language and the LÖVE game engine.",
-    thumbnail: "/assets/projects/gd50/thumbnail.png",
+    thumbnail: "/assets/projects/gd50/thumbnail.webp",
     skills: [lua, love2d, aseprite],
     featured: true,
   },
@@ -88,7 +88,7 @@ const projects = [
     pageBlurb: "A pet project of mine that I've been working on in my free time. The goal of this project is to create a custom GPT that can analyze a playlist and generate artwork and descriptions for the playlist.",
     description:
       "A custom GPT that analyzes playlist contents and generates artwork and descriptions for the playlist.",
-    thumbnail: "/assets/projects/plist/thumbnail.png",
+    thumbnail: "/assets/projects/plist/thumbnail.webp",
     skills: [spotify, openAI],
     featured: true,
   },
@@ -101,7 +101,7 @@ const projects = [
     pageBlurb: "A mod for Minecraft made for the band Masks of Malik. Contains a custom music disc with the band's music. And some paintings of the logo and a cat.",
     date: "2023",
     description: "A mod for Minecraft made for the band Masks of Malik. Contains a custom music disc with the band's music. And some paintings of the logo and a cat.",
-    thumbnail: "/assets/projects/malik/thumbnail.png",
+    thumbnail: "/assets/projects/malik/thumbnail.webp",
     skills: [java, aseprite],
   }
 ];

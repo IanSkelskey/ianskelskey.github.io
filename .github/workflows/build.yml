@@ -1,0 +1,57 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Start the application
+        run: npm start &
+        env:
+          CI: true
+
+      - name: Wait for application to be ready
+        run: |
+          echo "Waiting for application to start..."
+          until curl -s http://localhost:3000; do
+            echo "Waiting for application..."
+            sleep 5
+          done
+        env:
+          CI: true
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          configPath: './lighthouserc.json'
+          uploadArtifacts: true
+          temporaryPublicStorage: true

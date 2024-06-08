@@ -61,6 +61,7 @@ import {
   SiFigma,
   SiFirebase,
   SiFramer,
+  SiGodotengine,
   SiHtml5,
   SiLua,
   SiOpenai,
@@ -146,6 +147,7 @@ const siIcons = {
   html: SiHtml5,
   css: SiCss3,
   vite: SiVite,
+  godot: SiGodotengine
 };
 
 const svgIcons = {

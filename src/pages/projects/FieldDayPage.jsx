@@ -86,9 +86,9 @@ export default function FieldDayPage() {
           ))}
         </div>
         <h4 className="text-lg">Desktop App</h4>
-        <motion.img src="/assets/projects/fieldday/field-day-web-ui-mockup.png" alt="Field Day webui mockup" className="max-w-3xl" whileHover={{ scale: 1.05 }} />
+        <motion.img src="/assets/projects/fieldday/field-day-web-ui-mockup.webp" alt="Field Day webui mockup" className="max-w-3xl" whileHover={{ scale: 1.05 }} />
         <h4 className="text-lg">Mobile App</h4>
-        <motion.img src="/assets/projects/fieldday/field-day-pwa-mockup.png" alt="Field Day pwa mockup" className="max-w-md" whileHover={{ scale: 1.05 }} />
+        <motion.img src="/assets/projects/fieldday/field-day-pwa-mockup.webp" alt="Field Day pwa mockup" className="max-w-md" whileHover={{ scale: 1.05 }} />
         <h4 className="text-lg">The Team</h4>
         <ul className="flex justify-around flex-wrap gap-4">
           <li>
