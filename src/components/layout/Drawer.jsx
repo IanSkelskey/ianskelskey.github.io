@@ -1,14 +1,30 @@
 import { AnimatePresence, motion } from "framer-motion";
 import IconButton from "../atoms/IconButton";
 import { useEffect, useState, Children, cloneElement, isValidElement } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Drawer({ title, children }) {
-  const DEFAULT_WIDTH = "320px"; // Initial width for large screen
+  const DEFAULT_WIDTH = "280px"; // Initial width for large screen
   const MINIMIZED_WIDTH = "60px"; // Initial width for small screen
 
-  const [drawerOpen, setDrawerOpen] = useState(true);
+
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerWidth, setDrawerWidth] = useState(DEFAULT_WIDTH);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 860);
+
+  // Use history to track page changes
+  const location = useLocation();
+
+  // If the location changes, then minimize the drawer on large screens and close it on small screens
+  useEffect(() => {
+    if (isLargeScreen) {
+      setDrawerWidth(MINIMIZED_WIDTH);
+    } else {
+      setDrawerOpen(false);
+      
+    }
+  }, [location, isLargeScreen]);
 
   const toggleDrawer = () => {
     if (isLargeScreen) {
@@ -45,24 +61,32 @@ export default function Drawer({ title, children }) {
   });
 
   return (
-    <div className="flex flex-col space-y-6 items-center w-full md:max-w-fit md:max-h-screen md:overflow-y-auto md:overflow-x-hidden dark:bg-neutral-800 bg-neutral-100">
-      <div className="flex flex-row justify-between items-center w-full relative h-14 dark:bg-neutral-800 bg-neutral-100">
+    <motion.div className="flex flex-col space-y-6 items-center w-full md:max-w-fit md:max-h-screen md:overflow-y-auto md:overflow-x-hidden dark:bg-neutral-800 bg-neutral-100" layout>
+      <motion.div className="flex flex-row justify-between items-center w-full relative h-14 dark:bg-neutral-800 bg-neutral-100">
         <IconButton
           icon="hamburger"
           className="absolute top-2.5 left-2 z-50"
           onClick={toggleDrawer}
         />
-        <h1 className="text-2xl font-serif font-bold w-full text-center">
-          {!minimized && title}
-        </h1>
-      </div>
+        <AnimatePresence>
+          {!minimized && <motion.h1 className="text-2xl font-serif font-bold w-full text-center"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0, width: 0, height: 0 }}
+          >
+            {title}
+          </motion.h1>}
+        </AnimatePresence>
+
+
+      </motion.div>
 
       <AnimatePresence>
         {drawerOpen && (
           <motion.div
-            initial={isLargeScreen ? { width: 0 } : { height: 0 }}
+            initial={isLargeScreen ? { width: drawerWidth } : { height: 0 }}
             animate={isLargeScreen ? { width: drawerWidth } : { height: drawerOpen ? "auto" : 0 }}
-            exit={isLargeScreen ? { width: 0 } : { height: 0 }}
+            exit={{ width: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="flex flex-col space-y-6 items-center w-full"
           >
@@ -70,6 +94,6 @@ export default function Drawer({ title, children }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

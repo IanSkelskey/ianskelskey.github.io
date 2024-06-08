@@ -25,30 +25,28 @@ export default function TechStackSection() {
         code.
       </p>
       <p>Check out the source code on my GitHub repository!</p>
-      <p className="flex flex-row gap-4">
-        <a
-          href="https://github.com/ianskelskey/ianskelskey.github.io"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconButton
-            text="View Source"
-            icon="github"
-            className="bg-theme-blue rounded-md text-white w-fit"
-          />
-        </a>
-        <a
-          href="https://github.com/IanSkelskey/ianskelskey.github.io/issues/new/choose"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconButton
-            text="Report Issue"
-            icon="bug"
-            className="bg-neutral-700  rounded-md text-white w-fit"
-          />
-        </a>
-      </p>
+      <div className="flex flex-row gap-4">
+        <IconButton
+          text="View Source"
+          icon="github"
+          onClick={() =>
+            window.open(
+              "https://github.com/ianskelskey/ianskelskey.github.io", "_blank"
+            )
+          }
+          className="bg-theme-blue rounded-md text-white w-fit"
+        />
+        <IconButton
+          text="Report Issue"
+          icon="bug"
+          onClick={
+            () => window.open(
+              "https://github.com/IanSkelskey/ianskelskey.github.io/issues/new/choose", "_blank"
+            )
+          }
+          className="bg-neutral-700  rounded-md text-white w-fit"
+        />
+      </div>
     </TitleIconSection>
   );
 }

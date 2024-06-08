@@ -45,29 +45,33 @@ The project follows a standard React application structure, organized for clarit
 ```bash
 .
 ├── .github/                  # GitHub workflows for CI/CD
-│   ├── workflows/            # Workflows for CI/CD
-├── public/                   # Static files such as index.html, favicon.ico
-├── src/                      # Source files
-│   ├── components/           # Reusable components
-│       ├── atoms/            # Atom components (e.g., Badge, Icon)
-│       ├── content/          # Content components (e.g., Profile, Footer)
-│       ├── layout/           # Layout components (e.g., Page, Drawer)
-│   ├── pages/                # Page components (e.g., About, Resume)
-│       ├── projects/         # Project page components
-│   ├── assets/               # Static assets (e.g., images, fonts)
+│   ├── workflows/            # Workflows for CI/CD, including deployment and prettier formatting
+├── public/                   # Static files like index.html, favicon, logos, and manifest
+│   ├── assets/               # Public assets like images and project-specific graphics
+│       ├── projects/         # Assets related to specific projects showcased in the portfolio
+├── src/                      # Source code of the application
+│   ├── components/           # Reusable React components
+│       ├── atoms/            # Basic building blocks of the UI (e.g., Badge, Icon)
+│       ├── content/          # Components for content sections (e.g., ContactForm, Footer)
+│       ├── layout/           # Layout components for structuring pages (e.g., Drawer, Page)
+│       ├── media/            # Media components like Spotify and YouTube players
+│   ├── data/                 # Data files for badges, CV details, icons, projects, etc.
+│   ├── pages/                # Components for whole pages (e.g., About, Projects, Resume)
+│       ├── projects/         # Detailed project pages
+│   ├── assets/               # Static assets (SVGs for tech stack icons and project logos)
 │   ├── App.js                # Main application component
-│   ├── App.test.js           # Application test file
-│   ├── index.css             # Global CSS styles
-│   ├── index.js              # Application entry point
-├── .gitignore                # Files and directories to ignore in Git
-├── .prettierrc               # Configuration for Prettier code formatter
-├── .prettierignore           # Files and directories to ignore in Prettier
-├── postcss.config.js         # Configuration for PostCSS
-├── tailwind.config.js        # Configuration for Tailwind CSS
-├── node_modules/             # Installed project dependencies
+│   ├── App.test.js           # Tests for the main application
+│   ├── index.css             # Global styles
+│   ├── index.js              # Entry point of the React application
 ├── package.json              # Project metadata and dependencies
-├── package-lock.json         # Exact dependency tree for the project
-└── README.md                 # Project documentation
+├── package-lock.json         # Locked versions of dependencies
+├── postcss.config.js         # PostCSS configuration for processing CSS
+├── tailwind.config.js        # Tailwind CSS configuration for custom styles
+├── README.md                 # Documentation of the project
+├── TODO.md                   # List of tasks and features to be implemented
+├── .gitignore                # Specifies intentionally untracked files to ignore
+├── .prettierrc               # Configuration for Prettier to enforce consistent code style
+├── .prettierignore           # Files and directories that Prettier will ignore
 ```
 
 `.github/workflows/`

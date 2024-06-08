@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIcons, siIcons, svgIcons } from "../../data/icons";
 import { createElement } from "react";
+import { motion } from "framer-motion";
 
 const getTextSizeInPx = (className) => {
   const sizeMap = {
@@ -42,11 +43,11 @@ const Icon = ({ name, className = "" }) => {
   const size = getTextSizeInPx(className);
 
   if (isFontAwesome) {
-    return <FontAwesomeIcon icon={icon} className={className} />;
+    return <motion.div layout><FontAwesomeIcon icon={icon} className={className} /></motion.div>;
   } else if (isSimpleIcon) {
-    return <SiIcon icon={icon} size={size} className={className} />;
+    return <motion.div layout><SiIcon icon={icon} size={size} className={className} /></motion.div>;
   } else if (isSVG) {
-    return <SvgIcon icon={icon} size={size} className={className} alt={name} />;
+    return <motion.div layout><SvgIcon icon={icon} size={size} className={className} alt={name} /></motion.div>;
   }
 };
 

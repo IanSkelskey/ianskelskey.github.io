@@ -9,7 +9,6 @@ export default function ContactForm({ formId }) {
   const [nameError, setNameError] = useState("");
   const [messageError, setMessageError] = useState("");
 
-  /**Use Effect hook to update form when errors change */
   useEffect(() => { }, [emailError, nameError, messageError]);
 
   function validateName(value) {

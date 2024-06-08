@@ -15,12 +15,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAddressBook,
+  faArrowDownAZ,
+  faArrowUpAZ,
   faBars,
   faBriefcase,
   faBug,
   faCode,
+  faCube,
   faDesktop,
   faEnvelope,
+  faExclamation,
+  faEye,
   faFile,
   faGamepad,
   faGears,
@@ -42,6 +47,7 @@ import {
   faRecordVinyl,
   faRocket,
   faUser,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   SiAdobecreativecloud,
@@ -62,6 +68,7 @@ import {
   SiSimpleicons,
   SiSpotify,
   SiTailwindcss,
+  SiVite,
 } from "@icons-pack/react-simple-icons";
 import FormspreeSvg from "../assets/FormspreeSvg";
 import ExpressSvg from "../assets/ExpressSvg";
@@ -110,7 +117,13 @@ const faIcons = {
   desktop: faDesktop,
   recordVinyl: faRecordVinyl,
   maximize: faMaximize,
-  minimize: faMinimize
+  minimize: faMinimize,
+  eye: faEye,
+  sortUp: faArrowUpAZ,
+  sortDown: faArrowDownAZ,
+  video: faVideo,
+  cube: faCube,
+  exclamation: faExclamation,
 };
 
 const siIcons = {
@@ -132,6 +145,7 @@ const siIcons = {
   cpp: SiCplusplus,
   html: SiHtml5,
   css: SiCss3,
+  vite: SiVite,
 };
 
 const svgIcons = {

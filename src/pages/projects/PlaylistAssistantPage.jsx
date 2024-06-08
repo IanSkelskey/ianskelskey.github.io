@@ -1,12 +1,11 @@
-import { useState } from "react";
-import IconButton from "../../components/atoms/IconButton";
 import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePictureSection";
 import Page from "../../components/layout/Page";
 import TitleIconSection from "../../components/layout/TitleIconSection";
 import plists from "../../data/plists";
 import projects from "../../data/projects";
-import { motion } from "framer-motion";
 import SmallCard from "../../components/atoms/SmallCard";
+import SpotifyPlayer from "../../components/media/SpotifyPlayer";
+
 export default function PlaylistAssistantPage() {
     const playlistAssistantProject = projects.find(
         (project) => project.title === "AI Playlist Assistant"
@@ -29,13 +28,13 @@ export default function PlaylistAssistantPage() {
                 <div className="grid grid-cols-1 3xl:grid-cols-2 gap-4">
                     {plists.map((plist, index) => {
                         return (
-                            <SmallCard>
+                            <SmallCard key={index}>
                                 <div className="flex flex-col lg:flex-row items-center"  >
                                     <img src={plist.coverArt} alt={plist.name} className="lg:max-w-sm md:max-w-md sm:max-w-lg p-4" />
                                     <div className="flex flex-col gap-4 p-4">
                                         <h3 className="text-xl">{plist.name}</h3>
                                         <p className="text-sm subtle-text">{plist.description}</p>
-                                        <SpotifyPlaylistPlayer playlistId={plist.id} />
+                                        <SpotifyPlayer id={plist.id} type="playlist" title={plist.name} className="w-full" />
                                     </div>
                                 </div>
                             </SmallCard>
@@ -48,37 +47,4 @@ export default function PlaylistAssistantPage() {
             </TitleIconSection>
         </Page>
     )
-}
-
-function SpotifyPlaylistPlayer({ playlistId }) {
-    const SMALL_HEIGHT = 152;
-    const LARGE_HEIGHT = 352;
-    const [height, setHeight] = useState(SMALL_HEIGHT);
-
-    const toggleSize = () => {
-        setHeight(height === SMALL_HEIGHT ? LARGE_HEIGHT : SMALL_HEIGHT);
-    };
-
-    return (
-        <div className="w-full flex-col space-y-4">
-            <motion.iframe
-                title={playlistId}
-                src={`https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator`}
-                className="max-w-screen-sm"
-                width="100%"
-                height={height}
-                animate={{ height: height }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-            />
-            <IconButton
-                icon={height === SMALL_HEIGHT ? "maximize" : "minimize"}
-                text={height === SMALL_HEIGHT ? "Expand" : "Shrink"}
-                className="bg-spotify-green w-fit rounded-md"
-                onClick={toggleSize}
-            />
-        </div>
-    );
 }

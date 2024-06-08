@@ -4,6 +4,7 @@ import BigTitleQuotePictureSection from "../../components/layout/BigTitleQuotePi
 import Page from "../../components/layout/Page";
 import TitleIconSection from "../../components/layout/TitleIconSection";
 import projects from "../../data/projects";
+import { motion } from "framer-motion";
 
 export default function FieldDayPage() {
   const fieldDayProject = projects.find(
@@ -22,51 +23,58 @@ export default function FieldDayPage() {
 
         <p className="text-sm subtle-text">The code can be found in the GitHub organization. Both the PWA and Web UI are live, but use Google authentication and require asu email address to enter.</p>
         <div className="flex gap-4 flex-wrap text-sm">
-          <a
-            href={fieldDayProject.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconButton
-              icon="github"
-              text="View on GitHub"
-              className="bg-neutral-700 rounded-md text-white w-fit"
-            />
-          </a>
+          <IconButton
+            onClick={() =>
+              window.open(fieldDayProject.github, "_blank")
+            }
+            icon="github"
+            text="View on GitHub"
+            className="bg-neutral-700 rounded-md text-white w-fit"
+          />
 
-          <a
-            href={fieldDayProject.pwaUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconButton
-              icon="mobile"
-              text="View PWA"
-              className="bg-asu-maroon rounded-md text-white w-fit"
-            />
-          </a>
+          <IconButton
+            onClick={
+              () => window.open(fieldDayProject.pwaUrl, "_blank")
+            }
+            icon="mobile"
+            text="View PWA"
+            className="bg-asu-maroon rounded-md text-white w-fit"
+          />
 
-          <a
-            href={fieldDayProject.webUiUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconButton
-              icon="desktop"
-              text="View Web UI"
-              className="bg-asu-gold rounded-md text-black w-fit"
-            />
-          </a>
+          <IconButton
+            onClick={
+              () => window.open(fieldDayProject.webUiUrl, "_blank")
+            }
+            icon="desktop"
+            text="View Web UI"
+            className="bg-asu-gold rounded-md text-black w-fit"
+          />
         </div>
       </BigTitleQuotePictureSection>
-      <img src="/assets/mockup.png" alt="Field Day mockup" className="w-full" />
       <TitleIconSection
-        title="Overview"
-        iconName="fieldDay"
+        title="The Problem"
+        iconName="exclamation"
       >
         <p>
-          {fieldDayProject.description}
+          Field researchers encounter several challenges when collecting and analyzing wildlife population data, including human error during data collection, limited connectivity in remote areas,
+          and high costs of maintaining a secure cloud database. These issues can compromise the accuracy of results and hinder scientific research.
         </p>
+      </TitleIconSection>
+
+      <TitleIconSection
+        title="The Solution"
+        iconName="rocket"
+      >
+        <p>
+          To address these issues, the Field Day project employs innovative app design and cross-disciplinary
+          collaboration to streamline data collection and analysis. The team focused on reducing
+          deployment costs and enhancing user experience by migrating from Amazon Web Services
+          to Firebase, which offers a free tier and is more cost-effective. The team also improved
+          the Mobile App and Web App to better handle limited connectivity and enhance authentication
+          security using 2-factor Google authentication. These changes have resulted in a more
+          efficient, secure, and cost-effective user experience.
+        </p>
+        <h4 className="text-lg">Tech Stack</h4>
         <div className="flex gap-2 flex-wrap">
           {fieldDayProject.skills.map((skill) => (
             <Badge
@@ -77,6 +85,43 @@ export default function FieldDayPage() {
             />
           ))}
         </div>
+        <h4 className="text-lg">Desktop App</h4>
+        <motion.img src="/assets/projects/fieldday/field-day-web-ui-mockup.png" alt="Field Day webui mockup" className="max-w-3xl" whileHover={{ scale: 1.05 }} />
+        <h4 className="text-lg">Mobile App</h4>
+        <motion.img src="/assets/projects/fieldday/field-day-pwa-mockup.png" alt="Field Day pwa mockup" className="max-w-md" whileHover={{ scale: 1.05 }} />
+        <h4 className="text-lg">The Team</h4>
+        <ul className="flex justify-around flex-wrap gap-4">
+          <li>
+              <div className="flex flex-col gap-4 items-center">
+                <div className="w-20 h-20 rounded-full bg-gray-300"></div>
+                <p className="text-sm">Ian Skelskey</p>
+              </div>
+            </li>
+            <li>
+              <div className="flex flex-col gap-4 items-center">
+                <div className="w-20 h-20 rounded-full bg-gray-300"></div>
+                <p className="text-sm">Isaiah Lathem</p>
+              </div>
+            </li>
+            <li>
+              <div className="flex flex-col gap-4 items-center">
+                <div className="w-20 h-20 rounded-full bg-gray-300"></div>
+                <p className="text-sm">Zachary Jacobson</p>
+              </div>
+            </li>
+            <li>
+              <div className="flex flex-col gap-4 items-center">
+                <div className="w-20 h-20 rounded-full bg-gray-300"></div>
+                <p className="text-sm">Jack Norman</p>
+              </div>
+            </li>
+            <li>
+              <div className="flex flex-col gap-4 items-center">
+                <div className="w-20 h-20 rounded-full bg-gray-300"></div>
+                <p className="text-sm">Dennis Grassl</p>
+              </div>
+            </li>
+        </ul>
       </TitleIconSection>
     </Page>
   );
