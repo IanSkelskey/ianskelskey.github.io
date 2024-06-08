@@ -24,6 +24,20 @@ import {
 
 const experience = [
   {
+    title: "Freelance Software Engineer",
+    date: "March 2024 - Present",
+    employer: "Self-Employed",
+    location: "Remote",
+    description:
+      "Developed custom software solutions for clients in a variety of industries, specializing in web and game development and design.",
+    bullets: [
+      "Developed MIDI music visualization software using the Godot game engine.",
+      "Worked with a team to define product specifications and deliver client-focused solutions.",
+      "Wrote the engineering standards document to guide development processes.",
+      "Contributed ideas to shape the product vision.",
+    ],
+  },
+  {
     title: "Professional Tutor",
     date: "2012 - Present",
     employer: "CT State Tunxis",
