@@ -5,6 +5,7 @@ import {
   creativeCloud,
   css,
   express,
+  love2d,
   figma,
   firebase,
   framerMotion,
@@ -20,6 +21,7 @@ import {
   react,
   tailwind,
   vue,
+  godot,
 } from "./badges";
 
 const experience = [
@@ -100,6 +102,10 @@ const skills = [
   {
     category: "Version Control",
     skills: [git, github],
+  },
+  {
+    category: "Game Development",
+    skills: [love2d, godot],
   },
   {
     category: "Design",

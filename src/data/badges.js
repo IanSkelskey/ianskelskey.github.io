@@ -201,3 +201,9 @@ export const vite = {
   icon: "vite",
   color: "#646CFF",
 };
+
+export const godot = {
+  name: "Godot",
+  icon: "godot",
+  color: "#478CBF",
+};
