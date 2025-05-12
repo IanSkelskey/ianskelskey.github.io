@@ -1,100 +1,44 @@
-# Ian Skelskey's Portfolio
+# New Portfolio
 
-Welcome to my portfolio, a showcase of my skills and projects as a full-stack software engineer. This web application is crafted with React Tailwind CSS, and Framer Motion featuring a clean, responsive, and accessible design.
-
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Form Spree](https://img.shields.io/badge/Form_Spree-2EA2EF?style=for-the-badge&logo=formspree&logoColor=white)
-![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=font-awesome&logoColor=white)
-![Simple Icons](https://img.shields.io/badge/Simple_Icons-111111?style=for-the-badge&logo=simpleicons&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
-![GitHub Pages](https://img.shields.io/badge/Github_Pages-2088FF?style=for-the-badge&logo=githubpages&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+This is a modern, responsive portfolio site built with React, Vite, and Tailwind CSS.
 
 ## Features
 
-- Responsive layout with adaptive components for optimal viewing on any device.
-- Dark mode toggle for accessibility and user preference.
-- Contact form integrated with Formspree for direct messaging.
-- Projects section with detailed cards for each portfolio item.
-- Animated drawer for mobile navigation.
-- GitHub workflows to automate deployment and code formatting.
+- Project showcase (projects loaded from JSON for easy management)
+- Dark and light mode support
+- Mobile-first, accessible design
+- Clear CTA and visually cohesive branding
+- About, Skills, Projects (with filtering), and Contact sections
+- Semantic HTML and ARIA roles
+- Performance and SEO best practices
 
 ## Getting Started
 
-To set up your portfolio with this template:
+1. Install dependencies:
+   ```powershell
+   npm install
+   ```
+2. Start the development server:
+   ```powershell
+   npm run dev
+   ```
 
-1. Clone the repository:
-   `git clone https://github.com/IanSkelskey/ianskelskey.github.io.git`
-2. Install the necessary dependencies:
-   `npm install`
-3. Start the development server:
-   `npm start`
-4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Customization
 
-Customize content and styles to match your brand and showcase your work.
-
-## Project File Structure
-
-The project follows a standard React application structure, organized for clarity and easy navigation. Here's a brief overview of the main directories and files:
-
-```bash
-.
-├── .github/                  # GitHub workflows for CI/CD
-│   ├── workflows/            # Workflows for CI/CD, including deployment and prettier formatting
-├── public/                   # Static files like index.html, favicon, logos, and manifest
-│   ├── assets/               # Public assets like images and project-specific graphics
-│       ├── projects/         # Assets related to specific projects showcased in the portfolio
-├── src/                      # Source code of the application
-│   ├── components/           # Reusable React components
-│       ├── atoms/            # Basic building blocks of the UI (e.g., Badge, Icon)
-│       ├── content/          # Components for content sections (e.g., ContactForm, Footer)
-│       ├── layout/           # Layout components for structuring pages (e.g., Drawer, Page)
-│       ├── media/            # Media components like Spotify and YouTube players
-│   ├── data/                 # Data files for badges, CV details, icons, projects, etc.
-│   ├── pages/                # Components for whole pages (e.g., About, Projects, Resume)
-│       ├── projects/         # Detailed project pages
-│   ├── assets/               # Static assets (SVGs for tech stack icons and project logos)
-│   ├── App.js                # Main application component
-│   ├── App.test.js           # Tests for the main application
-│   ├── index.css             # Global styles
-│   ├── index.js              # Entry point of the React application
-├── package.json              # Project metadata and dependencies
-├── package-lock.json         # Locked versions of dependencies
-├── postcss.config.js         # PostCSS configuration for processing CSS
-├── tailwind.config.js        # Tailwind CSS configuration for custom styles
-├── README.md                 # Documentation of the project
-├── TODO.md                   # List of tasks and features to be implemented
-├── .gitignore                # Specifies intentionally untracked files to ignore
-├── .prettierrc               # Configuration for Prettier to enforce consistent code style
-├── .prettierignore           # Files and directories that Prettier will ignore
-```
-
-`.github/workflows/`
-
-GitHub workflows for CI/CD. The `deploy.yml` workflow is configured to deploy the application to GitHub Pages on every push to the `main` branch. The `prettier.yml` workflow is configured to run Prettier on every push to the `main` or `dev` branches.
-
-`public/`
-
-Static files such as `index.html`, `favicon.ico`, and `robots.txt`.
-
-`src/`
-
-Source files for the application. The `components/` directory contains reusable components, and the `pages/` directory contains page components. The `assets/` directory contains static assets such as images and fonts. The `App.js` file is the main application component, and the `index.js` file is the application entry point.
+- Add or edit projects in the `src/data/projects.json` file (to be created).
+- Update About, Skills, and Contact info in their respective components.
 
 ## Deployment
 
-This portfolio is set up to deploy to GitHub Pages using the `gh-pages` package. There are workflows configured to automatically deploy the application to GitHub Pages on every push to the `main` branch. You can also deploy the application manually by running the following commands in your terminal:
-
-1. Run the build script:
-   `npm run build`
-2. Deploy to GitHub Pages:
-   `npm run deploy`
-
-## Contributions
-
-I would like for other developers to review my code. I want to get better at writing clean, readable code, and I want to learn more about React. If you have any suggestions for improvements, please feel free to open an issue. I would also appreciate any feedback on my design and code.
+- Build for production:
+  ```powershell
+  npm run build
+  ```
+- Preview production build:
+  ```powershell
+  npm run preview
+  ```
 
 ---
 
-© 2024 Ian Skelskey. All rights reserved.
+Replace placeholder images and content with your own for best results.

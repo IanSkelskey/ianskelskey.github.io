@@ -1,0 +1,190 @@
+.about-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.about-section h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-lg);
+  color: var(--color-text);
+  position: relative;
+  padding-bottom: var(--space-xs);
+  display: inline-block;
+}
+
+.about-section h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.about-section p {
+  font-size: var(--font-size-md);
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+/* Timeline section */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: var(--space-xl);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 11px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow:
+    0 0 0 4px var(--color-bg),
+    0 0 0 6px rgba(99, 102, 241, 0.3);
+  z-index: 1;
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: var(--space-md);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--color-primary);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xs);
+}
+
+.timeline-content h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.timeline-institution {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+  font-style: italic;
+}
+
+/* Current interests section */
+.interests-content {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: var(--space-lg);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+}
+
+.current-learning {
+  margin-top: var(--space-md);
+}
+
+.current-learning h3 {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.current-learning ul {
+  list-style: none;
+  padding: 0;
+}
+
+.current-learning li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+}
+
+.current-learning li:before {
+  content: "→";
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+}
+
+/* CTA section - Improved contrast */
+.cta-section {
+  text-align: center;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-md);
+  margin: var(--space-xl) auto;
+  max-width: 900px;
+  box-shadow: 0 4px 20px var(--color-shadow);
+  /* Add border for better definition */
+  border: 1px solid var(--color-cta-border, transparent);
+}
+
+.cta-section h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+  color: var(--color-cta-text, white);
+  /* Increased font weight for better readability */
+  font-weight: 700;
+}
+
+.cta-section p {
+  max-width: 600px;
+  margin: 0 auto var(--space-lg);
+  color: var(--color-cta-text-secondary, rgba(255, 255, 255, 0.9));
+  /* Increased font weight for better readability */
+  font-weight: 500;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.cta-section .btn-primary {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid white;
+  /* Increased font weight for better contrast */
+  font-weight: 700;
+}
+
+.cta-section .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.cta-section .btn-secondary {
+  background-color: transparent;
+}

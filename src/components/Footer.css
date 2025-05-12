@@ -1,0 +1,162 @@
+.site-footer {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-xl) 0 var(--space-md);
+  width: 100%;
+  margin-top: auto; /* Push to bottom if content is short */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.footer-info h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.footer-info p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.footer-links h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-xs);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* Increased background opacity for better contrast */
+  background-color: rgba(99, 102, 241, 0.15);
+  color: var(--color-primary);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  /* Ensure sufficient contrast on hover state */
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.2);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* Copyright section - improved contrast */
+.copyright {
+  text-align: center;
+  /* Increased contrast for copyright text */
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  letter-spacing: 0.01em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .footer-container {
+    padding-inline: var(--space-sm);
+  }
+
+  .footer-content {
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: var(--space-lg) 0 var(--space-sm);
+  }
+
+  .footer-content {
+    margin-bottom: var(--space-lg);
+  }
+}
+
+/* Dark mode specific improvements for footer */
+@media (prefers-color-scheme: dark) {
+  .site-footer {
+    border-top-color: var(--color-border);
+  }
+
+  .social-links a {
+    /* Higher contrast for social links */
+    background-color: rgba(165, 180, 252, 0.25);
+  }
+
+  .footer-info p,
+  .copyright {
+    /* Ensure all footer text is readable */
+    color: var(--color-text);
+  }
+}
+
+/* --- Utility: Visually Hidden (for a11y) --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
