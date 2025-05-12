@@ -278,6 +278,11 @@
   stroke-width: 2px;
 }
 
+.project-cards-container {
+  display: contents; /* This makes the container behave like its children are direct children of the parent grid */
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
   .project-grid {
     gap: var(--space-lg);

@@ -78,7 +78,7 @@ const ProjectGrid = ({ projects }) => {
             layout: { type: "spring", damping: 30, stiffness: 300 },
           }}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredProjects.length === 0 ? (
               <motion.div
                 className="no-projects-container"
@@ -92,13 +92,22 @@ const ProjectGrid = ({ projects }) => {
                 <p className="no-projects">No projects in this category</p>
               </motion.div>
             ) : (
-              filteredProjects.map((project, index) => (
-                <ProjectCard
-                  key={project.path}
-                  project={project}
-                  index={index}
-                />
-              ))
+              // Wrap the mapped items in a single parent to fix the AnimatePresence issue
+              <motion.div
+                className="project-cards-container"
+                key="project-cards"
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.path}
+                    project={project}
+                    index={index}
+                  />
+                ))}
+              </motion.div>
             )}
           </AnimatePresence>
         </motion.div>

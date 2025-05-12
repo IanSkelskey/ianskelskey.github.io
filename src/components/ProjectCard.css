@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
 }
 
 .project-card:hover {
@@ -130,6 +131,13 @@
   color: var(--color-text-secondary);
 }
 
+/* Make tech tags look like links but prevent nested a tags */
+.project-tech a.tech-tag {
+  text-decoration: none;
+  position: relative;
+  z-index: 5; /* Ensure tech tags are above the card for proper click handling */
+}
+
 .project-icon {
   position: absolute;
   top: var(--space-sm);
@@ -159,4 +167,80 @@
   width: 18px;
   height: 18px;
   stroke-width: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-info {
+    padding: var(--space-md) var(--space-md);
+  }
+  
+  .project-title {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .project-subtitle {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .tech-tag {
+    padding: 0.2rem 0.6rem;
+    font-size: calc(var(--font-size-sm) - 0.05rem);
+  }
+  
+  .project-overlay span {
+    padding: 0.6rem 1.2rem;
+    font-size: var(--font-size-sm);
+  }
+  
+  .project-card:hover {
+    /* Reduce hover effect on mobile for better readability */
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info {
+    padding: var(--space-sm) var(--space-sm);
+  }
+  
+  .project-image-container {
+    aspect-ratio: 16 / 10; /* Slightly shorter images on very small screens */
+  }
+  
+  .project-tech {
+    gap: calc(var(--space-xs) * 0.75);
+  }
+  
+  .tech-tag {
+    padding: 0.15rem 0.5rem;
+  }
+  
+  .project-icon {
+    top: var(--space-xs);
+    right: var(--space-xs);
+    width: 28px;
+    height: 28px;
+  }
+  
+  .project-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Improve touch targets for mobile */
+  .project-link {
+    position: relative;
+  }
+  
+  /* Ensure proper tap area even with transform effects */
+  .project-overlay span {
+    min-width: 120px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
