@@ -27,13 +27,21 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Helper function to get the correct path for data files
+  const getDataPath = (filename) => {
+    // In development, use the src path; in production, use the root path
+    return import.meta.env.DEV
+      ? `/src/data/${filename}`
+      : `/ianskelskey.github.io/data/${filename}`;
+  };
+
   useEffect(() => {
     // Load all data in parallel
     Promise.all([
-      fetch("/src/data/projects.json").then((res) => res.json()),
-      fetch("/src/data/about.json").then((res) => res.json()),
-      fetch("/src/data/socialLinks.json").then((res) => res.json()),
-      fetch("/src/data/skills.json").then((res) => res.json()),
+      fetch(getDataPath("projects.json")).then((res) => res.json()),
+      fetch(getDataPath("about.json")).then((res) => res.json()),
+      fetch(getDataPath("socialLinks.json")).then((res) => res.json()),
+      fetch(getDataPath("skills.json")).then((res) => res.json()),
     ])
       .then(([projectsData, about, social, skills]) => {
         // Process projects to ensure consistent format (migrate from single category to categories array)
@@ -47,7 +55,7 @@ function App() {
             }
 
             return updatedProject;
-          },
+          }
         );
 
         setProjects(processedProjects);

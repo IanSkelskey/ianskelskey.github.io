@@ -29,7 +29,10 @@ jobs:
         run: npm run build
 
       - name: Copy Data Files
-        run: cp -r src/data dist/data # Copy data files to the dist directory
+        run: |
+          mkdir -p dist/data
+          cp -r src/data/* dist/data/
+          ls -la dist/data # Verify the files were copied correctly
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
