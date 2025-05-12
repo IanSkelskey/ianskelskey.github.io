@@ -29,11 +29,17 @@ jobs:
         run: npm run build
         # No need to set base path here since it's in vite.config.js
 
-      - name: Copy Data Files
+      - name: Copy Static Files
         run: |
+          # Copy data files
           mkdir -p dist/data
           cp -r src/data/* dist/data/
-          ls -la dist/data # Verify the files were copied correctly
+          ls -la dist/data # Verify the data files were copied correctly
+          
+          # Copy assets directory
+          mkdir -p dist/src/assets
+          cp -r src/assets dist/src/
+          ls -la dist/src/assets # Verify the assets were copied correctly
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
