@@ -5,20 +5,20 @@
 // Standard item fade in/slide up with optional delay based on index
 export const itemFadeIn = (index = 0, delayFactor = 0.05) => ({
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { 
+    transition: {
       delay: index * delayFactor,
       duration: 0.35,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+    },
   },
-  exit: { 
-    opacity: 0, 
-    scale: 0.9, 
-    transition: { duration: 0.2 } 
-  }
+  exit: {
+    opacity: 0,
+    scale: 0.9,
+    transition: { duration: 0.2 },
+  },
 });
 
 // For cards with hover state changes - toned down
@@ -26,19 +26,19 @@ export const cardHoverTransition = {
   whileHover: {
     y: -3, // Reduced from -5
     boxShadow: "0 6px 15px rgba(0, 0, 0, 0.08)", // Reduced shadow
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
 };
 
 // Scale animation for buttons, icons, etc.
 export const scaleOnHover = {
-  whileHover: { 
+  whileHover: {
     scale: 1.05,
-    transition: { duration: 0.2 } 
+    transition: { duration: 0.2 },
   },
-  whileTap: { 
-    scale: 0.98 
-  }
+  whileTap: {
+    scale: 0.98,
+  },
 };
 
 // Item slide in from side
@@ -50,9 +50,9 @@ export const slideInFromLeft = (index = 0, delayFactor = 0.05) => ({
     transition: {
       delay: index * delayFactor,
       duration: 0.4,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 });
 
 export const slideInFromRight = (index = 0, delayFactor = 0.05) => ({
@@ -63,7 +63,7 @@ export const slideInFromRight = (index = 0, delayFactor = 0.05) => ({
     transition: {
       delay: index * delayFactor,
       duration: 0.4,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 });

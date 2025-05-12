@@ -17,7 +17,7 @@
   --color-text-high-contrast: #000000;
   --color-link-hover: #4338ca;
   --color-disabled: #9ca3af;
-  
+
   /* Added new specific button colors */
   --color-btn-github: #24292e;
   --color-btn-github-hover: #1a1e22;
@@ -27,7 +27,7 @@
   --color-btn-gpt-hover: #0d8c6d;
   --color-btn-app: #1d4ed8; /* Darkened blue for app buttons to meet contrast requirements */
   --color-btn-app-hover: #1e40af;
-  
+
   /* Spacing system */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -35,7 +35,7 @@
   --space-lg: 2rem;
   --space-xl: 3rem;
   --space-2xl: 4rem;
-  
+
   /* Typography */
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -44,30 +44,31 @@
   --font-size-xl: 1.5rem;
   --font-size-2xl: 2rem;
   --font-size-3xl: 2.5rem;
-  
+
   /* Border radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem; /* Adjusted from 1rem to 0.75rem for more subtle card corners */
-  --radius-xl: 1rem;    /* Added for larger elements */
+  --radius-xl: 1rem; /* Added for larger elements */
   --radius-full: 9999px;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
-  
+
   /* CTA section specific colors */
   --color-cta-text: #ffffff;
   --color-cta-text-secondary: rgba(255, 255, 255, 0.9);
   --color-cta-border: transparent;
   --color-cta-btn-border: white;
-  
+
   /* Card specific variables */
   --card-bg: #fff;
   --card-radius: var(--radius-lg);
   --card-shadow: 0 4px 20px var(--color-shadow);
   --card-border: none;
-  --card-transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  --card-transition:
+    transform var(--transition-fast), box-shadow var(--transition-fast);
   --card-transform-hover: translateY(-5px);
   --card-shadow-hover: 0 10px 25px var(--color-shadow);
 }
@@ -92,7 +93,9 @@
     --color-text-high-contrast: #ffffff;
 
     /* Fix for card backgrounds in dark mode */
-    --card-bg: var(--color-bg-card); /* Add this line to update card backgrounds */
+    --card-bg: var(
+      --color-bg-card
+    ); /* Add this line to update card backgrounds */
 
     /* Adjusted button colors for dark mode */
     --color-btn-app: #1d4ed8; /* Darkened blue for better contrast with white text */
@@ -117,12 +120,20 @@
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
   margin: 0;
   min-height: 100vh;
   width: 100%;
@@ -197,7 +208,8 @@ a {
   transition: color var(--transition-fast);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--color-primary-accent);
 }
 
@@ -317,7 +329,8 @@ button {
 }
 
 /* Specialized button types - MOBILE/DESKTOP APP */
-.btn-mobile, .btn-desktop {
+.btn-mobile,
+.btn-desktop {
   background-color: var(--color-btn-app);
   color: var(--color-text-light);
   border: none;
@@ -325,7 +338,8 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn-mobile:hover, .btn-desktop:hover {
+.btn-mobile:hover,
+.btn-desktop:hover {
   background-color: var(--color-btn-app-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -400,12 +414,12 @@ button {
   .heading-xl {
     font-size: var(--font-size-xl);
   }
-  
+
   .section-title {
     font-size: var(--font-size-xl);
     margin-bottom: var(--space-md);
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     gap: var(--space-sm);
@@ -466,7 +480,7 @@ button {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   }
-  
+
   .cta-section .btn-secondary {
     color: #ffffff;
     border-color: rgba(255, 255, 255, 0.8);

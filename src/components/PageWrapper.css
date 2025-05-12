@@ -51,7 +51,7 @@
   .page-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .page-subtitle {
     font-size: var(--font-size-lg);
   }
@@ -61,7 +61,7 @@
   .page-wrapper {
     padding: var(--space-md) var(--space-sm);
   }
-  
+
   .page-header {
     padding: var(--space-lg) 0;
     margin-bottom: var(--space-xl);
@@ -72,15 +72,15 @@
   .page-wrapper {
     padding: var(--space-sm);
   }
-  
+
   .page-title {
     font-size: var(--font-size-xl);
   }
-  
+
   .page-subtitle {
     font-size: var(--font-size-md);
   }
-  
+
   .page-header {
     padding: var(--space-md) 0;
     margin-bottom: var(--space-lg);

@@ -1,48 +1,58 @@
-import { motion } from 'framer-motion';
-import { 
-  FaGithub, FaLinkedin, FaTwitter, FaDribbble, 
-  FaInstagram, FaYoutube, FaBehance, FaMedium, FaStackOverflow,
-  FaGlobe, FaDiscord, FaTwitch, FaDeviantart
-} from 'react-icons/fa';
-import PageWrapper from '../components/PageWrapper';
-import { staggerContainer, itemFadeIn } from '../animations';
-import './ContactPage.css';
+import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaDribbble,
+  FaInstagram,
+  FaYoutube,
+  FaBehance,
+  FaMedium,
+  FaStackOverflow,
+  FaGlobe,
+  FaDiscord,
+  FaTwitch,
+  FaDeviantart,
+} from "react-icons/fa";
+import PageWrapper from "../components/PageWrapper";
+import { staggerContainer, itemFadeIn } from "../animations";
+import "./ContactPage.css";
 
 const ContactPage = ({ socialLinks = [] }) => {
   // Function to render the appropriate icon based on platform
   const renderSocialIcon = (platform) => {
     const iconProps = {
-      'aria-hidden': 'true',
-      focusable: 'false',
-      size: "1.5rem"
+      "aria-hidden": "true",
+      focusable: "false",
+      size: "1.5rem",
     };
 
     // Match platform name to the appropriate icon
     switch (platform.toLowerCase()) {
-      case 'github':
+      case "github":
         return <FaGithub {...iconProps} />;
-      case 'linkedin':
+      case "linkedin":
         return <FaLinkedin {...iconProps} />;
-      case 'twitter':
-      case 'x':
+      case "twitter":
+      case "x":
         return <FaTwitter {...iconProps} />;
-      case 'dribbble':
+      case "dribbble":
         return <FaDribbble {...iconProps} />;
-      case 'instagram':
+      case "instagram":
         return <FaInstagram {...iconProps} />;
-      case 'youtube':
+      case "youtube":
         return <FaYoutube {...iconProps} />;
-      case 'behance':
+      case "behance":
         return <FaBehance {...iconProps} />;
-      case 'medium':
+      case "medium":
         return <FaMedium {...iconProps} />;
-      case 'stackoverflow':
+      case "stackoverflow":
         return <FaStackOverflow {...iconProps} />;
-      case 'discord':
+      case "discord":
         return <FaDiscord {...iconProps} />;
-      case 'twitch':
+      case "twitch":
         return <FaTwitch {...iconProps} />;
-      case 'deviantart':
+      case "deviantart":
         return <FaDeviantart {...iconProps} />;
       default:
         return <FaGlobe {...iconProps} />; // Default to web icon
@@ -50,8 +60,8 @@ const ContactPage = ({ socialLinks = [] }) => {
   };
 
   return (
-    <PageWrapper 
-      title="Contact Me" 
+    <PageWrapper
+      title="Contact Me"
       subtitle="Let's connect and collaborate"
       className="contact-page"
     >
@@ -64,15 +74,16 @@ const ContactPage = ({ socialLinks = [] }) => {
         <motion.div className="contact-content" variants={itemFadeIn(0)}>
           <motion.h2 variants={itemFadeIn(1)}>Connect With Me</motion.h2>
           <motion.p variants={itemFadeIn(2)}>
-            Thanks for your interest in my work! The best way to reach out is through 
-            my social platforms below. I'm always open to discussing new opportunities,
-            collaborations, or just chatting about technology and design.
+            Thanks for your interest in my work! The best way to reach out is
+            through my social platforms below. I'm always open to discussing new
+            opportunities, collaborations, or just chatting about technology and
+            design.
           </motion.p>
         </motion.div>
 
         <motion.div className="social-section" variants={itemFadeIn(3)}>
           <motion.h2 variants={itemFadeIn(4)}>Find Me Online</motion.h2>
-          <motion.div 
+          <motion.div
             className="social-links-grid"
             variants={staggerContainer(0.05)}
           >
@@ -83,7 +94,9 @@ const ContactPage = ({ socialLinks = [] }) => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={link.ariaLabel || `Connect with me on ${link.platform}`}
+                  aria-label={
+                    link.ariaLabel || `Connect with me on ${link.platform}`
+                  }
                   className="social-link-card"
                   variants={itemFadeIn(index)}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -106,11 +119,14 @@ const ContactPage = ({ socialLinks = [] }) => {
           </motion.div>
         </motion.div>
 
-        <motion.div className="future-plans" variants={itemFadeIn(socialLinks ? socialLinks.length + 5 : 5)}>
+        <motion.div
+          className="future-plans"
+          variants={itemFadeIn(socialLinks ? socialLinks.length + 5 : 5)}
+        >
           <motion.h2 variants={itemFadeIn(0)}>Coming Soon</motion.h2>
           <motion.p variants={itemFadeIn(1)}>
-            I'm planning to add more direct communication channels in the future.
-            Check back soon for updates!
+            I'm planning to add more direct communication channels in the
+            future. Check back soon for updates!
           </motion.p>
         </motion.div>
       </motion.div>

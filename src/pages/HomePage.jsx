@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import CTASection from '../components/CTASection';
-import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
-import ProjectCard from '../components/ProjectCard';
-import './HomePage.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import CTASection from "../components/CTASection";
+import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa";
+import ProjectCard from "../components/ProjectCard";
+import "./HomePage.css";
 
 const HomePage = ({ projects = [], socialLinks = [] }) => {
   // Filter featured projects only
-  const featuredProjects = projects.filter(project => project.featured);
+  const featuredProjects = projects.filter((project) => project.featured);
 
   // Stagger animation for children elements
   const containerVariants = {
@@ -17,21 +17,25 @@ const HomePage = ({ projects = [], socialLinks = [] }) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <motion.div 
+        <motion.div
           className="hero-content"
           initial="hidden"
           animate="visible"
@@ -44,8 +48,8 @@ const HomePage = ({ projects = [], socialLinks = [] }) => {
             Software Engineer & Designer
           </motion.p>
           <motion.p variants={itemVariants} className="hero-description">
-            Creating elegant, impactful web and game experiences with a focus on clean code, 
-            accessibility, and meaningful user interactions.
+            Creating elegant, impactful web and game experiences with a focus on
+            clean code, accessibility, and meaningful user interactions.
           </motion.p>
           <motion.div variants={itemVariants} className="hero-cta">
             <Link to="/projects" className="btn btn-primary">
@@ -56,10 +60,20 @@ const HomePage = ({ projects = [], socialLinks = [] }) => {
             </Link>
           </motion.div>
           <motion.div variants={itemVariants} className="hero-social">
-            <a href="https://github.com/ianskelskey" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a
+              href="https://github.com/ianskelskey"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/ianskelskey" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a
+              href="https://linkedin.com/in/ianskelskey"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <FaLinkedin />
             </a>
           </motion.div>
@@ -73,19 +87,31 @@ const HomePage = ({ projects = [], socialLinks = [] }) => {
           <div className="expertise-grid">
             <div className="expertise-card">
               <h3>Web Development</h3>
-              <p>Building responsive, accessible web applications using modern frameworks and design principles.</p>
+              <p>
+                Building responsive, accessible web applications using modern
+                frameworks and design principles.
+              </p>
             </div>
             <div className="expertise-card">
               <h3>Open Source</h3>
-              <p>Contributing to the Evergreen ILS project and other open source initiatives with a focus on libraries and education.</p>
+              <p>
+                Contributing to the Evergreen ILS project and other open source
+                initiatives with a focus on libraries and education.
+              </p>
             </div>
             <div className="expertise-card">
               <h3>Game Development</h3>
-              <p>Creating engaging game experiences using Godot, Lua, and other technologies with a focus on mechanics and design.</p>
+              <p>
+                Creating engaging game experiences using Godot, Lua, and other
+                technologies with a focus on mechanics and design.
+              </p>
             </div>
             <div className="expertise-card">
               <h3>UI/UX Design</h3>
-              <p>Designing intuitive interfaces that prioritize accessibility and user experience across platforms.</p>
+              <p>
+                Designing intuitive interfaces that prioritize accessibility and
+                user experience across platforms.
+              </p>
             </div>
           </div>
         </div>
@@ -96,14 +122,14 @@ const HomePage = ({ projects = [], socialLinks = [] }) => {
         <section>
           <div className="section-container">
             <h2 className="section-title">Featured Projects</h2>
-            <motion.div 
+            <motion.div
               className="featured-grid"
               initial="hidden"
               animate="visible"
               variants={containerVariants}
             >
               {featuredProjects.slice(0, 3).map((project, index) => (
-                <ProjectCard 
+                <ProjectCard
                   key={project.path}
                   project={project}
                   index={index}
@@ -121,16 +147,16 @@ const HomePage = ({ projects = [], socialLinks = [] }) => {
       )}
 
       {/* CTA Section - Now using the reusable component */}
-      <CTASection 
-        title="Let's Build Something Together" 
+      <CTASection
+        title="Let's Build Something Together"
         description="I'm always interested in new opportunities and collaborations."
-        primaryButton={{ 
-          text: 'Learn More About Me',
-          to: '/about'
+        primaryButton={{
+          text: "Learn More About Me",
+          to: "/about",
         }}
-        secondaryButton={{ 
-          text: 'Get In Touch',
-          href: '/contact'
+        secondaryButton={{
+          text: "Get In Touch",
+          href: "/contact",
         }}
       />
     </div>

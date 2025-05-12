@@ -9,9 +9,9 @@ export const staggerContainer = (staggerChildren = 0.1) => ({
     opacity: 1,
     transition: {
       staggerChildren,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 });
 
 // Container with staggered fade in (no container opacity animation)
@@ -20,9 +20,9 @@ export const staggerFadeContainer = (staggerChildren = 0.1) => ({
   visible: {
     transition: {
       staggerChildren,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 });
 
 // Grid container animation
@@ -32,9 +32,9 @@ export const gridContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-      duration: 0.4
-    }
-  }
+      duration: 0.4,
+    },
+  },
 };
 
 // Project grid animation with optimized settings for smoother transitions
@@ -45,11 +45,11 @@ export const projectGridVariants = {
     transition: {
       staggerChildren: 0.03, // Faster stagger for smoother appearance
       duration: 0.3,
-      ease: "easeOut"
-    }
+      ease: "easeOut",
+    },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.2 }
-  }
+    transition: { duration: 0.2 },
+  },
 };

@@ -18,7 +18,9 @@
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .back-link:hover {
@@ -68,7 +70,7 @@
 }
 
 .related-projects-section h2:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -174,7 +176,7 @@
 }
 
 .skill-cta h2:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -197,11 +199,11 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--space-lg);
   }
-  
+
   .skill-hero h1 {
     font-size: var(--font-size-2xl);
   }
-  
+
   .skill-description {
     font-size: var(--font-size-md);
   }
@@ -212,20 +214,20 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: var(--space-md);
   }
-  
+
   .skill-hero h1 {
     font-size: var(--font-size-xl);
   }
-  
+
   .skill-description {
     font-size: var(--font-size-base);
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .cta-buttons .btn {
     width: 100%;
     max-width: 300px;
@@ -236,16 +238,16 @@
   .related-projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .related-skills {
     gap: var(--space-sm);
   }
-  
+
   .related-skill-link {
     padding: 0.5rem 1rem;
     font-size: var(--font-size-sm);
   }
-  
+
   .skill-hero h1 {
     font-size: var(--font-size-lg);
   }
@@ -257,17 +259,25 @@
     background-color: var(--color-bg-card);
     border-color: var(--color-border);
   }
-  
+
   .related-skill-link:hover {
-    background-color: color-mix(in srgb, var(--color-bg-card) 90%, var(--color-primary));
+    background-color: color-mix(
+      in srgb,
+      var(--color-bg-card) 90%,
+      var(--color-primary)
+    );
   }
-  
+
   .skill-category {
     background-color: rgba(99, 102, 241, 0.2);
   }
-  
+
   .no-projects {
     border-color: var(--color-border);
-    background-color: color-mix(in srgb, var(--color-bg-card) 95%, var(--color-primary));
+    background-color: color-mix(
+      in srgb,
+      var(--color-bg-card) 95%,
+      var(--color-primary)
+    );
   }
 }

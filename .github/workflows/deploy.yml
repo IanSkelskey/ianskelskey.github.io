@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4 # Updated to latest version
         with:
           node-version: "18" # Set this to the node version you are using
-          cache: 'npm' # Cache npm dependencies for faster builds
+          cache: "npm" # Cache npm dependencies for faster builds
 
       - name: Install Dependencies
         run: npm ci # Using ci instead of install for more reliable builds

@@ -24,7 +24,11 @@
   margin-bottom: var(--space-sm);
   color: var(--color-text);
   font-weight: 800;
-  background: linear-gradient(45deg, var(--color-primary), var(--color-primary-accent));
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-primary-accent)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -101,7 +105,7 @@
 }
 
 .section-title:after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -226,22 +230,22 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: var(--font-size-lg);
   }
-  
+
   .hero-cta {
     flex-direction: column;
     gap: var(--space-sm);
   }
-  
+
   .expertise-grid,
   .featured-grid {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     gap: var(--space-sm);
@@ -252,11 +256,11 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-description {
     font-size: var(--font-size-base);
   }
-  
+
   .section-container {
     padding: var(--space-lg) var(--space-sm);
   }
@@ -270,25 +274,25 @@
     /* Add border for better definition in dark mode */
     border-color: rgba(255, 255, 255, 0.2);
   }
-  
+
   .cta-content h2 {
     /* Ensure heading is pure white for maximum contrast */
     color: #ffffff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Add shadow for better legibility */
   }
-  
+
   .cta-content p {
     /* Lighter text for better contrast */
     color: rgba(255, 255, 255, 0.95);
   }
-  
+
   .cta-section .btn-primary {
     /* High contrast - black text on white background */
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   }
-  
+
   .cta-section .btn-secondary {
     /* Ensure text is pure white for maximum contrast */
     color: #ffffff;

@@ -1,32 +1,39 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
-import { pageTransition, contentTransition, itemFadeIn, staggerContainer } from '../animations';
-import './DetailWrapper.css';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import {
+  pageTransition,
+  contentTransition,
+  itemFadeIn,
+  staggerContainer,
+} from "../animations";
+import "./DetailWrapper.css";
 
 const DetailWrapper = ({
   children,
   title,
   subtitle,
   backLink,
-  backText = 'Back',
+  backText = "Back",
   icon,
   metadata = [],
   heroImage,
   heroAlt,
   accentColor,
   animate = true,
-  className = ''
+  className = "",
 }) => {
   // Create a style object with CSS variables for the accent color if provided
-  const accentStyle = accentColor ? {
-    "--detail-accent-color": accentColor,
-    "--detail-accent-transparent": `${accentColor}33` // 20% opacity version
-  } : {};
+  const accentStyle = accentColor
+    ? {
+        "--detail-accent-color": accentColor,
+        "--detail-accent-transparent": `${accentColor}33`, // 20% opacity version
+      }
+    : {};
 
   return (
-    <motion.div 
-      className={`detail-wrapper ${className}`} 
+    <motion.div
+      className={`detail-wrapper ${className}`}
       style={accentStyle}
       initial="hidden"
       animate="visible"
@@ -34,11 +41,8 @@ const DetailWrapper = ({
       variants={pageTransition}
     >
       {/* Hero section */}
-      <motion.section 
-        className="detail-hero"
-        variants={staggerContainer(0.1)}
-      >
-        <motion.div 
+      <motion.section className="detail-hero" variants={staggerContainer(0.1)}>
+        <motion.div
           className="detail-hero-content"
           variants={staggerContainer(0.08)}
         >
@@ -49,30 +53,38 @@ const DetailWrapper = ({
               </Link>
             </motion.div>
           )}
-          
+
           {icon && (
-            <motion.div 
-              className="detail-hero-icon" 
+            <motion.div
+              className="detail-hero-icon"
               aria-hidden="true"
               variants={itemFadeIn(1)}
             >
               {icon}
             </motion.div>
           )}
-          
+
           <motion.div variants={staggerContainer(0.06)}>
-            {title && <motion.h1 className="detail-title" variants={itemFadeIn(0)}>{title}</motion.h1>}
-            {subtitle && <motion.p className="detail-subtitle" variants={itemFadeIn(1)}>{subtitle}</motion.p>}
+            {title && (
+              <motion.h1 className="detail-title" variants={itemFadeIn(0)}>
+                {title}
+              </motion.h1>
+            )}
+            {subtitle && (
+              <motion.p className="detail-subtitle" variants={itemFadeIn(1)}>
+                {subtitle}
+              </motion.p>
+            )}
           </motion.div>
-          
+
           {metadata.length > 0 && (
-            <motion.div 
+            <motion.div
               className="detail-meta"
               variants={staggerContainer(0.04)}
             >
               {metadata.map((item, index) => (
-                <motion.span 
-                  key={index} 
+                <motion.span
+                  key={index}
                   className="detail-meta-item"
                   variants={itemFadeIn(index)}
                 >
@@ -82,16 +94,13 @@ const DetailWrapper = ({
             </motion.div>
           )}
         </motion.div>
-        
+
         {heroImage && (
-          <motion.div 
+          <motion.div
             className="detail-hero-image"
             variants={itemFadeIn(metadata.length > 0 ? metadata.length + 1 : 3)}
           >
-            <img 
-              src={heroImage}
-              alt={heroAlt || `${title} visual`}
-            />
+            <img src={heroImage} alt={heroAlt || `${title} visual`} />
           </motion.div>
         )}
       </motion.section>
@@ -116,7 +125,7 @@ DetailWrapper.propTypes = {
   heroAlt: PropTypes.string,
   accentColor: PropTypes.string,
   animate: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default DetailWrapper;

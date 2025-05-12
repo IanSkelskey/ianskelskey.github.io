@@ -3,6 +3,7 @@
 This is a modern, responsive portfolio site built with React, Vite, and Tailwind CSS.
 
 ## Features
+
 - Project showcase (projects loaded from JSON for easy management)
 - Dark and light mode support
 - Mobile-first, accessible design
@@ -23,18 +24,20 @@ This is a modern, responsive portfolio site built with React, Vite, and Tailwind
    ```
 
 ## Customization
+
 - Add or edit projects in the `src/data/projects.json` file (to be created).
 - Update About, Skills, and Contact info in their respective components.
 
 ## Deployment
+
 - Build for production:
-   ```powershell
-   npm run build
-   ```
+  ```powershell
+  npm run build
+  ```
 - Preview production build:
-   ```powershell
-   npm run preview
-   ```
+  ```powershell
+  npm run preview
+  ```
 
 ---
 

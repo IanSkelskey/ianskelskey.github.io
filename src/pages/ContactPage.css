@@ -24,7 +24,7 @@
 .contact-content h2:after,
 .social-section h2:after,
 .future-plans h2:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -49,7 +49,9 @@
   background-color: var(--color-bg-card);
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 12px var(--color-shadow);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .contact-method:hover {
@@ -113,7 +115,11 @@
 
 .social-link-card:hover {
   border-color: var(--color-primary);
-  background-color: color-mix(in srgb, var(--color-bg-card) 95%, var(--color-primary));
+  background-color: color-mix(
+    in srgb,
+    var(--color-bg-card) 95%,
+    var(--color-primary)
+  );
 }
 
 .social-icon-wrapper {
@@ -180,11 +186,11 @@
   .contact-container {
     gap: var(--space-xl);
   }
-  
+
   .social-links-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-  
+
   .contact-content p,
   .future-plans p {
     font-size: var(--font-size-md);
@@ -195,17 +201,17 @@
   .social-links-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-method {
     flex-direction: column;
     text-align: center;
     padding: var(--space-lg) var(--space-md);
   }
-  
+
   .contact-icon {
     margin-bottom: var(--space-sm);
   }
-  
+
   .social-link-card {
     padding: var(--space-sm);
   }
@@ -216,16 +222,16 @@
   .social-icon-wrapper {
     background-color: rgba(165, 180, 252, 0.15);
   }
-  
+
   .contact-icon {
     background-color: rgba(165, 180, 252, 0.15);
   }
-  
+
   .social-link-card:hover {
     background-color: rgba(165, 180, 252, 0.05);
     border-color: var(--color-primary);
   }
-  
+
   .social-link-card:hover .social-icon-wrapper {
     background-color: rgba(165, 180, 252, 0.25);
   }

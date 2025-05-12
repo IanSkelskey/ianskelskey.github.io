@@ -12,7 +12,7 @@
 }
 
 .about-section h2:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -36,7 +36,7 @@
 }
 
 .timeline:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 20px;
   top: 0;
@@ -59,7 +59,9 @@
   height: 20px;
   border-radius: 50%;
   background-color: var(--color-primary);
-  box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px rgba(99, 102, 241, 0.3);
+  box-shadow:
+    0 0 0 4px var(--color-bg),
+    0 0 0 6px rgba(99, 102, 241, 0.3);
   z-index: 1;
 }
 
@@ -138,7 +140,7 @@
 .cta-section {
   text-align: center;
   background-color: var(--color-primary);
-  color: white; 
+  color: white;
   border-radius: var(--radius-lg);
   padding: var(--space-xl) var(--space-md);
   margin: var(--space-xl) auto;

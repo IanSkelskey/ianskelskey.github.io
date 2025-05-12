@@ -8,7 +8,13 @@
       "categories": ["OpenSource", "Web Development"],
       "date": "2024 - Present",
       "icon": "evergreen-ils",
-      "skills": ["PostgreSQL", "Perl", "Angular", "Open Source", "Documentation"],
+      "skills": [
+        "PostgreSQL",
+        "Perl",
+        "Angular",
+        "Open Source",
+        "Documentation"
+      ],
       "thumbnail": "/src/assets/projects/evergreen-ils/thumbnail.png",
       "path": "/projects/evergreen-ils",
       "featured": true,
@@ -102,7 +108,15 @@
       "desktopAppUrl": "https://asu-field-day-webui.web.app/",
       "categories": ["Web Development", "Research", "Education"],
       "thumbnail": "/src/assets/projects/fieldday/lizard.webp",
-      "skills": ["JavaScript", "React", "Tailwind", "Firebase", "Framer Motion", "Vite", "Documentation"],
+      "skills": [
+        "JavaScript",
+        "React",
+        "Tailwind",
+        "Firebase",
+        "Framer Motion",
+        "Vite",
+        "Documentation"
+      ],
       "featured": true,
       "accentColor": "#8C1D40",
       "links": [
