@@ -29,10 +29,10 @@ function App() {
 
   // Helper function to get the correct path for data files
   const getDataPath = (filename) => {
-    // In development, use the src path; in production, use the root path
+    // In development, use the src path; in production, use just /data/
     return import.meta.env.DEV
       ? `/src/data/${filename}`
-      : `/ianskelskey.github.io/data/${filename}`;
+      : `/data/${filename}`;
   };
 
   useEffect(() => {
