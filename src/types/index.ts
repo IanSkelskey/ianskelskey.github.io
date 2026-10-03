@@ -12,3 +12,15 @@ export type DemoStatus = {
   status: "ok" | "degraded";
   message: string;
 };
+
+export type ProjectLink = { label: string; href: string };
+
+export type DemoProject = {
+  id: string;
+  title: string;
+  category: "Application" | "Template";
+  description: string;
+  featured?: boolean;
+  primaryAction: ProjectLink;
+  supportingActions: readonly ProjectLink[];
+};
