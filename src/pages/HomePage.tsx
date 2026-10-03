@@ -5,13 +5,16 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 const HomePage = () => {
   useDocumentTitle("Demos & tools");
   return (
-    <section aria-labelledby="home-heading" className="flex flex-col gap-6">
+    <section aria-labelledby="home-heading" className="flex flex-col gap-10">
       <div>
-        <h1 id="home-heading" className="text-4xl font-bold text-foreground">
+        <h1
+          id="home-heading"
+          className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl"
+        >
           Demos & tools
         </h1>
-        <p className="mt-3 max-w-prose text-muted">
-          Small applications and reusable templates you can explore, try, and build on.
+        <p className="mt-4 max-w-prose text-lg text-muted">
+          Browser apps and reusable templates. Pick something to try.
         </p>
       </div>
       <ProjectGallery projects={projects} />

@@ -1,50 +1,89 @@
 import { useId } from "react";
 import type { DemoProject } from "../../types";
+import { BASE_PATH } from "../../config/env";
+import "./ProjectCard.css";
 
 type ProjectCardProps = { project: DemoProject };
 
+/*
+ * The whole card is one click target: the primary action's ::after stretches
+ * over the card (see ProjectCard.css), so there is a single tab stop per
+ * destination. Supporting links sit above that overlay with their own targets.
+ * A featured project spans the full gallery row in a horizontal layout.
+ */
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const headingId = useId();
+  const featured = project.featured === true;
+
   return (
     <article
       aria-labelledby={headingId}
-      className={`flex flex-col gap-6 rounded-xl border bg-raised p-6 transition-colors hover:border-accent ${project.featured ? "border-accent/40 md:col-span-2 md:p-8" : "border-divider"}`}
+      className={`project-card relative flex min-w-0 flex-col overflow-hidden rounded-xl border border-divider bg-raised ${
+        featured ? "col-span-full md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]" : ""
+      }`}
     >
-      <div>
-        <div className="flex flex-wrap items-center gap-3">
-          <p className="inline-flex rounded-full border border-divider px-3 py-1 text-xs font-semibold tracking-wide text-muted">
-            {project.category}
-          </p>
-          {project.featured && (
-            <span className="text-xs font-semibold text-accent">Featured project</span>
+      <div
+        className={`overflow-hidden border-b border-divider bg-divider/40 ${
+          featured
+            ? "aspect-video md:relative md:aspect-auto md:min-h-80 md:border-r md:border-b-0"
+            : "aspect-video"
+        }`}
+      >
+        <img
+          src={`${BASE_PATH}${project.thumbnail}`}
+          alt=""
+          width={640}
+          height={360}
+          loading={featured ? "eager" : "lazy"}
+          className={`project-card__thumb size-full object-cover ${featured ? "md:absolute md:inset-0" : ""}`}
+        />
+      </div>
+
+      <div
+        className={`flex flex-1 flex-col p-5 ${featured ? "sm:p-8 md:justify-center" : "sm:p-6"}`}
+      >
+        <p className="flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider text-accent uppercase">
+          {project.category}
+          {featured && (
+            <span className="rounded-full bg-accent/10 px-2 py-0.5 tracking-wide normal-case">
+              Featured
+            </span>
           )}
-        </div>
+        </p>
         <h2
           id={headingId}
-          className={`mt-4 font-bold tracking-tight text-foreground ${project.featured ? "text-3xl" : "text-2xl"}`}
+          className={`mt-2 font-bold tracking-tight text-foreground ${
+            featured ? "text-2xl sm:text-3xl" : "text-xl"
+          }`}
         >
           {project.title}
         </h2>
-        <p className="mt-3 max-w-prose leading-relaxed text-muted">{project.description}</p>
-      </div>
-      <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-divider pt-5">
-        <a
-          href={project.primaryAction.href}
-          aria-label={`${project.primaryAction.label}: ${project.title}`}
-          className="inline-flex min-h-11 items-center rounded-lg bg-accent px-6 py-3 font-semibold text-on-accent transition-colors hover:bg-accent-hover"
-        >
-          {project.primaryAction.label}
-        </a>
-        {project.supportingActions.map((action) => (
+        <p className={`mt-2 leading-relaxed text-muted ${featured ? "sm:text-lg" : "text-sm"}`}>
+          {project.description}
+        </p>
+
+        <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-1 pt-6">
           <a
-            key={action.href}
-            href={action.href}
-            aria-label={`${action.label}: ${project.title}`}
-            className="inline-flex min-h-11 items-center font-medium text-accent underline underline-offset-4 hover:text-accent-hover"
+            href={project.primaryAction.href}
+            aria-label={`${project.primaryAction.label}: ${project.title}`}
+            className="project-card__primary inline-flex min-h-11 items-center gap-2 rounded-full border border-accent px-4 text-sm font-semibold text-accent"
           >
-            {action.label}
+            {project.primaryAction.label}
+            <span aria-hidden="true" className="project-card__arrow">
+              ↗
+            </span>
           </a>
-        ))}
+          {project.supportingActions.map((action) => (
+            <a
+              key={action.href}
+              href={action.href}
+              aria-label={`${action.label}: ${project.title}`}
+              className="relative z-10 inline-flex min-h-11 items-center text-sm text-muted underline decoration-divider underline-offset-4 hover:text-accent hover:decoration-accent"
+            >
+              {action.label}
+            </a>
+          ))}
+        </div>
       </div>
     </article>
   );

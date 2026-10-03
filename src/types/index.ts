@@ -21,6 +21,7 @@ export type DemoProject = {
   category: "Application" | "Template";
   description: string;
   featured?: boolean;
+  thumbnail: string;
   primaryAction: ProjectLink;
   supportingActions: readonly ProjectLink[];
 };

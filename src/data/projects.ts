@@ -6,8 +6,10 @@ export const projects: readonly DemoProject[] = [
     id: "collab-code",
     title: "Collab Code",
     category: "Application",
-    description: "Collaborative coding rooms for classrooms, tutoring, and pair programming.",
+    description:
+      "Code together in the browser. Built for classrooms, tutoring, and pair programming.",
     featured: true,
+    thumbnail: "thumbnails/collab-code.svg",
     primaryAction: { label: "Open demo", href: "https://ianskelskey.github.io/collab-code/" },
     supportingActions: [
       { label: "View source", href: "https://github.com/IanSkelskey/collab-code" },
@@ -17,18 +19,15 @@ export const projects: readonly DemoProject[] = [
     id: "game-feed",
     title: "game-feed",
     category: "Template",
-    description:
-      "Publish your Steam and RetroAchievements gaming history as a browsable website and JSON feed.",
+    description: "Your gaming history, published as a website and JSON feed.",
+    thumbnail: "thumbnails/game-feed.webp",
     primaryAction: {
       label: "Explore example",
-      href: "https://ianskelskey.github.io/my-game-feed/",
+      href: "https://ianskelskey.github.io/game-feed/",
     },
     supportingActions: [
       { label: "Use template", href: "https://github.com/IanSkelskey/game-feed/generate" },
-      {
-        label: "View JSON feed",
-        href: "https://ianskelskey.github.io/my-game-feed/data/games.json",
-      },
+      { label: "JSON feed", href: "https://ianskelskey.github.io/game-feed/data/games.json" },
     ],
   },
   {
@@ -36,7 +35,8 @@ export const projects: readonly DemoProject[] = [
     title: "react-ts-starter",
     category: "Template",
     description:
-      "A React + TypeScript starting point with styling, accessibility, and GitHub Pages deployment configured.",
+      "A React + TypeScript starting point with styling, accessibility, and deployment ready.",
+    thumbnail: "thumbnails/react-ts-starter.webp",
     primaryAction: {
       label: "Explore starter",
       href: "https://ianskelskey.github.io/react-ts-starter/",

@@ -1,104 +1,91 @@
 import type { PropsWithChildren } from "react";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 import { APP_VERSION, BASE_PATH } from "../../config/env";
 
-const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `font-medium ${isActive ? "text-accent" : "text-foreground hover:text-accent"}`;
-
-/*
- * Vite copies `public/` verbatim and never rewrites paths pointing into it, so
- * the base has to be applied by hand. A literal "/icon.svg" 404s on a project
- * page, which is served from /<repo>/ rather than /.
- */
-const iconUrl = `${BASE_PATH}icon.svg`;
-
-/*
- * Marks live in `public/tech/` rather than inline, so the README and the app
- * render the same files. Each carries its own light/dark fills, so they are
- * plain <img> rather than inline SVG needing `currentColor`.
- */
-const TECH = [
-  { name: "React", file: "react.svg", href: "https://react.dev" },
-  {
-    name: "TypeScript",
-    file: "typescript.svg",
-    href: "https://www.typescriptlang.org/docs/",
-  },
-  { name: "Vite", file: "vite.svg", href: "https://vite.dev" },
-  {
-    name: "Tailwind CSS",
-    file: "tailwindcss.svg",
-    href: "https://tailwindcss.com/docs",
-  },
+const NAV_LINKS = [
+  { label: "Portfolio", href: "https://ianskelskey.com/" },
+  { label: "GitHub", href: "https://github.com/IanSkelskey" },
 ];
 
-const Layout = ({ children }: PropsWithChildren) => {
-  return (
-    <div className="flex min-h-full flex-col bg-surface text-foreground">
-      <header className="border-b border-divider bg-raised">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <NavLink
-            to="/"
-            className="flex items-center gap-2 font-bold text-accent hover:text-accent-hover"
-          >
-            {/* Decorative — the link already names the app. */}
-            <img src={iconUrl} alt="" aria-hidden width={24} height={24} />
-            React TS Template
-          </NavLink>
-          <nav aria-label="Primary">
-            <ul className="flex items-center gap-6 text-sm">
-              <li>
-                <NavLink to="/" end className={navLinkClass}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/demo" className={navLinkClass}>
-                  Demo
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">{children}</main>
-      <footer className="border-t border-divider bg-raised">
-        <div className="mx-auto max-w-5xl px-6 py-4 text-center text-sm text-muted">
-          {/*
-            Labelled in visible text rather than by tooltip: `title` is
-            unreachable by keyboard and absent on touch, so it is an affordance
-            here, never the label. The marks are `alt=""` because the adjacent
-            span already names the link.
-          */}
-          <ul
-            aria-label="Built with"
-            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
-          >
-            {TECH.map(({ name, file, href }) => (
-              <li key={name}>
+const Layout = ({ children }: PropsWithChildren) => (
+  <div className="flex min-h-full flex-col bg-surface text-foreground">
+    <a
+      href="#main-content"
+      className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded-lg focus:bg-raised focus:p-4"
+    >
+      Skip to content
+    </a>
+    <header className="border-b border-divider">
+      <div className="mx-auto flex w-full max-w-[1128px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <Link
+          to="/"
+          className="inline-flex min-h-11 min-w-0 items-center gap-3 font-semibold text-foreground hover:text-accent"
+        >
+          <span className="flex size-[50px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-raised ring-1 ring-divider">
+            {/* Render the 25px pixel portrait at exactly 2x. */}
+            <img
+              src={`${BASE_PATH}pixel-portrait.png`}
+              alt=""
+              width={50}
+              height={50}
+              className="size-[50px] max-w-none shrink-0 [image-rendering:pixelated]"
+            />
+          </span>
+          {/* Stacks under the name on narrow screens so the nav stays on one row. */}
+          <span className="flex flex-col leading-tight sm:flex-row sm:gap-1.5">
+            Ian Skelskey
+            <span className="text-sm font-normal text-muted sm:text-base">
+              <span aria-hidden="true" className="hidden sm:inline">
+                /{" "}
+              </span>
+              Demos
+            </span>
+          </span>
+        </Link>
+        <nav aria-label="Primary">
+          <ul className="flex items-center gap-5 text-sm font-medium sm:gap-6">
+            {NAV_LINKS.map(({ label, href }) => (
+              <li key={href}>
                 <a
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={`${name} documentation`}
-                  className="flex items-center gap-1.5 text-muted hover:text-accent"
+                  className="inline-flex min-h-11 items-center text-muted hover:text-accent"
                 >
-                  <img src={`${BASE_PATH}tech/${file}`} alt="" aria-hidden width={18} height={18} />
-                  <span className="text-xs font-medium">{name}</span>
+                  {label}
                 </a>
               </li>
             ))}
           </ul>
-          <p className="mt-3">
-            Made with <span aria-label="love">❤️</span> by Ian Skelskey. &copy;{" "}
-            {new Date().getFullYear()}
-          </p>
-          {/* A version string is readable content, not chrome — `text-muted`, not `text-faint`. */}
-          <p className="mt-1 text-xs text-muted">v{APP_VERSION}</p>
-        </div>
-      </footer>
-    </div>
-  );
-};
+        </nav>
+      </div>
+    </header>
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="mx-auto w-full max-w-[1128px] flex-1 px-4 py-10 sm:px-6 sm:py-14"
+    >
+      {children}
+    </main>
+    <footer className="border-t border-divider">
+      <div className="mx-auto flex max-w-[1128px] flex-col items-center gap-1 px-4 py-5 text-sm text-muted sm:flex-row sm:justify-between sm:px-6">
+        <p>
+          Made with <span aria-label="love">❤️</span> by Ian Skelskey &copy;{" "}
+          {new Date().getFullYear()}
+        </p>
+        <p className="flex items-center gap-2">
+          <span>Demos v{APP_VERSION}</span>
+          <span aria-hidden="true" className="text-faint">
+            ·
+          </span>
+          <a
+            href="https://github.com/IanSkelskey/ianskelskey.github.io"
+            className="inline-flex min-h-11 items-center underline decoration-divider underline-offset-4 hover:text-accent hover:decoration-accent"
+          >
+            Source
+          </a>
+        </p>
+      </div>
+    </footer>
+  </div>
+);
 
 export default Layout;

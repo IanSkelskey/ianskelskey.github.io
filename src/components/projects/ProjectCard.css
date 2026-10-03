@@ -1,0 +1,65 @@
+/*
+ * Stretch the primary action over the whole card. The card is the positioning
+ * context; supporting links opt out with `relative z-10`.
+ */
+.project-card__primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.project-card,
+.project-card__primary {
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-card__thumb {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-card__arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/*
+ * Hover states key off the primary link rather than the card, so hovering a
+ * supporting link does not advertise a click that goes somewhere else.
+ */
+.project-card:has(.project-card__primary:hover) {
+  border-color: var(--color-accent);
+}
+
+.project-card:has(.project-card__primary:hover) .project-card__thumb {
+  transform: scale(1.03);
+}
+
+.project-card:has(.project-card__primary:hover) .project-card__primary {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.project-card:has(.project-card__primary:hover) .project-card__arrow {
+  transform: translate(2px, -2px);
+}
+
+/* The focus ring belongs on the card, since the card is the click target. */
+.project-card:has(.project-card__primary:focus-visible) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Also undo the global :focus-visible radius, which beats the layered `rounded-full`. */
+.project-card__primary:focus-visible {
+  outline: none;
+  border-radius: 9999px;
+}
+
+@media (forced-colors: active) {
+  .project-card:has(.project-card__primary:focus-visible) {
+    outline-color: CanvasText;
+  }
+}

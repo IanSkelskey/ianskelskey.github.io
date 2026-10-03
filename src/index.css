@@ -9,62 +9,37 @@
  */
 
 :root {
-  /* Raw palette (slate/blue neutrals). Replace with your brand palette. */
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-800: #1e293b;
-  --color-slate-900: #0f172a;
-  --color-slate-950: #020617;
-
-  --color-accent-400: #60a5fa;
-  --color-accent-500: #3b82f6;
-  --color-accent-600: #2563eb;
-  --color-accent-700: #1d4ed8;
-
-  /* Semantic tokens — light mode */
-  --color-foreground: var(--color-slate-950);
-  --color-muted: var(--color-slate-600); /* meets WCAG AA on surface/raised */
-  --color-faint: var(--color-slate-400); /* decorative only — NOT accessible text */
-  --color-accent: var(--color-accent-600);
-  --color-accent-hover: var(--color-accent-700);
-  /*
-   * Foreground for text sitting ON an accent background. Paired with
-   * `--color-accent`, never assumed to be white: dark mode lightens the accent
-   * so that `text-accent` reads on a dark page, which leaves white text on
-   * `bg-accent` at only 2.5:1. Flipping this token to near-black there keeps
-   * accent buttons legible in both modes.
-   * #ffffff on --color-accent-600 → 5.2:1 (AA); on --color-accent-700 → 6.7:1.
-   */
+  /* Portfolio colors: readable text >= 5.7:1 on surface / raised.
+     White button text >= 6.5:1 on accent / hover. Faint is decorative. */
+  --color-foreground: #0e0e16;
+  --color-muted: #4e4e7e;
+  --color-faint: #8181b1;
+  --color-accent: #4d6336;
+  --color-accent-hover: #334224;
   --color-on-accent: #ffffff;
-  --color-error: #b91c1c; /* ~5.9:1 on white — WCAG AA */
-  --color-surface: var(--color-slate-50);
+  --color-error: #b91c1c; /* >= 5.2:1 on surface / raised */
+  --color-surface: #efeff5;
   --color-raised: #ffffff;
-  --color-divider: var(--color-slate-200);
+  --color-divider: #c0c0d8;
   --color-border-accent: var(--color-accent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-foreground: var(--color-slate-50);
-    --color-muted: var(--color-slate-300);
-    --color-faint: var(--color-slate-500);
-    --color-accent: var(--color-accent-400);
-    --color-accent-hover: #93c5fd;
-    /* slate-950 on --color-accent-400 → 7.9:1 (AA); on #93c5fd → 11.2:1. */
-    --color-on-accent: var(--color-slate-950);
-    --color-error: #f87171; /* ~6.8:1 on slate-950 — WCAG AA */
-    --color-surface: var(--color-slate-950);
-    --color-raised: var(--color-slate-900);
-    --color-divider: var(--color-slate-800);
+    /* Readable text >= 7:1 on both surfaces.
+       Near-black button text >= 8:1 on accent / hover. */
+    --color-foreground: #efeff5;
+    --color-muted: #a0a0c5;
+    --color-faint: #61619e;
+    --color-accent: #99b77b;
+    --color-accent-hover: #b3c99c;
+    --color-on-accent: #0e0e16;
+    --color-error: #f87171; /* >= 6.5:1 on surface / raised */
+    --color-surface: #0e0e16;
+    --color-raised: #131320;
+    --color-divider: #3a3a5f;
   }
 }
-
 /*
  * Expose semantic tokens as Tailwind color utilities.
  * Usage: text-foreground, bg-raised, border-divider, text-accent-hover, etc.
@@ -92,9 +67,12 @@ body,
 
 body {
   margin: 0;
+  min-width: 320px;
+  line-height: 1.6;
   background: var(--color-surface);
   color: var(--color-foreground);
   font-family:
+    "Inter",
     system-ui,
     -apple-system,
     "Segoe UI",

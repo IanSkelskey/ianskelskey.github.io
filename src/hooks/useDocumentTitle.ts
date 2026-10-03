@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BASE_TITLE = "React TS Template";
+const BASE_TITLE = "Ian Skelskey / Demos";
 
 /**
  * Sets `document.title` for the current route. Pass a section title to prepend,
