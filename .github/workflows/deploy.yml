@@ -25,12 +25,10 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      # For project-page deploys (user.github.io/<repo>/) the build must use
-      # `/${repo}/` as the base path. `${{ github.event.repository.name }}`
-      # resolves to the repo name at runtime so this works without edits.
+      # This user site is served at the domain root, not under the repo name.
       - name: Build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          BASE_PATH: /
         run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
