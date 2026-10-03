@@ -150,9 +150,11 @@ Call `useDocumentTitle(title?)` in every page. Never mutate `document.title` dir
 
 ## Fetch / API
 
-- Use `fetchWithTimeout` from `src/utils/fetchWithTimeout.ts`.
-- Every fetch must handle `!res.ok`, handle network rejection, and must not block first render.
-- Read `API_URL` from `src/config/env.ts`, not `import.meta.env` directly.
+The hub makes no network requests today. If one is added:
+
+- Give it a timeout via `AbortController` (or `AbortSignal.timeout()`).
+- Handle `!res.ok`, handle network rejection, and never block first render.
+- Read any API origin from `src/config/env.ts`, not `import.meta.env` directly.
 
 ---
 
@@ -172,7 +174,7 @@ Call `useDocumentTitle(title?)` in every page. Never mutate `document.title` dir
 2. Any new component renders at least once in the app.
 3. Any new color literal either (a) goes through a semantic token, or (b) carries an inline comment stating its WCAG contrast ratio.
 4. New interactive elements are keyboard-operable, have a visible focus style, and meet the accessibility checklist.
-5. New `fetch` calls use `fetchWithTimeout`, handle `!res.ok`, and handle network rejection.
+5. New `fetch` calls have a timeout, handle `!res.ok`, and handle network rejection.
 
 ---
 

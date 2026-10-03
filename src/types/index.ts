@@ -6,13 +6,6 @@
  * unions across.
  */
 
-/** Payload returned by the demo endpoint (`public/demo-data.json`). */
-export type DemoStatus = {
-  service: string;
-  status: "ok" | "degraded";
-  message: string;
-};
-
 export type ProjectLink = { label: string; href: string };
 
 export type DemoProject = {

@@ -6,7 +6,6 @@ import RouteFallback from "./components/RouteFallback";
 import HomePage from "./pages/HomePage";
 
 // Lazy-load non-critical routes. Keep the home/landing route eager.
-const DemoPage = lazy(() => import("./pages/DemoPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
         <Suspense fallback={<RouteFallback />} key={location.pathname}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/demo" element={<DemoPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
