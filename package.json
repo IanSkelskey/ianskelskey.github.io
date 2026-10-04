@@ -14,7 +14,8 @@
     "typecheck": "tsc -b --noEmit",
     "format": "prettier --write .",
     "prettier-check": "prettier --check .",
-    "verify": "npm run prettier-check && npm run lint && npm run typecheck && npm run build"
+    "verify": "npm run prettier-check && npm run lint && npm run typecheck && npm run build",
+    "itch:refresh": "node scripts/fetch-itch-assets.ts"
   },
   "dependencies": {
     "react": "^19.2.8",

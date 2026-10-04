@@ -13,16 +13,17 @@ npm run dev
 
 ## Scripts
 
-| Script                   | Purpose                                                            |
-| ------------------------ | ------------------------------------------------------------------ |
-| `npm run dev`            | Start the Vite dev server.                                         |
-| `npm run build`          | Type-check and produce a production build.                         |
-| `npm run preview`        | Preview the production build locally. **Audit this, not `dev`.**   |
-| `npm run lint`           | Run ESLint.                                                        |
-| `npm run typecheck`      | Run `tsc -b --noEmit`.                                             |
-| `npm run format`         | Write Prettier formatting.                                         |
-| `npm run prettier-check` | Verify Prettier formatting (used in CI).                           |
-| `npm run verify`         | Prettier-check → lint → typecheck → build. Must pass before merge. |
+| Script                   | Purpose                                                                 |
+| ------------------------ | ----------------------------------------------------------------------- |
+| `npm run dev`            | Start the Vite dev server.                                              |
+| `npm run build`          | Type-check and produce a production build.                              |
+| `npm run preview`        | Preview the production build locally. **Audit this, not `dev`.**        |
+| `npm run lint`           | Run ESLint.                                                             |
+| `npm run typecheck`      | Run `tsc -b --noEmit`.                                                  |
+| `npm run format`         | Write Prettier formatting.                                              |
+| `npm run prettier-check` | Verify Prettier formatting (used in CI).                                |
+| `npm run verify`         | Prettier-check → lint → typecheck → build. Must pass before merge.      |
+| `npm run itch:refresh`   | Refresh the asset pack snapshot from itch.io (needs `ITCH_IO_API_KEY`). |
 
 ## Adding a project
 
@@ -48,6 +49,27 @@ npm run dev
 
 The whole card links to `primaryAction`; `supportingActions` render as smaller links beside it (typically "View source", "Use template", or a data feed).
 
+## Asset packs
+
+Asset packs are not added by hand. [`scripts/fetch-itch-assets.ts`](scripts/fetch-itch-assets.ts) reads every published itch.io project classified as **Assets** from the [itch.io server-side API](https://itch.io/docs/api/serverside) and writes [`src/data/assetPacks.json`](src/data/assetPacks.json): title, short description, cover, URL, and minimum price, newest first. Nothing else from the API (view, download, or purchase counts) is written out.
+
+- **On deploy:** the workflow runs the script with the `ITCH_IO_API_KEY` repository secret before building, and also rebuilds every Monday, so a pack published on itch.io appears within a week without a push.
+- **Locally:** `ITCH_IO_API_KEY=… npm run itch:refresh`, then commit the updated JSON so CI and local builds without a key match production.
+- **Without a key, or if itch.io is down,** the script warns and keeps the committed snapshot, so a deploy never fails on itch.io.
+
+The API key grants full account access. Keep it in the repository secret and your local environment only — it must never be read from `src/`, where it would ship to the browser.
+
+Display tweaks live in [`src/data/assetPacks.ts`](src/data/assetPacks.ts), not the JSON: `TITLE_OVERRIDES` shortens itch titles (dropping version numbers and "(Free)" suffixes the card already shows), keyed by itch.io game id. Cards keep itch's 315 × 250 cover ratio, so upload covers at 630 × 500 on itch.io for sharp results on high-density screens.
+
+Each card's main action is **Download now** (**Buy now** for paid packs), linking to the pack's `/purchase` page: the same page itch.io's own download button opens, with "No thanks, just take me to the downloads" for free packs. That path is not part of itch's documented API, so if it ever stops working, point `primaryAction` in `assetPacks.ts` back at `pack.url`. A secondary "View on itch.io" link goes to the pack page.
+
+**Featured pack.** One pack can lead the section as a full-width card showing its itch.io page banner instead of the cover. The API has no banner field, so the banner is a local file:
+
+1. Open the pack's itch.io page and save the header image (the `#header img`, 2400 × 1000) to `public/thumbnails/<slug>-banner.png`.
+2. Set `FEATURED_PACK` in [`src/data/assetPacks.ts`](src/data/assetPacks.ts) to the pack's itch.io id and that path. Set it to `null` to show every pack in the grid.
+
+Banners are shown whole at their 12:5 ratio, since pack titles are usually lettered across them.
+
 ## Project structure
 
 ```
@@ -63,11 +85,13 @@ src/
 │   └── projects/
 │       ├── ProjectCard.tsx    # One card; `featured` switches to the wide layout
 │       ├── ProjectCard.css    # Stretched link, hover and focus states
-│       └── ProjectGallery.tsx # Card grid
+│       └── ProjectGallery.tsx # Card grid; `compact` for three columns
 ├── config/
 │   └── env.ts                 # Build-time constants (version, base path)
 ├── data/
-│   └── projects.ts            # The gallery — add projects here
+│   ├── projects.ts            # Apps and templates — add projects here
+│   ├── assetPacks.json        # Generated by scripts/fetch-itch-assets.ts
+│   └── assetPacks.ts          # Maps packs to cards; title overrides
 ├── hooks/
 │   └── useDocumentTitle.ts    # Per-route <title>
 ├── pages/
@@ -75,6 +99,9 @@ src/
 │   └── NotFound.tsx
 └── types/
     └── index.ts               # All shared types
+
+scripts/
+└── fetch-itch-assets.ts       # itch.io API → src/data/assetPacks.json (run by Node directly)
 ```
 
 ## Conventions
@@ -89,7 +116,7 @@ Full conventions are documented in [.github/copilot-instructions.md](.github/cop
 
 ## Deployment
 
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes `dist/` to GitHub Pages on every push to `main` (repo **Settings → Pages → Source: GitHub Actions**). Because this is the user site, it is served from the domain root and builds with `BASE_PATH=/`.
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes `dist/` to GitHub Pages on every push to `main` (repo **Settings → Pages → Source: GitHub Actions**). Because this is the user site, it is served from the domain root and builds with `BASE_PATH=/`. It also runs weekly on a schedule to pick up new asset packs (see [Asset packs](#asset-packs)), which needs the `ITCH_IO_API_KEY` secret under **Settings → Secrets and variables → Actions**.
 
 Deep links survive a hard refresh via the [spa-github-pages](https://github.com/rafgraph/spa-github-pages) redirect: a `404.html` generated at build time by [`vite.config.ts`](vite.config.ts) bounces unknown paths to `index.html`, and an inline script there restores the URL before React Router boots.
 

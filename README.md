@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/IanSkelskey/ianskelskey.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/IanSkelskey/ianskelskey.github.io/actions/workflows/ci.yml)
 
-The demo hub at **[ianskelskey.github.io](https://ianskelskey.github.io/)** — one page that collects the small browser apps and reusable templates I publish on GitHub Pages, each with a link to try it, its source, and (for templates) a one-click "Use template".
+The demo hub at **[ianskelskey.github.io](https://ianskelskey.github.io/)** — one page that collects the small browser apps and reusable templates I publish on GitHub Pages, each with a link to try it, its source, and (for templates) a one-click "Use template". It also lists my pixel-art asset packs from [itch.io](https://ianskelskey.itch.io/), pulled in automatically at build time.
 
 For the bigger picture — work history, case studies, writing — see my portfolio at [ianskelskey.com](https://ianskelskey.com/).
 
@@ -16,11 +16,11 @@ For the bigger picture — work history, case studies, writing — see my portfo
 | [game-feed](https://ianskelskey.github.io/my-game-feed/)            | Template    | Your gaming history, published as a website and JSON feed.                             |
 | [react-ts-starter](https://ianskelskey.github.io/react-ts-starter/) | Template    | A React + TypeScript starting point with styling, accessibility, and deployment ready. |
 
-The live list comes from [`src/data/projects.ts`](src/data/projects.ts); this table is a snapshot.
+The live list comes from [`src/data/projects.ts`](src/data/projects.ts); this table is a snapshot. Asset packs come straight from itch.io, so they are not listed here.
 
 ## Contributing
 
-Built with React, TypeScript, Vite, and Tailwind CSS, starting from my [react-ts-starter](https://github.com/IanSkelskey/react-ts-starter) template. Adding a project, running the site locally, and deployment are covered in [CONTRIBUTING.md](CONTRIBUTING.md).
+Built with React, TypeScript, Vite, and Tailwind CSS, starting from my [react-ts-starter](https://github.com/IanSkelskey/react-ts-starter) template. Adding a project, how asset packs sync from itch.io, running the site locally, and deployment are covered in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

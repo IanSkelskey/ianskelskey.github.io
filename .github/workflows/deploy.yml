@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Weekly rebuild so asset packs published on itch.io appear without a push.
+  schedule:
+    - cron: "0 6 * * 1"
 
 # Allow one concurrent deployment; skip runs in progress but queue the latest.
 concurrency:
@@ -25,6 +28,12 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      # Overwrites the committed asset pack snapshot with live itch.io data.
+      # Warns and keeps the snapshot if the secret is missing or itch.io is down.
+      - name: Refresh itch.io asset packs
+        env:
+          ITCH_IO_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
+        run: npm run itch:refresh
       # This user site is served at the domain root, not under the repo name.
       - name: Build
         env:

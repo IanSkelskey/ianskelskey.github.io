@@ -16,10 +16,6 @@
     color 0.2s ease;
 }
 
-.project-card__thumb {
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 .project-card__arrow {
   display: inline-block;
   transition: transform 0.2s ease;
@@ -31,10 +27,6 @@
  */
 .project-card:has(.project-card__primary:hover) {
   border-color: var(--color-accent);
-}
-
-.project-card:has(.project-card__primary:hover) .project-card__thumb {
-  transform: scale(1.03);
 }
 
 .project-card:has(.project-card__primary:hover) .project-card__primary {
