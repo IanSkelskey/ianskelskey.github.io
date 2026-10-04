@@ -29,6 +29,19 @@ const formatPrice = (cents: number) => (cents === 0 ? "Free" : `From $${(cents /
  */
 const purchaseUrl = (pack: AssetPack) => `${pack.url.replace(/\/$/, "")}/purchase`;
 
+/*
+ * itch.io cannot be framed (X-Frame-Options / frame-ancestors), so the
+ * download flow opens in a small window instead, the way itch's own buy button
+ * (static.itch.io/api.js) does: `?popup=1` is its compact layout, built for a
+ * 680px-wide window. Taller than itch's 400px default, so the price field,
+ * skip link, and file list fit with little scrolling.
+ */
+const purchasePopup = (pack: AssetPack) => ({
+  href: `${purchaseUrl(pack)}?popup=1`,
+  width: 680,
+  height: 640,
+});
+
 /**
  * The pack shown full-width above the grid, with its itch.io page banner in
  * place of the cover. The API has no banner field, so the image is saved under
@@ -54,6 +67,7 @@ const toCard = (pack: AssetPack): DemoProject => {
     primaryAction: {
       label: pack.minPrice === 0 ? "Download now" : "Buy now",
       href: purchaseUrl(pack),
+      popup: purchasePopup(pack),
     },
     supportingActions: [{ label: "View on itch.io", href: pack.url }],
   };

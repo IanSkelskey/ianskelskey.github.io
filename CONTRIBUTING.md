@@ -63,6 +63,8 @@ Display tweaks live in [`src/data/assetPacks.ts`](src/data/assetPacks.ts), not t
 
 Each card's main action is **Download now** (**Buy now** for paid packs), linking to the pack's `/purchase` page: the same page itch.io's own download button opens, with "No thanks, just take me to the downloads" for free packs. That path is not part of itch's documented API, so if it ever stops working, point `primaryAction` in `assetPacks.ts` back at `pack.url`. A secondary "View on itch.io" link goes to the pack page.
 
+A plain click opens that page in a small centered window, using `?popup=1`, the compact layout itch's own buy button uses. An in-page modal is not possible: itch.io sends `X-Frame-Options` and `frame-ancestors` headers that forbid framing. New-tab clicks, blocked popups, and no-JS all fall back to the full `/purchase` page. Any link can opt in by setting `popup` on its `ProjectLink`; the handler is [`src/utils/openPopup.ts`](src/utils/openPopup.ts).
+
 **Featured pack.** One pack can lead the section as a full-width card showing its itch.io page banner instead of the cover. The API has no banner field, so the banner is a local file:
 
 1. Open the pack's itch.io page and save the header image (the `#header img`, 2400 × 1000) to `public/thumbnails/<slug>-banner.png`.
@@ -97,8 +99,10 @@ src/
 ├── pages/
 │   ├── HomePage.tsx           # The hub
 │   └── NotFound.tsx
-└── types/
-    └── index.ts               # All shared types
+├── types/
+│   └── index.ts               # All shared types
+└── utils/
+    └── openPopup.ts           # Opens a link's `popup` window, falling back to its href
 
 scripts/
 └── fetch-itch-assets.ts       # itch.io API → src/data/assetPacks.json (run by Node directly)

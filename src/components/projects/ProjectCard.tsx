@@ -1,6 +1,7 @@
 import { useId } from "react";
 import type { DemoProject } from "../../types";
 import { BASE_PATH } from "../../config/env";
+import { openPopup } from "../../utils/openPopup";
 import "./ProjectCard.css";
 
 type ProjectCardProps = { project: DemoProject };
@@ -45,6 +46,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const headingId = useId();
   const featured = project.featured === true;
   const shape = project.thumbnailShape ?? "wide";
+  const popup = project.primaryAction.popup;
   const layout: CardLayout = !featured ? "stacked" : shape === "banner" ? "banner" : "split";
 
   // Each shape keeps its own ratio: itch.io covers (315:250) and banners (12:5)
@@ -108,7 +110,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         >
           <a
             href={project.primaryAction.href}
-            aria-label={`${project.primaryAction.label}: ${project.title}`}
+            onClick={popup ? (event) => openPopup(event, popup) : undefined}
+            aria-label={`${project.primaryAction.label}: ${project.title}${
+              popup ? " (opens in a new window)" : ""
+            }`}
             className="project-card__primary inline-flex min-h-11 items-center gap-2 rounded-full border border-accent px-4 text-sm font-semibold text-accent"
           >
             {project.primaryAction.label}

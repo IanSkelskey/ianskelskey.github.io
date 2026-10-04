@@ -6,7 +6,15 @@
  * unions across.
  */
 
-export type ProjectLink = { label: string; href: string };
+/** A small window a link opens on plain click, in place of navigating. */
+export type PopupWindow = { href: string; width: number; height: number };
+
+export type ProjectLink = {
+  label: string;
+  /** Always a real destination: used for new-tab clicks, no-JS, and blocked popups. */
+  href: string;
+  popup?: PopupWindow;
+};
 
 export type DemoProject = {
   id: string;
